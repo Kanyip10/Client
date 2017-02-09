@@ -19,20 +19,12 @@
         android:layout_height="wrap_content"
         android:paddingTop="6dp"
         android:paddingBottom="6dp"
-        android:id="@+id/CorrectAns"
+        android:id="@+id/Answers"
         android:textColor="#4caf50"
         android:textSize="16sp"
         android:layout_below="@+id/Questions" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="6dp"
-        android:paddingBottom="6dp"
-        android:id="@+id/YourAns"
-        android:textColor="#f44336"
-        android:textSize="16sp"
-        android:layout_below="@+id/CorrectAns"/>
+
 
 
 </RelativeLayout>
