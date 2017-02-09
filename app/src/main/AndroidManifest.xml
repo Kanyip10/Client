@@ -33,6 +33,8 @@
             android:name=".TestActivity"></activity>
         <activity
             android:name=".ReferenceListActivity"></activity>
+        <activity
+            android:name=".TestResultActivity"></activity>
 
     </application>
 

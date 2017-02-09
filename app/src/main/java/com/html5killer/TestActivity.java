@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.html5killer.utils.Constants;
 
+import junit.framework.TestResult;
+
 public class TestActivity extends AppCompatActivity {
 
     private TestLibrary mQuestionLibrary = new TestLibrary();
@@ -31,6 +33,9 @@ public class TestActivity extends AppCompatActivity {
 
     private String mToken;
     private String mEmail;
+
+    private String[] uAnswer = {"1", "2", "3", "4"};
+    private int countQ = 0;
 
     private void initSharedPreferences(){
         Bundle bundle = getIntent().getExtras();
@@ -57,16 +62,20 @@ public class TestActivity extends AppCompatActivity {
         mButtonChoice1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                
+
 
                 if (mButtonChoice1.getText() == mAnswer){
                     mScore = mScore + 1;
+                    uAnswer[countQ] = (String)mButtonChoice1.getText();
+                    countQ++;
                     updateScore(mScore);
                     updateQuestion();
                     
                     Toast.makeText(TestActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
+                    uAnswer[countQ] = (String)mButtonChoice1.getText();
+                    countQ++;
                     Toast.makeText(TestActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 }
@@ -83,12 +92,16 @@ public class TestActivity extends AppCompatActivity {
 
                 if (mButtonChoice2.getText() == mAnswer){
                     mScore = mScore + 1;
+                    uAnswer[countQ] = (String)mButtonChoice1.getText();
+                    countQ++;
                     updateScore(mScore);
                     updateQuestion();
                     
                     Toast.makeText(TestActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
+                    uAnswer[countQ] = (String)mButtonChoice1.getText();
+                    countQ++;
                     Toast.makeText(TestActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 }
@@ -106,12 +119,16 @@ public class TestActivity extends AppCompatActivity {
 
                 if (mButtonChoice3.getText() == mAnswer){
                     mScore = mScore + 1;
+                    uAnswer[countQ] = (String)mButtonChoice1.getText();
+                    countQ++;
                     updateScore(mScore);
                     updateQuestion();
                     
                     Toast.makeText(TestActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
+                    uAnswer[countQ] = (String)mButtonChoice1.getText();
+                    countQ++;
                     Toast.makeText(TestActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 }
@@ -128,11 +145,15 @@ public class TestActivity extends AppCompatActivity {
 
                 if (mButtonChoice4.getText() == mAnswer){
                     mScore = mScore + 1;
+                    uAnswer[countQ] = (String)mButtonChoice1.getText();
+                    countQ++;
                     updateScore(mScore);
                     updateQuestion();
                     Toast.makeText(TestActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
+                    uAnswer[countQ] = (String)mButtonChoice1.getText();
+                    countQ++;
                     Toast.makeText(TestActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 }
@@ -148,7 +169,7 @@ public class TestActivity extends AppCompatActivity {
 
     private void updateQuestion(){
         if(mQuestionLibrary.getQuestion(mQuestionNumber) == null){
-            test();
+            testResult();
         } else {
             mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
             mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
@@ -168,9 +189,9 @@ public class TestActivity extends AppCompatActivity {
     }
 
 
-    private void test(){
-        Intent intent = new Intent(this, ProfileActivity.class);
-        ProfileActivity test1 = new ProfileActivity();
+    private void testResult(){
+        Intent intent = new Intent(this, TestResultActivity.class);
+        TestResultActivity test1 = new TestResultActivity();
 
         Bundle bundle = new Bundle();
         bundle.putString(Constants.EMAIL, mEmail);
@@ -179,6 +200,16 @@ public class TestActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public String getuAnswer(int a){
+        String answer = uAnswer[a];
+        return answer;
+    }
+
+    public int getCountQ(){
+        return countQ;
+    }
+
 }
 
 
