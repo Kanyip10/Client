@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HTML5 killer</string>
+    <string-array name="list_array">
+        <item>Level</item>
+        <item>Topic</item>
+        <item>Exam</item>
+    </string-array>
+</resources>
