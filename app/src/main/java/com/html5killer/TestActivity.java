@@ -34,8 +34,11 @@ public class TestActivity extends AppCompatActivity {
     private String mToken;
     private String mEmail;
 
-    private String[] uAnswer = {"1", "2", "3", "4"};
-    private int countQ = 0;
+    private  static String[] uAnswer = {"1", "2", "3", "4"};
+    private static int countQ = 0;
+
+    private static String[] test1={};
+    private static int count = 0;
 
     private void initSharedPreferences(){
         Bundle bundle = getIntent().getExtras();
@@ -48,7 +51,7 @@ public class TestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_do_test);
-
+        initSharedPreferences();
         mScoreView = (TextView)findViewById(R.id.score);
         mQuestionView = (TextView)findViewById(R.id.question);
         mButtonChoice1 = (Button)findViewById(R.id.choice1);
@@ -92,7 +95,7 @@ public class TestActivity extends AppCompatActivity {
 
                 if (mButtonChoice2.getText() == mAnswer){
                     mScore = mScore + 1;
-                    uAnswer[countQ] = (String)mButtonChoice1.getText();
+                    uAnswer[countQ] = (String)mButtonChoice2.getText();
                     countQ++;
                     updateScore(mScore);
                     updateQuestion();
@@ -100,7 +103,7 @@ public class TestActivity extends AppCompatActivity {
                     Toast.makeText(TestActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
-                    uAnswer[countQ] = (String)mButtonChoice1.getText();
+                    uAnswer[countQ] = (String)mButtonChoice2.getText();
                     countQ++;
                     Toast.makeText(TestActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     updateQuestion();
@@ -119,7 +122,7 @@ public class TestActivity extends AppCompatActivity {
 
                 if (mButtonChoice3.getText() == mAnswer){
                     mScore = mScore + 1;
-                    uAnswer[countQ] = (String)mButtonChoice1.getText();
+                    uAnswer[countQ] = (String)mButtonChoice3.getText();
                     countQ++;
                     updateScore(mScore);
                     updateQuestion();
@@ -127,7 +130,7 @@ public class TestActivity extends AppCompatActivity {
                     Toast.makeText(TestActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
-                    uAnswer[countQ] = (String)mButtonChoice1.getText();
+                    uAnswer[countQ] = (String)mButtonChoice3.getText();
                     countQ++;
                     Toast.makeText(TestActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     updateQuestion();
@@ -145,14 +148,14 @@ public class TestActivity extends AppCompatActivity {
 
                 if (mButtonChoice4.getText() == mAnswer){
                     mScore = mScore + 1;
-                    uAnswer[countQ] = (String)mButtonChoice1.getText();
+                    uAnswer[countQ] = (String)mButtonChoice4.getText();
                     countQ++;
                     updateScore(mScore);
                     updateQuestion();
                     Toast.makeText(TestActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
-                    uAnswer[countQ] = (String)mButtonChoice1.getText();
+                    uAnswer[countQ] = (String)mButtonChoice4.getText();
                     countQ++;
                     Toast.makeText(TestActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     updateQuestion();
@@ -169,6 +172,8 @@ public class TestActivity extends AppCompatActivity {
 
     private void updateQuestion(){
         if(mQuestionLibrary.getQuestion(mQuestionNumber) == null){
+            test1 = uAnswer;
+            count = countQ;
             testResult();
         } else {
             mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
@@ -198,7 +203,6 @@ public class TestActivity extends AppCompatActivity {
         bundle.putString(Constants.TOKEN,mToken);
         intent.putExtras(bundle);
         startActivity(intent);
-
     }
 
     public String getuAnswer(int a){
@@ -210,6 +214,7 @@ public class TestActivity extends AppCompatActivity {
         return countQ;
     }
 
+    public String[] getArray(){return uAnswer;}
 }
 
 

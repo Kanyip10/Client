@@ -1,6 +1,7 @@
 package com.html5killer;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,6 +18,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+
 
 /**
  * Created by KanYip on 8/2/17.
@@ -41,12 +44,12 @@ public class TestResultActivity extends AppCompatActivity {
     private String mToken;
     private String mEmail;
     private Button mBtFinish;
-
+    public static final String RED = "\u001B[31m";
+    public static final String RESET = "\u001B[0m";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_result);
@@ -57,11 +60,23 @@ public class TestResultActivity extends AppCompatActivity {
         ListView resultListView = (ListView) findViewById(R.id.answer);
 
         HashMap<String, String> qna = new HashMap<>();
+        /*
+        qna.put("1","a");
+        qna.put("2","b");
+        qna.put("3","c");
+        qna.put("4","d");
+        */
 
         for (int i = 0; i < mTestActivity.getCountQ(); i++) {
-            qna.put((mQuestionLibrary.getQuestion(i)), "Correct Ans: " +
-                    mQuestionLibrary.getCorrectAnswer(i) + "\nYour Ans: "
-                    + mTestActivity.getuAnswer(i));
+            if (mQuestionLibrary.getCorrectAnswer(i) == mTestActivity.getuAnswer(i)) {
+                qna.put(mQuestionLibrary.getQuestion(i), "Correct Ans: " +
+                        mQuestionLibrary.getCorrectAnswer(i) + "\nYour Ans: "
+                        + mTestActivity.getuAnswer(i) + "  \u2705");
+            } else{
+                qna.put(mQuestionLibrary.getQuestion(i), "Correct Ans: " +
+                        mQuestionLibrary.getCorrectAnswer(i) + "\nYour Ans: "
+                        + mTestActivity.getuAnswer(i)+ "  \u274c");
+            }
         }
 
         List<HashMap<String, String>> listItems = new ArrayList<>();
@@ -103,5 +118,6 @@ public class TestResultActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
 
 }
