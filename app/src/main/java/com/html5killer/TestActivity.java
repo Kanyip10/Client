@@ -73,7 +73,7 @@ public class TestActivity extends AppCompatActivity {
                     countQ++;
                     updateScore(mScore);
                     updateQuestion();
-                    
+
                     Toast.makeText(TestActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
@@ -91,7 +91,7 @@ public class TestActivity extends AppCompatActivity {
         mButtonChoice2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                
+
 
                 if (mButtonChoice2.getText() == mAnswer){
                     mScore = mScore + 1;
@@ -99,7 +99,7 @@ public class TestActivity extends AppCompatActivity {
                     countQ++;
                     updateScore(mScore);
                     updateQuestion();
-                    
+
                     Toast.makeText(TestActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
@@ -118,7 +118,7 @@ public class TestActivity extends AppCompatActivity {
         mButtonChoice3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                
+
 
                 if (mButtonChoice3.getText() == mAnswer){
                     mScore = mScore + 1;
@@ -126,7 +126,7 @@ public class TestActivity extends AppCompatActivity {
                     countQ++;
                     updateScore(mScore);
                     updateQuestion();
-                    
+
                     Toast.makeText(TestActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
@@ -144,7 +144,7 @@ public class TestActivity extends AppCompatActivity {
         mButtonChoice4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                
+
 
                 if (mButtonChoice4.getText() == mAnswer){
                     mScore = mScore + 1;
@@ -216,5 +216,3 @@ public class TestActivity extends AppCompatActivity {
 
     public String[] getArray(){return uAnswer;}
 }
-
-

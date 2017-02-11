@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">HTML5 killer</string>
     <string-array name="list_array">
-        <item>Level</item>
-        <item>Topic</item>
-        <item>Exam</item>
+        <item>Ordered by Alphabet</item>
+        <item>Ordered by Category</item>
+        <item>Ordered by Exam Topic</item>
     </string-array>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

@@ -23,24 +23,23 @@ import java.util.Map;
 
 /**
  * Created by KanYip on 8/2/17.
-*/
+ */
 
 public class TestResultActivity extends AppCompatActivity {
 
     private TestLibrary mQuestionLibrary = new TestLibrary();
     private TestActivity mTestActivity = new TestActivity();
-/*
-    private ListView listView;
-    private TextView mQuestionView;
-    private Button mButtonChoice1;
-    private Button mButtonChoice2;
-    private Button mButtonChoice3;
-    private Button mButtonChoice4;
-
-    private String mAnswer;
-    private int mScore = 0;
-    private int mQuestionNumber = 0;
-*/
+    /*
+        private ListView listView;
+        private TextView mQuestionView;
+        private Button mButtonChoice1;
+        private Button mButtonChoice2;
+        private Button mButtonChoice3;
+        private Button mButtonChoice4;
+        private String mAnswer;
+        private int mScore = 0;
+        private int mQuestionNumber = 0;
+    */
     private String mToken;
     private String mEmail;
     private Button mBtFinish;

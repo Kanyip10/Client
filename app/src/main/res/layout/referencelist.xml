@@ -1,19 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/referencelist"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.html5killer.ReferenceListActivity">
+    android:layout_height="wrap_content"
+    tools:context="com.html5killer.ReferenceListActivity"
+    >
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     <Spinner
         android:id="@+id/list_spinner"
         android:layout_width="fill_parent"
         android:layout_height="70dp" />
 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/separator1"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        style="?android:listSeparatorTextViewStyle" />
+
     <ListView
-    android:id="@+id/list"
-    android:layout_height="match_parent"
+    android:id="@+id/list1"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent">
 </ListView>
-</LinearLayout>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/separator2"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        style="?android:listSeparatorTextViewStyle" />
+
+    <ListView
+        android:id="@+id/list2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+    </ListView>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/separator3"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        style="?android:listSeparatorTextViewStyle" />
+
+    <ListView
+        android:id="@+id/list3"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+    </ListView>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/separator4"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        style="?android:listSeparatorTextViewStyle" />
+
+    <ListView
+        android:id="@+id/list4"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+    </ListView>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/separator5"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        style="?android:listSeparatorTextViewStyle" />
+
+    <ListView
+        android:id="@+id/list5"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+    </ListView>
+        </LinearLayout>
+</ScrollView>
