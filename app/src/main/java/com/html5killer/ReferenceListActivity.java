@@ -1,12 +1,20 @@
 package com.html5killer;
 
 
+import android.net.http.HttpResponseCache;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -25,7 +33,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
 
-import static com.html5killer.R.id.list;
+
 
 
 /**
@@ -35,7 +43,18 @@ import static com.html5killer.R.id.list;
 public class ReferenceListActivity extends AppCompatActivity {
     public static final String TAG = ReferenceListActivity.class.getSimpleName();
 
+
+
     private ListView listView ;
+    private ListView listView1 ;
+    private ListView listView2 ;
+    private ListView listView3 ;
+    private ListView listView4 ;
+    private TextView header;
+    private TextView header1;
+    private TextView header2;
+    private TextView header3;
+    private TextView header4;
     private Spinner spinner;
     private TextView mTvMessage;
 
@@ -44,8 +63,22 @@ public class ReferenceListActivity extends AppCompatActivity {
     private String mToken;
     private String mEmail;
 
-    private String[] sorted = {"a","b","c", "d"};
+    private String[] list1 = {"<!--...-->","<!DOCTYPE>","<a>","<abbr>","<acronym>","<address>","<applet>",
+            "<area>","<article>","<aside>","<audio>","<b>","<base>","<basefont>","<bdi>","<bdo>","<big>",
+        "<blockquote>","<body>","<br>","<button>","<canvas>","<caption>","<center>","<cite>","<code>","<col>",
+        "<colgroup>","<command>","<datalist>","<dd>","<del>","<details>","<dfn>","<div>","<dl>","<dt>","<em>",
+            "<embed>","<fieldset>","<figcaption>","<figure>","<font>","<footer>","<form>","<frame>","<frameset>",
+        "<h1> - <h6>","<head>","<header>","<hgroup>","<hr>","<html>","<i>","<iframe>","<img>","<input>","<ins>",
+           "<kbd>","<keygen>","<label>","<legend>","<li>","<link>","<main>","<map>","<mark>","<menu>"};
 
+
+    private static final String[] list2 = {"<!--...-->","<!DOCTYPE>","<body>","<br>","<h1> - <h6>","<head>","<header>","<hr>"
+            ,"<html>","<p>"};
+
+    private static final String[] list3 = {"<table>","<caption>","<th>","<tr>","<td>","<thead>"
+    ,"<tbody>","<tfoot>","<col>","<colgroup>"};
+
+    private static final String[] list4 = {"<ul>","<ol>","<li>","<dl>","<dt>","<dd>"};
 
 
     @Override
@@ -56,6 +89,9 @@ public class ReferenceListActivity extends AppCompatActivity {
         initViews();
         initSharedPreferences();
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
 
 
         spinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener(){
@@ -63,12 +99,42 @@ public class ReferenceListActivity extends AppCompatActivity {
                 switch (position){
                 case 0:
                 sorting(spinner.getSelectedItem().toString());
+                    header.setText("");
+                    header1.setText("");
+                    header2.setText("");
+                    header3.setText("");
+                    header4.setText("");
+
+                    listView.setAdapter(selectedList(list1));
+                    ListUtils.setDynamicHeight(listView);
                     break;
                 case 1:
                 sorting(spinner.getSelectedItem().toString());
-                        break;
+                    header.setText("basic");
+                    listView.setAdapter(selectedList(list2));
+                    header1.setText("table");
+                    listView1.setAdapter(selectedList(list3));
+                    header2.setText("list");
+                    listView2.setAdapter(selectedList(list4));
+
+                    ListUtils.setDynamicHeight(listView);
+                    ListUtils.setDynamicHeight(listView1);
+                    ListUtils.setDynamicHeight(listView2);
+
+
+                    break;
                 case 2:
                 sorting(spinner.getSelectedItem().toString());
+                    header.setText("chapter1");
+                    listView.setAdapter(selectedList(list2));
+                    header1.setText("chapter2");
+                    listView1.setAdapter(selectedList(list3));
+                    header2.setText("chapter3");
+                    listView2.setAdapter(selectedList(list4));
+
+                    ListUtils.setDynamicHeight(listView);
+                    ListUtils.setDynamicHeight(listView1);
+                    ListUtils.setDynamicHeight(listView2);
                         break;
 
                 }
@@ -81,6 +147,26 @@ public class ReferenceListActivity extends AppCompatActivity {
         });
     }
 
+    public static class ListUtils {
+        public static void setDynamicHeight(ListView mListView) {
+            ListAdapter mListAdapter = mListView.getAdapter();
+            if (mListAdapter == null) {
+                // when adapter is null
+                return;
+            }
+            int height = 0;
+            int desiredWidth = View.MeasureSpec.makeMeasureSpec(mListView.getWidth(), View.MeasureSpec.UNSPECIFIED);
+            for (int i = 0; i < mListAdapter.getCount(); i++) {
+                View listItem = mListAdapter.getView(i, null, mListView);
+                listItem.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
+                height += listItem.getMeasuredHeight();
+            }
+            ViewGroup.LayoutParams params = mListView.getLayoutParams();
+            params.height = height + (mListView.getDividerHeight() * (mListAdapter.getCount() - 1));
+            mListView.setLayoutParams(params);
+            mListView.requestLayout();
+        }
+    }
 
 
     private void initSharedPreferences() {
@@ -99,7 +185,17 @@ public class ReferenceListActivity extends AppCompatActivity {
         spinner = (Spinner) findViewById(R.id.list_spinner);
         spinner.setAdapter(spinnerView());
         spinner.setSelection(0);
-        listView = (ListView) findViewById(list);
+        listView = (ListView) findViewById(R.id.list1);
+        listView1 = (ListView) findViewById(R.id.list2);
+        listView2 = (ListView) findViewById(R.id.list3);
+        listView3 = (ListView) findViewById(R.id.list4);
+        listView4 = (ListView) findViewById(R.id.list5);
+        header = (TextView) findViewById(R.id.separator1);
+        header1 = (TextView) findViewById(R.id.separator2);
+        header2 = (TextView) findViewById(R.id.separator3);
+        header3 = (TextView) findViewById(R.id.separator4);
+        header4 = (TextView) findViewById(R.id.separator5);
+
 
     }
 
@@ -132,14 +228,14 @@ public class ReferenceListActivity extends AppCompatActivity {
 
     }
 
-    private void handleResponse(ReferenceList list) {
-
-        for(int i = 0; i < sorted.length; i++){
-            sorted[0] = list.getName();
-        }
+    private void handleResponse(ReferenceList list ) {
 
 
-        listView.setAdapter(selectedList(sorted));
+      //  for(int i = 0; i < sorted.length; i++){
+        // sorted[0] = list.getName();
+        //}
+
+
 
 
     }
@@ -156,14 +252,14 @@ public class ReferenceListActivity extends AppCompatActivity {
 
                 String errorBody = ((HttpException) error).response().errorBody().string();
                 Response response = gson.fromJson(errorBody,Response.class);
-                showMessage(response.getMessage());
+                showSnackBarMessage(response.getMessage());
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
         } else {
 
-            //showMessage("Network Error !");
+            showSnackBarMessage("Network Error !");
         }
     }
 
@@ -175,7 +271,7 @@ public class ReferenceListActivity extends AppCompatActivity {
     }
     private void showSnackBarMessage(String message) {
 
-        Snackbar.make(findViewById(R.id.activity_profile),message,Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(findViewById(R.id.referencelist),message,Snackbar.LENGTH_SHORT).show();
 
     }
 
@@ -185,5 +281,31 @@ public class ReferenceListActivity extends AppCompatActivity {
         mSubscriptions.unsubscribe();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
 
-}
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        }
+    }
+
