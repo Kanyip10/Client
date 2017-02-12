@@ -270,6 +270,14 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
 
         } else if (id == R.id.nav_slideshow) {
 
+            Intent intent = new Intent(this, GamePageActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString(Constants.EMAIL, mEmail);
+            bundle.putString(Constants.TOKEN,mToken);
+            intent.putExtras(bundle);
+            startActivity(intent);
+
+
         } else if (id == R.id.nav_manage) {
 
         }
