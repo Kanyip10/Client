@@ -21,12 +21,24 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewAns"
+        android:padding="6dp"
+        android:text="Score"
+        android:textAlignment="center"
+        android:textColor="#ff0a00"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
 
     <ListView
         android:id="@+id/answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/viewAns" />
+        android:layout_below="@+id/score" />
 
 
 

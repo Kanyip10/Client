@@ -37,8 +37,7 @@ public class TestActivity extends AppCompatActivity {
     private  static String[] uAnswer = {"1", "2", "3", "4"};
     private static int countQ = 0;
 
-    private static String[] test1={};
-    private static int count = 0;
+    private static int countCorrect = 0;
 
     private void initSharedPreferences(){
         Bundle bundle = getIntent().getExtras();
@@ -66,19 +65,18 @@ public class TestActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
 
+                uAnswer[countQ] = (String)mButtonChoice1.getText();
+                countQ++;
 
                 if (mButtonChoice1.getText() == mAnswer){
                     mScore = mScore + 1;
-                    uAnswer[countQ] = (String)mButtonChoice1.getText();
-                    countQ++;
+                    countCorrect++;
                     updateScore(mScore);
                     updateQuestion();
                     
                     Toast.makeText(TestActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
-                    uAnswer[countQ] = (String)mButtonChoice1.getText();
-                    countQ++;
                     Toast.makeText(TestActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 }
@@ -91,20 +89,19 @@ public class TestActivity extends AppCompatActivity {
         mButtonChoice2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                
+
+                uAnswer[countQ] = (String)mButtonChoice2.getText();
+                countQ++;
 
                 if (mButtonChoice2.getText() == mAnswer){
                     mScore = mScore + 1;
-                    uAnswer[countQ] = (String)mButtonChoice2.getText();
-                    countQ++;
+                    countCorrect++;
                     updateScore(mScore);
                     updateQuestion();
                     
                     Toast.makeText(TestActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
-                    uAnswer[countQ] = (String)mButtonChoice2.getText();
-                    countQ++;
                     Toast.makeText(TestActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 }
@@ -118,20 +115,19 @@ public class TestActivity extends AppCompatActivity {
         mButtonChoice3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                
+
+                uAnswer[countQ] = (String)mButtonChoice3.getText();
+                countQ++;
 
                 if (mButtonChoice3.getText() == mAnswer){
                     mScore = mScore + 1;
-                    uAnswer[countQ] = (String)mButtonChoice3.getText();
-                    countQ++;
+                    countCorrect++;
                     updateScore(mScore);
                     updateQuestion();
                     
                     Toast.makeText(TestActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
-                    uAnswer[countQ] = (String)mButtonChoice3.getText();
-                    countQ++;
                     Toast.makeText(TestActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 }
@@ -144,19 +140,18 @@ public class TestActivity extends AppCompatActivity {
         mButtonChoice4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                
+
+                uAnswer[countQ] = (String)mButtonChoice4.getText();
+                countQ++;
 
                 if (mButtonChoice4.getText() == mAnswer){
                     mScore = mScore + 1;
-                    uAnswer[countQ] = (String)mButtonChoice4.getText();
-                    countQ++;
+                    countCorrect++;
                     updateScore(mScore);
                     updateQuestion();
                     Toast.makeText(TestActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
                 }else {
-                    uAnswer[countQ] = (String)mButtonChoice4.getText();
-                    countQ++;
                     Toast.makeText(TestActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 }
@@ -172,8 +167,6 @@ public class TestActivity extends AppCompatActivity {
 
     private void updateQuestion(){
         if(mQuestionLibrary.getQuestion(mQuestionNumber) == null){
-            test1 = uAnswer;
-            count = countQ;
             testResult();
         } else {
             mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
@@ -212,6 +205,10 @@ public class TestActivity extends AppCompatActivity {
 
     public int getCountQ(){
         return countQ;
+    }
+
+    public int getCountCorrect(){
+        return countCorrect;
     }
 
     public String[] getArray(){return uAnswer;}

@@ -41,11 +41,10 @@ public class TestResultActivity extends AppCompatActivity {
     private int mScore = 0;
     private int mQuestionNumber = 0;
 */
+    private TextView mScoreView;
     private String mToken;
     private String mEmail;
     private Button mBtFinish;
-    public static final String RED = "\u001B[31m";
-    public static final String RESET = "\u001B[0m";
 
 
     @Override
@@ -53,9 +52,13 @@ public class TestResultActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_result);
+
+        mScoreView = (TextView)findViewById(R.id.score);
         mBtFinish = (Button) findViewById(R.id.btn_finish);
 
+        mScoreView.setText("Score = " + mTestActivity.getCountCorrect() + "/" + mTestActivity.getCountQ());
         mBtFinish.setOnClickListener(view -> finishing());
+
 
         ListView resultListView = (ListView) findViewById(R.id.answer);
 
