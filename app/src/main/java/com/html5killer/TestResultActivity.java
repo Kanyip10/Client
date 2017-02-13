@@ -3,6 +3,8 @@ package com.html5killer;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +13,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.html5killer.model.User;
 import com.html5killer.utils.Constants;
 
 import java.util.ArrayList;
@@ -99,6 +102,8 @@ public class TestResultActivity extends AppCompatActivity {
         resultListView.setAdapter(adapter);
 
         initSharedPreferences();
+
+        //updateExp(User user);
     }
 
 
@@ -109,10 +114,17 @@ public class TestResultActivity extends AppCompatActivity {
         mEmail = bundle.getString(Constants.EMAIL);
 
     }
-
+    /*
+    private void updateExp(){
+        user.setExperience(user.getExperience()+ 5 * mTestActivity.getCountCorrect());
+    }
+*/
     private void finishing(){
+
         Intent intent = new Intent(this, ProfileActivity.class);
         ProfileActivity test1 = new ProfileActivity();
+
+
 
         Bundle bundle = new Bundle();
         bundle.putString(Constants.EMAIL, mEmail);
