@@ -1,6 +1,7 @@
 package com.html5killer;
 
 
+import android.content.Intent;
 import android.net.http.HttpResponseCache;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -80,6 +81,12 @@ public class ReferenceListActivity extends AppCompatActivity {
 
     private static final String[] list4 = {"<ul>","<ol>","<li>","<dl>","<dt>","<dd>"};
 
+    private static final String[] list5 = {"<html>","<body>","<p>","<h1> - <h6>","<br>"};
+
+
+
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -98,7 +105,7 @@ public class ReferenceListActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView adapterView, View view, int position, long id){
                 switch (position){
                 case 0:
-                sorting(spinner.getSelectedItem().toString());
+                //sorting(spinner.getSelectedItem().toString());
                     header.setText("");
                     header1.setText("");
                     header2.setText("");
@@ -107,9 +114,39 @@ public class ReferenceListActivity extends AppCompatActivity {
 
                     listView.setAdapter(selectedList(list1));
                     ListUtils.setDynamicHeight(listView);
+
+                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+
+                                        if(position == 0) {
+                                            Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
+                                            Bundle bundle = new Bundle();
+                                            bundle.putString(Constants.EMAIL, mEmail);
+                                            bundle.putString(Constants.TOKEN, mToken);
+                                            bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                                            intent.putExtras(bundle);
+                                            startActivity(intent);
+                                        }
+
+                                         else{
+                                            Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
+                                            Bundle bundle = new Bundle();
+                                            bundle.putString(Constants.EMAIL, mEmail);
+                                            bundle.putString(Constants.TOKEN, mToken);
+                                            bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                                            intent.putExtras(bundle);
+                                            startActivity(intent);
+                                        }
+
+
+
+
+                        }
+                    });
                     break;
                 case 1:
-                sorting(spinner.getSelectedItem().toString());
+               // sorting(spinner.getSelectedItem().toString());
                     header.setText("basic");
                     listView.setAdapter(selectedList(list2));
                     header1.setText("table");
@@ -121,12 +158,100 @@ public class ReferenceListActivity extends AppCompatActivity {
                     ListUtils.setDynamicHeight(listView1);
                     ListUtils.setDynamicHeight(listView2);
 
+                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+
+                            if(position == 0) {
+                                Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
+                                Bundle bundle = new Bundle();
+                                bundle.putString(Constants.EMAIL, mEmail);
+                                bundle.putString(Constants.TOKEN, mToken);
+                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                                intent.putExtras(bundle);
+                                startActivity(intent);
+                            }
+
+                            else{
+                                Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
+                                Bundle bundle = new Bundle();
+                                bundle.putString(Constants.EMAIL, mEmail);
+                                bundle.putString(Constants.TOKEN, mToken);
+                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                                intent.putExtras(bundle);
+                                startActivity(intent);
+                            }
+
+
+
+
+                        }
+                    });
+                    listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+
+                            if(position == 0) {
+                                Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
+                                Bundle bundle = new Bundle();
+                                bundle.putString(Constants.EMAIL, mEmail);
+                                bundle.putString(Constants.TOKEN, mToken);
+                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                                intent.putExtras(bundle);
+                                startActivity(intent);
+                            }
+
+                            else{
+                                Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
+                                Bundle bundle = new Bundle();
+                                bundle.putString(Constants.EMAIL, mEmail);
+                                bundle.putString(Constants.TOKEN, mToken);
+                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                                intent.putExtras(bundle);
+                                startActivity(intent);
+                            }
+
+
+
+
+                        }
+                    });
+                    listView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+
+                            if(position == 0) {
+                                Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
+                                Bundle bundle = new Bundle();
+                                bundle.putString(Constants.EMAIL, mEmail);
+                                bundle.putString(Constants.TOKEN, mToken);
+                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                                intent.putExtras(bundle);
+                                startActivity(intent);
+                            }
+
+                            else{
+                                Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
+                                Bundle bundle = new Bundle();
+                                bundle.putString(Constants.EMAIL, mEmail);
+                                bundle.putString(Constants.TOKEN, mToken);
+                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                                intent.putExtras(bundle);
+                                startActivity(intent);
+                            }
+
+
+
+
+                        }
+                    });
+
 
                     break;
                 case 2:
-                sorting(spinner.getSelectedItem().toString());
+               // sorting(spinner.getSelectedItem().toString());
                     header.setText("chapter1");
-                    listView.setAdapter(selectedList(list2));
+                    listView.setAdapter(selectedList(list5));
                     header1.setText("chapter2");
                     listView1.setAdapter(selectedList(list3));
                     header2.setText("chapter3");
@@ -138,6 +263,95 @@ public class ReferenceListActivity extends AppCompatActivity {
                         break;
 
                 }
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+
+                        if(position == 0) {
+                            Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putString(Constants.EMAIL, mEmail);
+                            bundle.putString(Constants.TOKEN, mToken);
+                            bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                        }
+
+                        else{
+                            Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putString(Constants.EMAIL, mEmail);
+                            bundle.putString(Constants.TOKEN, mToken);
+                            bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                        }
+
+
+
+
+                    }
+                });
+
+                listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+
+                        if(position == 0) {
+                            Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putString(Constants.EMAIL, mEmail);
+                            bundle.putString(Constants.TOKEN, mToken);
+                            bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                        }
+
+                        else{
+                            Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putString(Constants.EMAIL, mEmail);
+                            bundle.putString(Constants.TOKEN, mToken);
+                            bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                        }
+
+
+
+
+                    }
+                });
+                listView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+
+                        if(position == 0) {
+                            Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putString(Constants.EMAIL, mEmail);
+                            bundle.putString(Constants.TOKEN, mToken);
+                            bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                        }
+
+                        else{
+                            Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putString(Constants.EMAIL, mEmail);
+                            bundle.putString(Constants.TOKEN, mToken);
+                            bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                        }
+
+
+
+
+                    }
+                });
+
 
 
             }
@@ -218,7 +432,7 @@ public class ReferenceListActivity extends AppCompatActivity {
     }
 
 
-    private void sorting(String division) {
+  /*  private void sorting(String division) {
 
         mSubscriptions.add(NetworkUtil.getRetrofit(mToken).sort(mEmail,division)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -274,7 +488,7 @@ public class ReferenceListActivity extends AppCompatActivity {
         Snackbar.make(findViewById(R.id.referencelist),message,Snackbar.LENGTH_SHORT).show();
 
     }
-
+*/
     @Override
     protected void onDestroy() {
         super.onDestroy();
