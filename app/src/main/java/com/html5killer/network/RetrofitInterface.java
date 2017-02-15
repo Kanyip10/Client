@@ -41,4 +41,7 @@ public interface RetrofitInterface {
 
     @GET("ReferenceList/{email}/position")
     Observable <ReferenceList> sort(@Path("email")String email, @Query("sort") String sort);
+
+    @PUT("users/{email}")
+    Observable<Response> changeExp(@Path("email") String email, @Body User user);
 }

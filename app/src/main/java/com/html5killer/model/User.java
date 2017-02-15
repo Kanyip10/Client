@@ -11,6 +11,7 @@ public class User {
     private String created_at;
     private String newPassword;
     private String token;
+    private int newExp;
 
     public void setName(String name) {
         this.name = name;
@@ -47,6 +48,8 @@ public class User {
     public int getLevel() { return level;}
 
     public void setLevel(int level) { this.level = level;}
+
+    public void setNewExp(int exp){this.newExp = exp;}
 
     public int getExperience() {
         return experience;
