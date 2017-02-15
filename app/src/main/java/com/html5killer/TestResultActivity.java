@@ -124,8 +124,6 @@ public class TestResultActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ProfileActivity.class);
         ProfileActivity test1 = new ProfileActivity();
 
-
-
         Bundle bundle = new Bundle();
         bundle.putString(Constants.EMAIL, mEmail);
         bundle.putString(Constants.TOKEN,mToken);

@@ -58,6 +58,10 @@ public class TestActivity extends AppCompatActivity {
         mButtonChoice3 = (Button)findViewById(R.id.choice3);
         mButtonChoice4 = (Button)findViewById(R.id.choice4);
 
+        mScore = 0;
+        mQuestionNumber = 0;
+        countQ = 0;
+        countCorrect = 0;
         updateQuestion();
 
         //Start of Button Listener for Button1
