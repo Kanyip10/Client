@@ -49,6 +49,7 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
     private Button mBtTest;
     private Button mBtReferenceList;
 
+    private ProgressBar expProgressbar;
     private ProgressBar mProgressbar;
 
     private SharedPreferences mSharedPreferences;
@@ -93,6 +94,7 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
         mTvEmail = (TextView) findViewById(R.id.tv_email);
         mTvDate = (TextView) findViewById(R.id.tv_date);
         mTvlevelnExp = (TextView) findViewById(R.id.level);
+        expProgressbar = (ProgressBar) findViewById(R.id.progressBar);
 
 
         mBtChangePassword = (Button) findViewById(R.id.btn_change_password);
@@ -176,6 +178,8 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
         mTvEmail.setText(user.getEmail());
         mTvDate.setText(user.getCreated_at());
         mTvlevelnExp.setText(user.toString());
+        expProgressbar.setProgress(user.getExperience());
+
     }
 
     private void handleError(Throwable error) {

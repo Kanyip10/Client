@@ -1,5 +1,6 @@
 package com.html5killer.fragments;
 
+
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -21,9 +22,12 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.html5killer.ProfileActivity;
 import com.html5killer.R;
+import com.html5killer.Teacher_ProfileActivity;
+import com.html5killer.TestActivity;
 import com.html5killer.model.Response;
 import com.html5killer.network.NetworkUtil;
 import com.html5killer.utils.Constants;
+import com.html5killer.model.User;
 
 import java.io.IOException;
 
@@ -51,8 +55,7 @@ public class LoginFragment extends Fragment {
     private CompositeSubscription mSubscriptions;
     private SharedPreferences mSharedPreferences;
 
-
-
+    private String email = "";
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -88,8 +91,9 @@ public class LoginFragment extends Fragment {
 
         setError();
 
-        String email = mEtEmail.getText().toString();
+        email = mEtEmail.getText().toString();
         String password = mEtPassword.getText().toString();
+
 
         int err = 0;
 
@@ -139,11 +143,25 @@ public class LoginFragment extends Fragment {
         editor.putString(Constants.EMAIL,response.getMessage());
         editor.apply();
 
+
+
         mEtEmail.setText(null);
         mEtPassword.setText(null);
 
-        Intent intent = new Intent(getActivity(), ProfileActivity.class);
-        startActivity(intent);
+
+        char identity = email.charAt(0);
+
+        if(identity == 's'){
+            Intent intent = new Intent(getActivity(), ProfileActivity.class);
+            startActivity(intent);
+        } else {
+            Intent intent1 = new Intent(getActivity(), Teacher_ProfileActivity.class);
+            startActivity(intent1);
+        }
+
+
+       // Intent intent = new Intent(getActivity(), ProfileActivity.class);
+        //startActivity(intent);
 
     }
 
@@ -169,6 +187,7 @@ public class LoginFragment extends Fragment {
             showSnackBarMessage("Network Error !");
         }
     }
+
 
     private void showSnackBarMessage(String message) {
 

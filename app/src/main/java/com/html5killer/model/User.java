@@ -64,4 +64,8 @@ public class User {
 
     }
 
+    public char checkIdentity(String id){
+        char firstWord = id.charAt(0);
+        return firstWord;
+    }
 }

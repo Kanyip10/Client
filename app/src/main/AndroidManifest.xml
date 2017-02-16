@@ -32,6 +32,9 @@
         <activity
             android:name=".ProfileActivity"
             android:theme="@style/AppTheme.Profile" />
+        <activity
+            android:name=".Teacher_ProfileActivity"
+            android:theme="@style/AppTheme.Profile" />
         <activity android:name=".TestActivity" />
         <activity android:name=".ReferenceListActivity" />
         <activity android:name=".TestResultActivity" />

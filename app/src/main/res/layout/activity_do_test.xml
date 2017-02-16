@@ -43,7 +43,7 @@
     <TextView
         android:id="@+id/question"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:text="Which thing is alive?"
         android:textSize="25sp"
         android:padding="8dp"

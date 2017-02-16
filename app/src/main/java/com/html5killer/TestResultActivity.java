@@ -157,15 +157,24 @@ public class TestResultActivity extends AppCompatActivity {
 
 
     private void finishing(){
+        if(mEmail.toString().charAt(0) == 's'){
+            Intent intent = new Intent(this, ProfileActivity.class);
+            ProfileActivity test1 = new ProfileActivity();
+            Bundle bundle = new Bundle();
+            bundle.putString(Constants.EMAIL, mEmail);
+            bundle.putString(Constants.TOKEN,mToken);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        } else {
+            Intent intent = new Intent(this, Teacher_ProfileActivity.class);
+            Teacher_ProfileActivity test1 = new Teacher_ProfileActivity();
+            Bundle bundle = new Bundle();
+            bundle.putString(Constants.EMAIL, mEmail);
+            bundle.putString(Constants.TOKEN,mToken);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
 
-        Intent intent = new Intent(this, ProfileActivity.class);
-        ProfileActivity test1 = new ProfileActivity();
-
-        Bundle bundle = new Bundle();
-        bundle.putString(Constants.EMAIL, mEmail);
-        bundle.putString(Constants.TOKEN,mToken);
-        intent.putExtras(bundle);
-        startActivity(intent);
 
     }
 

@@ -192,6 +192,7 @@ public class TestActivity extends AppCompatActivity {
 
 
     private void testResult(){
+
         Intent intent = new Intent(this, TestResultActivity.class);
         TestResultActivity test1 = new TestResultActivity();
 
