@@ -33,12 +33,24 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/exp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score"
+        android:padding="6dp"
+        android:text="exp"
+        android:textAlignment="center"
+        android:textColor="#0037ff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
 
     <ListView
         android:id="@+id/answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/score" />
+        android:layout_below="@+id/exp" />
 
 
 

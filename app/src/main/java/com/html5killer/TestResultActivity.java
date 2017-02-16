@@ -1,6 +1,7 @@
 package com.html5killer;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -42,19 +43,9 @@ public class TestResultActivity extends AppCompatActivity {
 
     private TestLibrary mQuestionLibrary = new TestLibrary();
     private TestActivity mTestActivity = new TestActivity();
-/*
-    private ListView listView;
-    private TextView mQuestionView;
-    private Button mButtonChoice1;
-    private Button mButtonChoice2;
-    private Button mButtonChoice3;
-    private Button mButtonChoice4;
 
-    private String mAnswer;
-    private int mScore = 0;
-    private int mQuestionNumber = 0;
-*/
     private TextView mScoreView;
+    private TextView mExp;
     private String mToken;
     private String mEmail;
     private Button mBtFinish;
@@ -71,11 +62,17 @@ public class TestResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test_result);
 
         mSubscriptions = new CompositeSubscription();
+        initSharedPreferences();
+        loadProfile();
+        System.out.println(mEmail);
+        System.out.println(mToken);
 
         mScoreView = (TextView)findViewById(R.id.score);
+        mExp = (TextView)findViewById(R.id.exp);
         mBtFinish = (Button) findViewById(R.id.btn_finish);
 
         mScoreView.setText("Score = " + mTestActivity.getCountCorrect() + "/" + mTestActivity.getCountQ());
+
         mBtFinish.setOnClickListener(view -> finishing());
 
 
@@ -83,12 +80,6 @@ public class TestResultActivity extends AppCompatActivity {
         ListView resultListView = (ListView) findViewById(R.id.answer);
 
         HashMap<String, String> qna = new HashMap<>();
-        /*
-        qna.put("1","a");
-        qna.put("2","b");
-        qna.put("3","c");
-        qna.put("4","d");
-        */
 
         for (int i = 0; i < mTestActivity.getCountQ(); i++) {
             if (mQuestionLibrary.getCorrectAnswer(i) == mTestActivity.getuAnswer(i)) {
@@ -118,11 +109,8 @@ public class TestResultActivity extends AppCompatActivity {
 
         resultListView.setAdapter(adapter);
 
-        initSharedPreferences();
 
-        loadProfile();
-
-        updateExp();
+        //updateExp();]
     }
 
 
@@ -136,7 +124,7 @@ public class TestResultActivity extends AppCompatActivity {
 
     private void updateExp(){
         User user = new User();
-        user.setNewExp(exp + 5 * mTestActivity.getCountCorrect());
+        user.setExperience(exp + 5 * mTestActivity.getCountCorrect());
         changeExp(user);
     }
 
@@ -184,12 +172,13 @@ public class TestResultActivity extends AppCompatActivity {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(this::handleResponse,this::handleError));
+
+
+
     }
 
-    private void handleResponse(User user) {
-
-
-       exp = user.getExperience();
+   private void handleResponse(User user) {
+        mExp.setText(""+user.getExperience());
 
     }
 
@@ -221,11 +210,7 @@ public class TestResultActivity extends AppCompatActivity {
         Snackbar.make(findViewById(R.id.testResult),message,Snackbar.LENGTH_SHORT).show();
 
     }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mSubscriptions.unsubscribe();
-    }
+
 
 
 

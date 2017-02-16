@@ -59,6 +59,7 @@ public class User {
         this.experience = experience;
     }
 
+
     public String toString(){
         return "Level: " + getLevel() + "   Experience: " + getExperience() +"/100 ";
 
