@@ -49,7 +49,7 @@ public class User {
 
     public void setLevel(int level) { this.level = level;}
 
-    public void setNewExp(int exp){this.newExp = exp;}
+    public void setNewExp(int score){this.newExp = score;}
 
     public int getExperience() {
         return experience;

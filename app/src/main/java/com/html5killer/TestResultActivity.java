@@ -1,5 +1,6 @@
 package com.html5killer;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.html5killer.fragments.ChangePasswordDialog;
 import com.html5killer.model.Response;
 import com.html5killer.model.User;
 import com.html5killer.network.NetworkUtil;
@@ -49,6 +51,7 @@ public class TestResultActivity extends AppCompatActivity {
     private String mToken;
     private String mEmail;
     private Button mBtFinish;
+
 
     private int exp = 0;
 
@@ -110,9 +113,8 @@ public class TestResultActivity extends AppCompatActivity {
         resultListView.setAdapter(adapter);
 
 
-        //updateExp();]
-    }
 
+    }
 
 
     private void initSharedPreferences(){
@@ -124,7 +126,7 @@ public class TestResultActivity extends AppCompatActivity {
 
     private void updateExp(){
         User user = new User();
-        user.setExperience(exp + 5 * mTestActivity.getCountCorrect());
+        user.setNewExp(mTestActivity.getCountCorrect());
         changeExp(user);
     }
 
@@ -145,9 +147,11 @@ public class TestResultActivity extends AppCompatActivity {
 
 
     private void finishing(){
+
         if(mEmail.toString().charAt(0) == 's'){
+            updateExp();
             Intent intent = new Intent(this, ProfileActivity.class);
-            ProfileActivity test1 = new ProfileActivity();
+            //ProfileActivity test1 = new ProfileActivity();
             Bundle bundle = new Bundle();
             bundle.putString(Constants.EMAIL, mEmail);
             bundle.putString(Constants.TOKEN,mToken);
@@ -155,7 +159,7 @@ public class TestResultActivity extends AppCompatActivity {
             startActivity(intent);
         } else {
             Intent intent = new Intent(this, Teacher_ProfileActivity.class);
-            Teacher_ProfileActivity test1 = new Teacher_ProfileActivity();
+            //Teacher_ProfileActivity test1 = new Teacher_ProfileActivity();
             Bundle bundle = new Bundle();
             bundle.putString(Constants.EMAIL, mEmail);
             bundle.putString(Constants.TOKEN,mToken);
@@ -178,7 +182,7 @@ public class TestResultActivity extends AppCompatActivity {
     }
 
    private void handleResponse(User user) {
-        mExp.setText(""+user.getExperience());
+
 
     }
 
