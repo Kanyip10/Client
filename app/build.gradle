@@ -14,6 +14,9 @@ android {
         jackOptions {
             enabled true
         }
+
+        manifestPlaceholders = [onesignal_app_id: "6900a5fe-f311-4800-8186-cf21490f7624",
+                                onesignal_google_project_number: "8510387587"]
     }
 
     compileOptions {
@@ -44,4 +47,8 @@ dependencies {
     compile 'io.reactivex:rxjava:1.2.0'
     compile 'io.reactivex:rxandroid:1.2.1'
     testCompile 'junit:junit:4.12'
+
+    compile 'com.onesignal:OneSignal:3.+@aar'
+    compile 'com.google.android.gms:play-services-gcm:+'
+    compile "com.google.android.gms:play-services-location:+"
 }
