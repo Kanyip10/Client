@@ -45,7 +45,6 @@ public class Teacher_ProfileActivity extends AppCompatActivity implements Change
     private TextView mTvlevelnExp;
     private TextView mTvDate;
     private Button mBtChangePassword;
-    private Button mBtLogout;
     private Button mBtTest;
     private Button mBtReferenceList;
 
@@ -96,7 +95,6 @@ public class Teacher_ProfileActivity extends AppCompatActivity implements Change
 
 
         mBtChangePassword = (Button) findViewById(R.id.btn_change_password);
-        mBtLogout = (Button) findViewById(R.id.btn_logout);
         mBtTest = (Button) findViewById(R.id.btn_test);
         mBtReferenceList = (Button) findViewById(R.id.btn_reference_list);
         mProgressbar = (ProgressBar) findViewById(R.id.progress);
@@ -106,7 +104,6 @@ public class Teacher_ProfileActivity extends AppCompatActivity implements Change
 
 
         mBtChangePassword.setOnClickListener(view -> showDialog());
-        mBtLogout.setOnClickListener(view -> logout());
         mBtTest.setOnClickListener(view -> test());
         mBtReferenceList.setOnClickListener(view -> referenceList());
     }
@@ -280,6 +277,8 @@ public class Teacher_ProfileActivity extends AppCompatActivity implements Change
 
         } else if (id == R.id.nav_manage) {
 
+        } else if (id == R.id.nav_logout) {
+            logout();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.teacher_activity_profile);
