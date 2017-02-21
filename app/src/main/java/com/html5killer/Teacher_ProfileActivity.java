@@ -257,7 +257,7 @@ public class Teacher_ProfileActivity extends AppCompatActivity implements Change
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_tutorial) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 

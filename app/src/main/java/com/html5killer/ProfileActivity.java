@@ -261,8 +261,14 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
+        if (id == R.id.nav_tutorial) {
+            Intent intent = new Intent(this, TutorialActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString(Constants.EMAIL, mEmail);
+            bundle.putString(Constants.TOKEN,mToken);
+            intent.putExtras(bundle);
+            startActivity(intent);
+
         } else if (id == R.id.nav_gallery) {
 
             Intent intent = new Intent(this, ReferenceListActivity.class);

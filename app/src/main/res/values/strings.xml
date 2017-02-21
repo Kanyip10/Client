@@ -18,4 +18,5 @@
     <string name="game1_rule">Enter as many HTML5 tag as possible in five minutes.
     Correct answer will be automatically be logged as you type.
         Once your time is up, any tags you missed will be listed so you can improve for next time.</string>
+    <string name="title_activity_tutorial">TutorialActivity</string>
 </resources>
