@@ -31,11 +31,15 @@ public class TutorialActivity extends AppCompatActivity {
     };
     private String[] urls = {
             "https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view",
-            "https://tvb.com/",
+            "https://www.youtube.com/watch?v=9gTw2EDkaDQ",
             "https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view",
+            "https://www.youtube.com/watch?v=YcApt9RgiT0",
             "https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view",
+            "https://www.youtube.com/watch?v=CGSdK7FI9MY",
             "https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view",
-            "https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view"
+            "https://www.youtube.com/watch?v=4I1WgJz_lmA",
+            "https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view",
+            "https://www.youtube.com/watch?v=dDn9uw7N9Xg"
     };
     private ArrayAdapter arrayAdapter;
 
