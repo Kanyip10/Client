@@ -52,6 +52,10 @@
             android:name=".TutorialActivity"
             android:label="@string/title_activity_tutorial"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ForumActivity"
+            android:label="@string/title_activity_forum"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
