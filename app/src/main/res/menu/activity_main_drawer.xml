@@ -22,6 +22,10 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Game" />
         <item
+            android:id="@+id/nav_test"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Game" />
+        <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
             android:title="Fourm" />

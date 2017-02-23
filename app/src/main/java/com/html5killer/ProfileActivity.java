@@ -199,7 +199,15 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
             intent.putExtras(bundle);
             startActivity(intent);
 
+        } else if (id == R.id.nav_test) {
 
+            Intent intent = new Intent(this, TestActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString(Constants.EMAIL, mEmail);
+            bundle.putString(Constants.TOKEN, mToken);
+            intent.putExtras(bundle);
+            startActivity(intent);
+            finish();
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_logout) {

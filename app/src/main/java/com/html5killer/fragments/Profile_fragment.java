@@ -86,6 +86,7 @@ public class Profile_fragment extends Fragment implements ChangePasswordDialog.L
         mTvEmail = (TextView) v.findViewById(R.id.tv_email);
         mTvDate = (TextView) v.findViewById(R.id.tv_date);
         mTvlevelnExp = (TextView) v.findViewById(R.id.level);
+        mProgressbar = (ProgressBar) v.findViewById(R.id.progressBar);
 
 
       /*  mBtChangePassword = (Button) v.findViewById(R.id.btn_change_password);
@@ -123,17 +124,7 @@ public class Profile_fragment extends Fragment implements ChangePasswordDialog.L
 
 
 
-    private void test() {
-        Intent intent = new Intent(getActivity(), TestActivity.class);
-        TestActivity test1 = new TestActivity();
 
-        Bundle bundle = new Bundle();
-        bundle.putString(Constants.EMAIL, mEmail);
-        bundle.putString(Constants.TOKEN, mToken);
-        intent.putExtras(bundle);
-        startActivity(intent);
-
-    }
 
     private void referenceList() {
         Intent intent = new Intent(getActivity(), ReferenceListActivity.class);
@@ -155,17 +146,17 @@ public class Profile_fragment extends Fragment implements ChangePasswordDialog.L
 
     private void handleResponse(User user) {
 
-        mProgressbar.setVisibility(View.GONE);
+
 
         mTvName.setText(user.getName());
         mTvEmail.setText(user.getEmail());
         mTvDate.setText(user.getCreated_at());
         mTvlevelnExp.setText(user.toString());
+        mProgressbar.setProgress(user.getExperience());
     }
 
     private void handleError(Throwable error) {
 
-        mProgressbar.setVisibility(View.GONE);
 
         if (error instanceof HttpException) {
 

@@ -201,6 +201,7 @@ public class TestActivity extends AppCompatActivity {
         bundle.putString(Constants.TOKEN,mToken);
         intent.putExtras(bundle);
         startActivity(intent);
+        finish();
     }
 
     public String getuAnswer(int a){

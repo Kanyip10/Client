@@ -112,7 +112,7 @@ public class TestResultActivity extends AppCompatActivity {
 
         resultListView.setAdapter(adapter);
 
-
+        updateExp();
 
     }
 
@@ -149,7 +149,6 @@ public class TestResultActivity extends AppCompatActivity {
     private void finishing(){
 
         if(mEmail.toString().charAt(0) == 's'){
-            updateExp();
             Intent intent = new Intent(this, ProfileActivity.class);
             //ProfileActivity test1 = new ProfileActivity();
             Bundle bundle = new Bundle();
@@ -157,6 +156,7 @@ public class TestResultActivity extends AppCompatActivity {
             bundle.putString(Constants.TOKEN,mToken);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         } else {
             Intent intent = new Intent(this, Teacher_ProfileActivity.class);
             //Teacher_ProfileActivity test1 = new Teacher_ProfileActivity();
@@ -165,6 +165,7 @@ public class TestResultActivity extends AppCompatActivity {
             bundle.putString(Constants.TOKEN,mToken);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
 
 
