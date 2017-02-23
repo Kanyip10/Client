@@ -99,8 +99,8 @@ public class Teacher_ProfileActivity extends AppCompatActivity implements Change
         mBtReferenceList = (Button) findViewById(R.id.btn_reference_list);
         mProgressbar = (ProgressBar) findViewById(R.id.progress);
 
-        nName = (TextView) (findViewById(R.id.nName));
-        nEmail = (TextView) (findViewById(R.id.nEmail));
+      //  nName = (TextView) (findViewById(R.id.nName));
+        //nEmail = (TextView) (findViewById(R.id.nEmail));
 
 
         mBtChangePassword.setOnClickListener(view -> showDialog());

@@ -19,4 +19,6 @@
     Correct answer will be automatically be logged as you type.
         Once your time is up, any tags you missed will be listed so you can improve for next time.</string>
     <string name="title_activity_tutorial">TutorialActivity</string>
+
+    <string name="title_activity_forum">ForumActivity</string>
 </resources>

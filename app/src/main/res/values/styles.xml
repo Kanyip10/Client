@@ -3,22 +3,23 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorlightgreen</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
     <style name="AppTheme.LoginRegister" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:windowBackground">@color/colorPrimary</item>
-        <item name="colorControlNormal">@android:color/white</item>
-        <item name="colorControlHighlight">@android:color/white</item>
-        <item name="colorControlActivated">@android:color/white</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
         <item name="colorButtonNormal">@color/colorAccent</item>
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:textColorPrimary">@android:color/white</item>
-        <item name="android:editTextColor">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="android:editTextColor">@color/colorAccent</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -26,10 +27,12 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+
+
     <style name="AppTheme.Profile" parent="AppTheme">
-        <item name="android:windowBackground">@color/colorDarkGrey</item>
+        <item name="android:windowBackground">@color/colorlightgreen</item>
         <item name="colorButtonNormal">@color/colorAccent</item>
-        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
     </style>
 
     <style name="AppTheme.Dialog" parent="Theme.AppCompat.Light.Dialog">

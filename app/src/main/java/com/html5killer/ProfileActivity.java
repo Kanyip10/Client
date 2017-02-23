@@ -5,7 +5,11 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +25,10 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.html5killer.fragments.ChangePasswordDialog;
+import com.html5killer.fragments.ErrorGameFragment;
+import com.html5killer.fragments.Profile_fragment;
+import com.html5killer.fragments.TagGameFragment;
+import com.html5killer.fragments.TutorialFragment;
 import com.html5killer.model.Response;
 import com.html5killer.model.User;
 import com.html5killer.network.NetworkUtil;
@@ -33,23 +41,9 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
 
-public class ProfileActivity extends AppCompatActivity implements ChangePasswordDialog.Listener
-        ,NavigationView.OnNavigationItemSelectedListener {
+public class ProfileActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,ChangePasswordDialog.Listener {
 
     public static final String TAG = ProfileActivity.class.getSimpleName();
-
-    private TextView mTvName;
-    private TextView mTvEmail;
-    private TextView nName;
-    private TextView nEmail;
-    private TextView mTvlevelnExp;
-    private TextView mTvDate;
-    private Button mBtChangePassword;
-    private Button mBtTest;
-    private Button mBtReferenceList;
-
-    private ProgressBar expProgressbar;
-    private ProgressBar mProgressbar;
 
     private SharedPreferences mSharedPreferences;
     private String mToken;
@@ -57,15 +51,23 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
 
     private CompositeSubscription mSubscriptions;
 
+    private SectionsPagerAdapter mSectionsPagerAdapter;
+
+    /**
+     * The {@link ViewPager} that will host the section contents.
+     */
+    private ViewPager mViewPager;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
         mSubscriptions = new CompositeSubscription();
-        initViews();
+//        initViews();
         initSharedPreferences();
-        loadProfile();
+      //  loadProfile();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -80,41 +82,21 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
+        // Set up the ViewPager with the sections adapter.
+        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
 
 
     }
 
-    private void initViews() {
-
-
-
-        mTvName = (TextView) findViewById(R.id.tv_name);
-        mTvEmail = (TextView) findViewById(R.id.tv_email);
-        mTvDate = (TextView) findViewById(R.id.tv_date);
-        mTvlevelnExp = (TextView) findViewById(R.id.level);
-        expProgressbar = (ProgressBar) findViewById(R.id.progressBar);
-
-
-        mBtChangePassword = (Button) findViewById(R.id.btn_change_password);
-        mBtTest = (Button) findViewById(R.id.btn_test);
-        mBtReferenceList = (Button) findViewById(R.id.btn_reference_list);
-        mProgressbar = (ProgressBar) findViewById(R.id.progress);
-
-        nName = (TextView) (findViewById(R.id.nName));
-        nEmail = (TextView) (findViewById(R.id.nEmail));
-
-
-        mBtChangePassword.setOnClickListener(view -> showDialog());
-        mBtTest.setOnClickListener(view -> test());
-        mBtReferenceList.setOnClickListener(view -> referenceList());
-    }
 
     private void initSharedPreferences() {
 
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        mToken = mSharedPreferences.getString(Constants.TOKEN,"");
-        mEmail = mSharedPreferences.getString(Constants.EMAIL,"");
+        mToken = mSharedPreferences.getString(Constants.TOKEN, "");
+        mEmail = mSharedPreferences.getString(Constants.EMAIL, "");
     }
 
     private void logout() {
@@ -138,73 +120,10 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
         fragment.show(getFragmentManager(), ChangePasswordDialog.TAG);
     }
 
-    private void test(){
-        Intent intent = new Intent(this, TestActivity.class);
-        TestActivity test1 = new TestActivity();
-
-        Bundle bundle = new Bundle();
-        bundle.putString(Constants.EMAIL, mEmail);
-        bundle.putString(Constants.TOKEN,mToken);
-        intent.putExtras(bundle);
-        startActivity(intent);
-
-    }
-
-    private void referenceList(){
-        Intent intent = new Intent(this, ReferenceListActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putString(Constants.EMAIL, mEmail);
-        bundle.putString(Constants.TOKEN,mToken);
-        intent.putExtras(bundle);
-        startActivity(intent);
-
-    }
-    private void loadProfile() {
-
-        mSubscriptions.add(NetworkUtil.getRetrofit(mToken).getProfile(mEmail)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io())
-                .subscribe(this::handleResponse,this::handleError));
-    }
-
-    private void handleResponse(User user) {
-
-        mProgressbar.setVisibility(View.GONE);
-
-        mTvName.setText(user.getName());
-        mTvEmail.setText(user.getEmail());
-        mTvDate.setText(user.getCreated_at());
-        mTvlevelnExp.setText(user.toString());
-        expProgressbar.setProgress(user.getExperience());
-
-    }
-
-    private void handleError(Throwable error) {
-
-        mProgressbar.setVisibility(View.GONE);
-
-        if (error instanceof HttpException) {
-
-            Gson gson = new GsonBuilder().create();
-
-            try {
-
-                String errorBody = ((HttpException) error).response().errorBody().string();
-                Response response = gson.fromJson(errorBody,Response.class);
-                showSnackBarMessage(response.getMessage());
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-
-            showSnackBarMessage("Network Error !");
-        }
-    }
 
     private void showSnackBarMessage(String message) {
 
-        Snackbar.make(findViewById(R.id.content_main),message,Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(findViewById(R.id.content_main), message, Snackbar.LENGTH_SHORT).show();
 
     }
 
@@ -214,11 +133,7 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
         mSubscriptions.unsubscribe();
     }
 
-    @Override
-    public void onPasswordChanged() {
 
-        showSnackBarMessage("Password Changed Successfully !");
-    }
 
     @Override
     public void onBackPressed() {
@@ -252,8 +167,8 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
         return super.onOptionsItemSelected(item);
     }
 
-   // @SuppressWarnings("StatementWithEmptyBody")
-  // @Override
+    // @SuppressWarnings("StatementWithEmptyBody")
+    // @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
@@ -271,7 +186,7 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
             Intent intent = new Intent(this, ReferenceListActivity.class);
             Bundle bundle = new Bundle();
             bundle.putString(Constants.EMAIL, mEmail);
-            bundle.putString(Constants.TOKEN,mToken);
+            bundle.putString(Constants.TOKEN, mToken);
             intent.putExtras(bundle);
             startActivity(intent);
 
@@ -280,7 +195,7 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
             Intent intent = new Intent(this, GamePageActivity.class);
             Bundle bundle = new Bundle();
             bundle.putString(Constants.EMAIL, mEmail);
-            bundle.putString(Constants.TOKEN,mToken);
+            bundle.putString(Constants.TOKEN, mToken);
             intent.putExtras(bundle);
             startActivity(intent);
 
@@ -290,10 +205,77 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
         } else if (id == R.id.nav_logout) {
             logout();
         }
+        else if (id == R.id.nav_changePassword) {
+        showDialog();
+    }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_profile);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-}
 
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            // getItem is called to instantiate the fragment for the given page.
+            // Return a PlaceholderFragment (defined as a static inner class below).
+            switch (position) {
+                case 0:
+                    TutorialFragment tag1 = new TutorialFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putString(Constants.EMAIL, mEmail);
+                    bundle.putString(Constants.TOKEN, mToken);
+                    tag1.setArguments(bundle);
+                    return tag1;
+                case 1:
+                    ErrorGameFragment tag2 = new ErrorGameFragment();
+                    Bundle bundle1 = new Bundle();
+                    bundle1.putString(Constants.EMAIL, mEmail);
+                    bundle1.putString(Constants.TOKEN, mToken);
+                    tag2.setArguments(bundle1);
+                    return tag2;
+                case 2:
+                    Profile_fragment tag3 = new Profile_fragment();
+                    Bundle bundle2 = new Bundle();
+                    bundle2.putString(Constants.EMAIL, mEmail);
+                    bundle2.putString(Constants.TOKEN, mToken);
+                    tag3.setArguments(bundle2);
+                    return tag3;
+
+            }
+            return null;
+        }
+
+
+        @Override
+        public int getCount() {
+            // Show 3 total pages.
+            return 3;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position) {
+                case 0:
+                    return "Tag";
+                case 1:
+                    return "Error";
+                case 2:
+                    return "Error";
+            }
+            return null;
+        }
+    }
+    @Override
+    public void onPasswordChanged() {
+
+        showSnackBarMessage("Password Changed Successfully !");
+    }
+
+
+}
