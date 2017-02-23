@@ -59,9 +59,25 @@ public class User {
         this.experience = experience;
     }
 
+    public String getLevelName(int level){
+        String[] levelTitle= {"Beginner","Amateur", "Professional","Expert"};
+        String levelName;
+        switch(level){
+            case 1 : levelName = levelTitle[0];
+                break;
+            case 2 : levelName = levelTitle[1];
+                break;
+            case 3 : levelName = levelTitle[2];
+                break;
+            case 4 : levelName = levelTitle[3];
+                break;
+            default : levelName = levelTitle[3];
+        }
+        return levelName;
+    }
 
     public String toString(){
-        return "Level: " + getLevel() + "   Experience: " + getExperience() +"/100 ";
+        return "Level: " + getLevelName(getLevel()) + "   Experience: " + getExperience() +"/100 ";
 
     }
 
