@@ -30,9 +30,9 @@
 
 
     <style name="AppTheme.Profile" parent="AppTheme">
-        <item name="android:windowBackground">@color/colorlightgreen</item>
+        <item name="android:windowBackground">@android:color/white</item>
         <item name="colorButtonNormal">@color/colorAccent</item>
-        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@android:color/widget_edittext_dark</item>
     </style>
 
     <style name="AppTheme.Dialog" parent="Theme.AppCompat.Light.Dialog">

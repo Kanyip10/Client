@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -41,6 +42,8 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
 
+
+
 public class ProfileActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,ChangePasswordDialog.Listener {
 
     public static final String TAG = ProfileActivity.class.getSimpleName();
@@ -73,6 +76,7 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
         setSupportActionBar(toolbar);
 
 
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.activity_profile);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -87,6 +91,10 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
+
 
 
     }
@@ -270,11 +278,11 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Tag";
+                    return "Tutorials";
                 case 1:
-                    return "Error";
+                    return "Game";
                 case 2:
-                    return "Error";
+                    return "Profile";
             }
             return null;
         }

@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebSettings;
+import android.webkit.WebViewClient;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -43,7 +46,7 @@ public class listContent extends AppCompatActivity {
 
     private String listname;
 
-
+    private WebView editor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,6 +60,14 @@ public class listContent extends AppCompatActivity {
         ddescription = (TextView) findViewById(R.id.ddescrition);
         lddescription = (TextView) findViewById(R.id.ldescrition);
         sorting(listname);
+
+        editor = (WebView) findViewById(R.id.webView);
+
+        editor.getSettings().setJavaScriptEnabled(true);
+
+        editor.setWebViewClient(new WebViewClient());
+
+        editor.loadUrl("file:///android_asset/tryit_editor_mirror/index.html");
 
 
 
