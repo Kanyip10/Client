@@ -54,6 +54,10 @@
             android:name=".ForumActivity"
             android:label="@string/title_activity_forum"
             android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="ErrorGame"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

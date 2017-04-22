@@ -2,16 +2,10 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Ashley Wong\AppData\Local\Android\Sdk\platforms\android-24\android.jar"
+        jar="C:\Users\Ashley Wong\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
         revision="24.0.2"
-        sha1="d49cc0972df7adf495d3ad3d0cf71c0ec517ace4">
-        <dex dex="C:\Users\Ashley Wong\Desktop\Client\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\android-503d8ebf8de1996f65eb2d7c6cba8187422e4682.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ashley Wong\AppData\Local\Android\Sdk\platforms\android-24\optional\org.apache.http.legacy.jar"
-        revision="24.0.2"
-        sha1="fb7023e781abb70ed1b0442eb611fbed295cae84">
-        <dex dex="C:\Users\Ashley Wong\Desktop\Client\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\org.apache.http.legacy-495f458ce5d1bef0d7390eabec2b9e6b51c71add.jar" />
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="C:\Users\Ashley Wong\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\retrofit-2.1.0-902b0fe7362f7a611d9d052960a71e689c10e57c.jar" />
     </item>
 
 </items>

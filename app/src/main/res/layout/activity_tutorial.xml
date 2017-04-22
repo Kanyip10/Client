@@ -8,6 +8,7 @@
     tools:context="com.html5killer.TutorialActivity">
 
 
+
     <include layout="@layout/content_tutorial" />
 
 </android.support.design.widget.CoordinatorLayout>
