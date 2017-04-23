@@ -1,33 +1,47 @@
 package com.html5killer;
 
+
+import android.media.Image;
+import android.widget.ImageView;
+
 /**
  * Created by KanYip on 2/2/17.
  */
 
 public class TestLibrary {
 
+    private int[] mQuestionImages = new int[]{
+            R.drawable.image_q1,
+            R.drawable.image_q2,
+            R.drawable.image_q3,
+            R.drawable.image_q4
+    };
+
     private String mQuestions [] = {
-            "What does HTML stand for?",
-            "Who is making the Web standards?",
-            "Choose the correct HTML element for the largest heading:",
-            "What is the correct HTML element for inserting a line break"
+            "What is the Headings tag used for \'Hello 1\'?",
+            "What is the tag used for creating the above html?",
+            "What is the corresponding xx and yy?",
+            "What is the corresponding xx and yy?"
 
     };
 
 
     private String mChoices[][] = {
-            {"Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Language", "Higher Tool Markup Language"},
-            {"Mozilla", "Google", "Microsoft", "The World Wide Web Consortium"},
-            {"<head>", "<heading>", "<h6>", "<h1>"},
-            {"<break>", "<br>", " <lb>", "<bak>"}
+            {"<H1>", "<H2>", "<H6>", "<H7>"},
+            {"<img>", "<image>", "<photo>", "<canvas>"},
+            {"<xx> = <td>, <yy> = <th>", "<xx> = <th>, <yy> = <td>", "<xx> = <tr>, <yy> = <th>", "<xx> = <th>, <yy> = <tr>"},
+            {"<xx> = <ul>, <yy> = <ol>", "<xx> = <ol>, <yy> = <ul>", "<xx> = <li>, <yy> = <ol>", "<xx> = <ol>, <yy> = <li>"}
 
     };
 
 
 
-    private String mCorrectAnswers[] = {"Hyper Text Markup Language", "The World Wide Web Consortium", "<h1>", "<br>"};
+    private String mCorrectAnswers[] = {"<H6>", "<img>", "<xx> = <th>, <yy> = <td>", "<xx> = <ul>, <yy> = <ol>"};
 
-
+    public int getQuestionImage(int a) {
+        int image = mQuestionImages[a];
+        return image;
+    }
 
 
     public String getQuestion(int a) {

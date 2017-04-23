@@ -4,6 +4,7 @@ package com.html5killer.model;
 public class Quiz {
 
     private String name;
+
     private String[] question;
     private String[] choice1;
     private String[] choice2;
