@@ -58,6 +58,16 @@
             android:name=".HomeActivity"
             android:label="ErrorGame"
             android:theme="@style/AppTheme"></activity>
+
+        <activity android:theme="@style/Theme.Transparent" android:name=".NextGameActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/AppBaseTheme.NoTitle" android:name=".SummaryActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/AppBaseTheme.NoTitle" android:name=".LostActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/AppBaseTheme.NoTitle" android:name=".StagePickActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/AppBaseTheme.NoTitle" android:name=".PlayActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <activity android:theme="@android:style/Theme.Translucent" android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+
     </application>
 
 </manifest>
