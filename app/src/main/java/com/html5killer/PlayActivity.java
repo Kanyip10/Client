@@ -5,6 +5,7 @@ import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -13,6 +14,7 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
@@ -42,6 +44,7 @@ import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.location.DetectedActivity;
 import com.google.android.gms.location.GeofenceStatusCodes;
+import com.html5killer.utils.Constants;
 
 import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
@@ -53,6 +56,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import javax.xml.parsers.SAXParserFactory;
+
+import rx.subscriptions.CompositeSubscription;
 
 public class PlayActivity extends Activity {
     private float ROTATE_FROM;
@@ -94,6 +99,12 @@ public class PlayActivity extends Activity {
     private RelativeLayout rlImage2;
     private int scaledHeight;
     private int scaledWidth;
+
+    private CompositeSubscription mSubscriptions;
+
+    private SharedPreferences mSharedPreferences;
+    private String mToken;
+    private String mEmail;
 
     /* renamed from: net.androidiconpacks.findmulti.PlayActivity.1 */
     class C06441 implements AnimationListener {
@@ -147,7 +158,7 @@ public class PlayActivity extends Activity {
             }
 
             public void onClick(DialogInterface dialog, int which) {
-                PlayActivity.this.startActivity(new Intent(PlayActivity.this, HomeActivity.class));
+               // PlayActivity.this.startActivity(new Intent(PlayActivity.this, HomeActivity.class));
                 PlayActivity.this.finish();
             }
         }
@@ -373,6 +384,7 @@ public class PlayActivity extends Activity {
         LoadResources();
         LoadListeners();
         LoadStage(this.mCurStage);
+        initSharedPreferences();
         LinearLayout layout = (LinearLayout) findViewById(R.id.linearLayoutAdmob);
     }
 
@@ -602,5 +614,13 @@ public class PlayActivity extends Activity {
         } catch (Exception e) {
             e.getStackTrace();
         }
+    }
+
+
+    private void initSharedPreferences() {
+
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        mToken = mSharedPreferences.getString(Constants.TOKEN,"");
+        mEmail = mSharedPreferences.getString(Constants.EMAIL,"");
     }
 }
