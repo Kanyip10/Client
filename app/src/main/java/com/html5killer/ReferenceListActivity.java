@@ -70,7 +70,7 @@ public class ReferenceListActivity extends AppCompatActivity {
         "<colgroup>","<command>","<datalist>","<dd>","<del>","<details>","<dfn>","<div>","<dl>","<dt>","<em>",
             "<embed>","<fieldset>","<figcaption>","<figure>","<font>","<footer>","<form>","<frame>","<frameset>",
         "<h1> - <h6>","<head>","<header>","<hgroup>","<hr>","<html>","<i>","<iframe>","<img>","<input>","<ins>",
-           "<kbd>","<keygen>","<label>","<legend>","<li>","<link>","<main>","<map>","<mark>","<menu>"};
+           "<kbd>","<keygen>","<label>","<legend>","<li>","<link>","<main>","<map>","<mark>","<menu>","<table>"};
 
 
     private static final String[] list2 = {"<!--...-->","<!DOCTYPE>","<body>","<br>","<h1> - <h6>","<head>","<header>","<hr>"
