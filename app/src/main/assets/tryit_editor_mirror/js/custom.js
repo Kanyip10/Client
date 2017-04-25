@@ -1,14 +1,20 @@
     function submitTryit(){
-        var text = editor.getValue();
-        var ifr = document.createElement("iframe");
-        ifr.setAttribute("frameborder", "0");
-        ifr.setAttribute("id", "iframeOutput");  
-        document.getElementById("iframewrapper").innerHTML = "";
-        document.getElementById("iframewrapper").appendChild(ifr);
-        var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
-        ifrw.document.open();
-        ifrw.document.write(text);
-        ifrw.document.close();
+          if(closeTagChecking() != 0){
+            window.alert("Close tag is missing");
+          }else{
+
+            //window.alert(closeTagChecking());
+            var text = editor.getValue();
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeOutput");  
+            document.getElementById("iframewrapper").innerHTML = "";
+            document.getElementById("iframewrapper").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();    
+          }     
     };
 
       $( document ).ready(function() {
@@ -62,3 +68,21 @@
         });
       };
     });
+    
+    function closeTagChecking(){
+      code = editor.getValue();
+      var close = 0;
+      for(var i = 0; i < code.length; i++){
+        if (code[i] == "<" && code[i+1] != "/" && code[i+1] != "!" && code[i+1] != "m"){
+          close = close + 1;
+        } else if (code[i] == "<" && code[i+1] == "/"){
+          close = close - 1;
+        }
+      }
+      return close;
+    }
+
+  var htmlDontClose = ["area", "base", "br", "col", "command", "embed", "hr", "img", "input", "keygen", "link", "meta", "param",
+                       "source", "track", "wbr"];
+  var htmlIndent = ["applet", "blockquote", "body", "button", "div", "dl", "fieldset", "form", "frameset", "h1", "h2", "h3", "h4",
+                    "h5", "h6", "head", "html", "iframe", "layer", "legend", "object", "ol", "p", "select", "table", "ul"];

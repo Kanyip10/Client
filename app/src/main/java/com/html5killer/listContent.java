@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebSettings;
 import android.webkit.WebViewClient;
@@ -65,7 +66,9 @@ public class listContent extends AppCompatActivity {
 
         editor.getSettings().setJavaScriptEnabled(true);
 
-        editor.setWebViewClient(new WebViewClient());
+        //editor.setWebViewClient(new WebViewClient());
+
+        editor.setWebChromeClient(new WebChromeClient());
 
         editor.loadUrl("file:///android_asset/tryit_editor_mirror/index.html");
 
