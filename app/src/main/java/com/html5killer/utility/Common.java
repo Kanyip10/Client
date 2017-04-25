@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 
-
 import com.html5killer.R;
 
 import java.io.IOException;
@@ -15,7 +14,7 @@ public class Common {
         try {
             return Drawable.createFromStream(ctx.getAssets().open(image), null);
         } catch (IOException e) {
-            return ctx.getResources().getDrawable(R.drawable.logo);
+            return ctx.getResources().getDrawable(R.drawable.ic_launcher);
         }
     }
 
@@ -23,7 +22,7 @@ public class Common {
         try {
             return BitmapFactory.decodeStream(ctx.getAssets().open(image));
         } catch (IOException e) {
-            return BitmapFactory.decodeResource(ctx.getResources(), R.drawable.logo);
+            return BitmapFactory.decodeResource(ctx.getResources(), R.drawable.ic_launcher);
         }
     }
 }

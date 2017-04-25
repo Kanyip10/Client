@@ -2,16 +2,16 @@
 <items version="2" >
 
     <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="3683531139103cc263b71d8b5ac6062832a8fd30">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-cc834bde9e5b0e89aca692be8cbcc18a277a9ae2.jar" />
+    </item>
+    <item
         jar="/Users/KanYip/Library/Android/sdk/platforms/android-24/optional/org.apache.http.legacy.jar"
         revision="24.0.2"
         sha1="fb7023e781abb70ed1b0442eb611fbed295cae84">
         <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackRuntimeLibraries/debug/jars/8000/40/org.apache.http.legacy-4fd30f5e14178f2e16234489ba2c257ba934cbed.jar" />
-    </item>
-    <item
-        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.2.0/jars/classes.jar"
-        revision="24.0.2"
-        sha1="6da05b7498da036b5b37c3beb861cd2060929dcd">
-        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-e8526c50312e28123102dfa2ce1ffb172cfd554c.jar" />
     </item>
     <item
         jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.onesignal/OneSignal/3.4.4/jars/classes.jar"
@@ -26,10 +26,10 @@
         <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/adapter-rxjava-2.1.0-901ee73311d606aab60e2b807ebd90c7f33ae297.jar" />
     </item>
     <item
-        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/10.2.0/jars/classes.jar"
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.1/jars/classes.jar"
         revision="24.0.2"
-        sha1="857ce7350acf811749c8fd0254d3d39b02aa71f5">
-        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-1ccc1c847bedc15dc9e472ee70bf0b2d57ed29e3.jar" />
+        sha1="19696dc358ac668e341f28c41e3387d61ccdb81d">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-5c76c2e6ff7aef043ef2b08da1e510640d085242.jar" />
     </item>
     <item
         jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
@@ -74,34 +74,22 @@
         <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/internal_impl-24.0.0-770597c28513772d7a65546602e75028cac71ea9.jar" />
     </item>
     <item
-        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/10.2.0/jars/classes.jar"
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.2.1/jars/classes.jar"
         revision="24.0.2"
-        sha1="3f4483afd050f3be12db7838422309446a45daa1">
-        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-85b4462aa697fb810998d64295372ae89d5d6d08.jar" />
+        sha1="825c2e97a00df4df5b0f3081faa4fd6280cd7c72">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-582afc836226e0e2bd1c41d6d2cdc71b5963d95f.jar" />
     </item>
     <item
-        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/10.2.0/jars/classes.jar"
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.1/jars/classes.jar"
         revision="24.0.2"
-        sha1="d08bb32b88df3dbcbe1d498c3c57f020b8c521ec">
-        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-cba4af687a50f43045a2acedb0c9232e4b026611.jar" />
-    </item>
-    <item
-        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.0/jars/classes.jar"
-        revision="24.0.2"
-        sha1="aa23e4589287adb431ef59d6c78af79ab8885682">
-        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-91c5644f5b39ef7e16b08fd6f859d78b0cb462cc.jar" />
+        sha1="da5c606c36276a12a356e351882044c6b4b9e8d4">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-977c46e1ef1bdd5e52c9671162f56106da7ba4b6.jar" />
     </item>
     <item
         jar="/Users/KanYip/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
         revision="24.0.2"
         sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
         <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/okhttp-3.3.0-6e8136377291679051e73caa2823b246582cfd85.jar" />
-    </item>
-    <item
-        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/jars/classes.jar"
-        revision="24.0.2"
-        sha1="3d13e510077b35fe8e49930a627dd849ad5da0dc">
-        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-f838562c7d573dcfd84626dce9a93d41bacf4dfb.jar" />
     </item>
     <item
         jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
@@ -122,16 +110,16 @@
         <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-909f2a93a45212548222308428c76903f3b31778.jar" />
     </item>
     <item
-        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/10.2.0/jars/classes.jar"
-        revision="24.0.2"
-        sha1="4ef2d91da513c4d7e773ae438fe04d0e4c135957">
-        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-953203142dedd71f99aae99bd6db665f0b0f11f6.jar" />
-    </item>
-    <item
         jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
         revision="24.0.2"
         sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
         <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-a881bba197346d928faac859293d37c370e5df8a.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="bdcc2a9572f18b8c90a3a157cab6cdfc97c6c736">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-ec1d734e4da5ae77a86be91f0aadff728897b5ac.jar" />
     </item>
     <item
         jar="/Users/KanYip/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
@@ -152,10 +140,10 @@
         <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-caa4bad1e0cbdcf6bf475ac2b35cfeda494ec1e4.jar" />
     </item>
     <item
-        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.0/jars/classes.jar"
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/10.2.1/jars/classes.jar"
         revision="24.0.2"
-        sha1="bd75f9f0296fe220da6d0ad961831b04541c4452">
-        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-9bead63b8c3fcb37d2bd3305b82eb14891c2bfd8.jar" />
+        sha1="cfa47e1b140562d47bc670629d07e209cd8b02c4">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-460ab9e0fb633aaf8989dbcfebd12053ce2a12bb.jar" />
     </item>
     <item
         jar="/Users/KanYip/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
@@ -218,6 +206,18 @@
         <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-840939665d402c0c156d95ffd5a558ec34c4aa81.jar" />
     </item>
     <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="c7626a9aa507bbbdc16188bc9a9f9bf3370c1ddd">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-f67a78235c4ba5b0dff6a07bdedfd69cf609ce3b.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="abf7c64e0bbaaa931738856734f76646ae62d9a5">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-cde1736a6054df5c4983e941a5c555d477ef63d4.jar" />
+    </item>
+    <item
         jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         revision="24.0.2"
         sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
@@ -236,22 +236,10 @@
         <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-9b0354de452ca28c9933c659322bab2399f8ea72.jar" />
     </item>
     <item
-        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/10.2.0/jars/classes.jar"
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.1/jars/classes.jar"
         revision="24.0.2"
-        sha1="ea03bbfaed89818f233ee9918fac493f2b63895a">
-        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-23e70d3f7669c519e2a87dcb93ec1fff7678aabe.jar" />
-    </item>
-    <item
-        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.2.0/jars/classes.jar"
-        revision="24.0.2"
-        sha1="a3f7595ca32e614b454ceb7b7e241bb037a28e86">
-        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-0ca9641d1cb02e6508945a21eacd23a842d2199d.jar" />
-    </item>
-    <item
-        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/10.2.0/jars/classes.jar"
-        revision="24.0.2"
-        sha1="421a5cebe9ff187c98075c59786e9464c5c67d36">
-        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-f5b477345dc073023817b3be4c4b4e4a009e1179.jar" />
+        sha1="6003d64df88a6ce5e961fa2bad7f1b9b97689ac1">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-a8b11a858473e671793c5621da22ccaa86b19c84.jar" />
     </item>
     <item
         jar="/Users/KanYip/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
@@ -260,10 +248,22 @@
         <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/gson-2.7-d5c8f5078494d7e4f35b329b7a0973e9d148f542.jar" />
     </item>
     <item
-        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.0/jars/classes.jar"
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/10.2.1/jars/classes.jar"
         revision="24.0.2"
-        sha1="1ac56e5801e986583cbe27f2cce57f626cc7ff93">
-        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-4a0204deddfedbb2fac68860b2b3161b10ec216f.jar" />
+        sha1="ab8343c3aadefce37313ceadd8bc4db1993f2ff0">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-ee934ac39a1341367c71f45753be6d58f74f8486.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="bb115a110992b254f767f337da233071f6f940b8">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-fd1e5fbcff665cff2a92994490718de774d7b81c.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="bfd85a88cf976eb2c54507cc914d8e8914c2f71e">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-c6234e683693383d571ff88b02c2a87626093951.jar" />
     </item>
 
 </items>

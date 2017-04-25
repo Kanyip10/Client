@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.ashleywong.myapplication.utility.CoverFlow android:id="@id/coverflow" android:layout_marginTop="5dp"
+    <com.html5killer.utility.CoverFlow android:id="@id/coverflow" android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

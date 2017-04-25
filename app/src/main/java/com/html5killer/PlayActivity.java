@@ -13,6 +13,7 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
@@ -172,7 +173,7 @@ public class PlayActivity extends Activity {
                     DBHelper.setScore(PlayActivity.this.getApplicationContext(), PlayActivity.this.mCurStage - 1, ((DifferencesInfo) PlayActivity.this.mDiffList.get(PlayActivity.this.mCurStage - 1)).getDatePlayed(), ((DifferencesInfo) PlayActivity.this.mDiffList.get(PlayActivity.this.mCurStage - 1)).getDuration(), ((DifferencesInfo) PlayActivity.this.mDiffList.get(PlayActivity.this.mCurStage - 1)).getErrors());
                 }
                 PlayActivity.this.rlImage1.removeViewsInLayout(PlayActivity.this.rlImage1.getChildCount() - PlayActivity.this.mHitPoints.size(), PlayActivity.this.mHitPoints.size());
-               // PlayActivity.this.rlImage2.removeViewsInLayout(PlayActivity.this.rlImage2.getChildCount() - PlayActivity.this.mHitPoints.size(), PlayActivity.this.mHitPoints.size());
+               //PlayActivity.this.rlImage2.removeViewsInLayout(PlayActivity.this.rlImage2.getChildCount() - PlayActivity.this.mHitPoints.size(), PlayActivity.this.mHitPoints.size());
                 PlayActivity.this.mGameTimer.cancel();
                 PlayActivity.this.mHitPoints.clear();
                 PlayActivity playActivity = PlayActivity.this;
@@ -224,6 +225,7 @@ public class PlayActivity extends Activity {
             switch (event.getAction()) {
                 case DetectedActivity.IN_VEHICLE /*0*/:
                     PlayActivity.this.mDiffPoint = PlayActivity.this.CheckForDetection(PlayActivity.this.mImageB1,(int) event.getX(), (int) event.getY());
+
                     PlayActivity playActivity;
                     if (PlayActivity.this.mDiffPoint != null) {
                         PlayActivity.this.mHitPoints.add(Integer.valueOf(PlayActivity.this.mDiffPoint.getID()));
@@ -372,11 +374,6 @@ public class PlayActivity extends Activity {
         LoadListeners();
         LoadStage(this.mCurStage);
         LinearLayout layout = (LinearLayout) findViewById(R.id.linearLayoutAdmob);
-        AdView adView = new AdView(this);
-        adView.setAdSize(AdSize.SMART_BANNER);
-        adView.setAdUnitId(getResources().getString(R.string.admob_id));
-        layout.addView(adView);
-        adView.loadAd(new AdRequest.Builder().build());
     }
 
     public void onPause() {
@@ -415,7 +412,7 @@ public class PlayActivity extends Activity {
         this.mImageB1 = Common.loadImageFromAsset(this, this.mDiffinfo.getImageLocation1());
         this.mImageB2 = Common.loadImageFromAsset(this, this.mDiffinfo.getImageLocation2());
         setImageViewBitmap(this.mImageV1, this.mImageB1);
-//        setImageViewBitmap(this.mImageV2, this.mImageB2);
+        setImageViewBitmap(this.mImageV2, this.mImageB2);
         if (this.mResumeAt != this.mLevelDuration) {
             for (int i = 0; i < this.mHitPoints.size(); i++) {
                 this.mDiffPoint = this.mDiffinfo.getPoint(((Integer) this.mHitPoints.get(i)).intValue());
@@ -442,7 +439,7 @@ public class PlayActivity extends Activity {
     private void LoadResources() {
         parseXML(getResources().getString(R.string.imageLocation));
         readDBData();
-        this.mProgressBar = (SaundProgressBar) findViewById(R.id.ProgressBar);
+        this.mProgressBar = (SaundProgressBar) findViewById(R.id.progressBar);
         this.mProgressBar.setMax(this.mLevelDuration);
         this.rlImage1 = (RelativeLayout) findViewById(R.id.rlayout1);
         this.rlImage2 = (RelativeLayout) findViewById(R.id.rlayout2);
@@ -509,6 +506,9 @@ public class PlayActivity extends Activity {
     }
 
     private DifferencePoint CheckForDetection(Bitmap b1, int x, int y) {
+        Log.i("TAG", "moving: (" + (int) (((float) x) * (((float) b1.getWidth()) / ((float) this.scaledWidth))) + ", " + (int) (((float) y) * (((float) b1.getHeight()) / ((float) this.scaledHeight)))+ ")");
+
+
         return this.mDiffinfo.isPointInRadius((int) (((float) x) * (((float) b1.getWidth()) / ((float) this.scaledWidth))), (int) (((float) y) * (((float) b1.getHeight()) / ((float) this.scaledHeight))), true);
     }
 
