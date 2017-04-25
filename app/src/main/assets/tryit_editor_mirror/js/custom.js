@@ -1,8 +1,13 @@
     function submitTryit(){
-          if(closeTagChecking() != 0){
-            window.alert("Close tag is missing");
+          if(closeTagChecking2() == 1){
+            window.alert("There is " + closeTagChecking2() + " close tag missing");
+          }else if(closeTagChecking2() > 1){
+            window.alert("There are " + closeTagChecking2() + " close tag missing");
+          }else if(closeTagChecking2() == -1){
+            window.alert("There is " + Math.abs(closeTagChecking2()) + " unmatched close tag");
+          }else if(closeTagChecking2() < -1){
+            window.alert("There are " + Math.abs(closeTagChecking2()) + " unmatched close tag");
           }else{
-
             //window.alert(closeTagChecking());
             var text = editor.getValue();
             var ifr = document.createElement("iframe");
@@ -82,7 +87,34 @@
       return close;
     }
 
-  var htmlDontClose = ["area", "base", "br", "col", "command", "embed", "hr", "img", "input", "keygen", "link", "meta", "param",
-                       "source", "track", "wbr"];
-  var htmlIndent = ["applet", "blockquote", "body", "button", "div", "dl", "fieldset", "form", "frameset", "h1", "h2", "h3", "h4",
-                    "h5", "h6", "head", "html", "iframe", "layer", "legend", "object", "ol", "p", "select", "table", "ul"];
+    function closeTagChecking2(){
+      code = editor.getValue();
+      var htmlDontClose = ["area", "base", "br", "col", "command", "embed", "hr", "img", "input", "keygen", "link", "meta", "param",
+                         "source", "track", "wbr"];
+      var htmlIndent = ["applet", "blockquote", "body", "button", "canvas", "div", "dl", "fieldset", "form", "frameset", "h1", "h2", "h3", "h4",
+                        "h5", "h6", "head", "html", "iframe", "layer", "legend", "object", "ol", "p", "script", "select", "style",
+                        "table", "title", "ul"];
+      var close = 0;
+      var buffer = [];
+      var index = 0;
+      for(var i = 0; i < code.length; i++){
+        if (code[i] == "<" && code[i+1] != "/" && code[i+1] != "!"){
+          var x = i;
+          while(code[x+1] != ">" && code[x+1] != " "){
+            buffer[index] = code[x+1];
+            x = x + 1;
+            index = index + 1;
+          }
+          tagBuffer = buffer.join("");
+          if (htmlIndent.includes(tagBuffer)){
+            close = close + 1;
+          }
+          buffer = [];
+        } else if (code[i] == "<" && code[i+1] == "/"){
+          close = close - 1;
+        }
+      }
+      return close;
+    }
+
+
