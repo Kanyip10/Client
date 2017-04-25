@@ -15,6 +15,7 @@ import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.preference.PreferenceManager;
+import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
@@ -31,8 +32,13 @@ import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.html5killer.db.DBHelper;
 import com.html5killer.db.StatusInfoDB;
+import com.html5killer.model.Response;
+import com.html5killer.model.User;
+import com.html5killer.network.NetworkUtil;
 import com.html5killer.utility.Common;
 import com.html5killer.utility.DifferencePoint;
 import com.html5killer.utility.DifferencesInfo;
@@ -49,6 +55,7 @@ import com.html5killer.utils.Constants;
 import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.text.MessageFormat;
 import java.text.SimpleDateFormat;
@@ -57,6 +64,9 @@ import java.util.Date;
 
 import javax.xml.parsers.SAXParserFactory;
 
+import retrofit2.adapter.rxjava.HttpException;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
 
 public class PlayActivity extends Activity {
@@ -158,6 +168,7 @@ public class PlayActivity extends Activity {
             }
 
             public void onClick(DialogInterface dialog, int which) {
+
                // PlayActivity.this.startActivity(new Intent(PlayActivity.this, HomeActivity.class));
                 PlayActivity.this.finish();
             }
@@ -194,6 +205,7 @@ public class PlayActivity extends Activity {
                     String title = PlayActivity.this.getString(R.string.success_title);
                     Object[] args = new Object[]{Integer.valueOf(PlayActivity.this.mTotalScore), Integer.valueOf(nHighScore)};
                     String message = MessageFormat.format(PlayActivity.this.getString(R.string.success), args);
+                    updateExp();
                     int icon = R.drawable.win;
                     if (PlayActivity.this.mTotalScore > nHighScore) {
                         title = PlayActivity.this.getString(R.string.hiscore_title);
@@ -381,10 +393,11 @@ public class PlayActivity extends Activity {
         setContentView(R.layout.activity_play);
         LoadConfigParams();
         LoadSharedPreferences();
+        initSharedPreferences();
+        Log.i("TAG", mEmail+ "    " + mToken);
         LoadResources();
         LoadListeners();
         LoadStage(this.mCurStage);
-        initSharedPreferences();
         LinearLayout layout = (LinearLayout) findViewById(R.id.linearLayoutAdmob);
     }
 
@@ -618,9 +631,59 @@ public class PlayActivity extends Activity {
 
 
     private void initSharedPreferences() {
+        Bundle bundle = getIntent().getExtras();
 
-        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        mToken = mSharedPreferences.getString(Constants.TOKEN,"");
-        mEmail = mSharedPreferences.getString(Constants.EMAIL,"");
+        mToken = bundle.getString(Constants.TOKEN);
+        mEmail = bundle.getString(Constants.EMAIL);
+
     }
+
+    private void updateExp(){
+        Log.i("TAG",""+PlayActivity.this.mTotalScore);
+        User user = new User();
+        user.setNewExp(PlayActivity.this.mTotalScore/200);
+        changeExp(user);
+    }
+
+    private void changeExp(User user) {
+
+        mSubscriptions.add(NetworkUtil.getRetrofit(mToken).changeExp(mEmail,user)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(this::Response,this::handleError));
+    }
+
+    private void Response(Response response) {
+
+    }
+
+    private void handleError(Throwable error) {
+
+
+
+        if (error instanceof HttpException) {
+
+            Gson gson = new GsonBuilder().create();
+
+            try {
+
+                String errorBody = ((HttpException) error).response().errorBody().string();
+                Response response = gson.fromJson(errorBody,Response.class);
+                showSnackBarMessage(response.getMessage());
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+
+            showSnackBarMessage("Network Error !");
+        }
+    }
+
+    private void showSnackBarMessage(String message) {
+
+        Snackbar.make(findViewById(R.id.gameResult),message,Snackbar.LENGTH_SHORT).show();
+
+    }
+
 }

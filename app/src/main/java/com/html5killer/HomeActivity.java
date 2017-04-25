@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -33,7 +34,14 @@ public class HomeActivity extends Activity {
         public void onClick(View v) {
             Prefs.clearPref(HomeActivity.this.getApplicationContext());
             Prefs.setStagePref(HomeActivity.this.getApplicationContext(), 1);
-            HomeActivity.this.startActivity(new Intent(HomeActivity.this, PlayActivity.class));
+            Intent intent = new Intent(HomeActivity.this, PlayActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString(Constants.EMAIL, mEmail);
+            bundle.putString(Constants.TOKEN, mToken);
+            intent.putExtras(bundle);
+            startActivity(intent);
+
+
         }
     }
 
@@ -43,12 +51,14 @@ public class HomeActivity extends Activity {
         }
 
         public void onClick(View v) {
+            Intent intent = new Intent(HomeActivity.this, PlayActivity.class);
             Bundle bundle = new Bundle();
             bundle.putString(Constants.EMAIL, mEmail);
             bundle.putString(Constants.TOKEN, mToken);
+            intent.putExtras(bundle);
+            startActivity(intent);
 
-            HomeActivity.this.startActivity(new Intent(HomeActivity.this, PlayActivity.class).putExtras(bundle)
-            );
+
         }
     }
 
@@ -58,6 +68,7 @@ public class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         initSharedPreferences();
+        Log.i("TAG", mEmail+ "    " + mToken);
         this.mLevelDuration = getResources().getInteger(R.integer.levelDuration);
         this.mLevelDuration *= GeofenceStatusCodes.GEOFENCE_NOT_AVAILABLE;
         this.mBtnSingle = (Button) findViewById(R.id.btnSingle);
@@ -73,9 +84,11 @@ public class HomeActivity extends Activity {
     }
     private void initSharedPreferences() {
 
-        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        mToken = mSharedPreferences.getString(Constants.TOKEN,"");
-        mEmail = mSharedPreferences.getString(Constants.EMAIL,"");
+        Bundle bundle = getIntent().getExtras();
+
+        mToken = bundle.getString(Constants.TOKEN);
+        mEmail = bundle.getString(Constants.EMAIL);
+
     }
     protected void onRestart() {
         super.onRestart();
