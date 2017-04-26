@@ -391,6 +391,7 @@ public class PlayActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
+        mSubscriptions = new CompositeSubscription();
         LoadConfigParams();
         LoadSharedPreferences();
         initSharedPreferences();

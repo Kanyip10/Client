@@ -6,9 +6,27 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.html5killer.TutorialActivity">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
 
 
-    <include layout="@layout/content_tutorial" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/wiseowl"
+        android:id="@+id/imageView2" />
+
+    <ExpandableListView
+        android:id="@+id/lvExp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@id/imageView2"/>
+
+
+
+</RelativeLayout>
+
 
 </android.support.design.widget.CoordinatorLayout>

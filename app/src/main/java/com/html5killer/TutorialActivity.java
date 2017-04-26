@@ -10,13 +10,133 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 public class TutorialActivity extends AppCompatActivity {
+    ExpandableListAdapter listAdapter;
+    ExpandableListView expListView;
+    List<String> listDataHeader;
+    HashMap<String, List<String>> listDataChild;
+    private ImageView owl;
 
-    private ListView listView;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_tutorial);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        // get the listview
+        expListView = (ExpandableListView) findViewById(R.id.lvExp);
+
+        // preparing list data
+        prepareListData();
+
+        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+
+        // setting list adapter
+        expListView.setAdapter(listAdapter);
+        owl = (ImageView) findViewById(R.id.imageView2);
+      /*  arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
+        arrayAdapter.addAll(Arrays.asList(tutorials));
+
+        listView = (ListView)findViewById(R.id.listView);
+        listView.setAdapter(arrayAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                TutorialActivity.this.openPDF(TutorialActivity.this.urls[position]);
+
+            }
+        });*/
+
+
+    expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+
+        @Override
+        public void onGroupExpand(int groupPosition) {
+            Toast.makeText(getApplicationContext(),
+                    listDataHeader.get(groupPosition) + " Expanded",
+                    Toast.LENGTH_SHORT).show();
+        }
+    });
+
+    // Listview Group collasped listener
+    expListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+
+        @Override
+        public void onGroupCollapse(int groupPosition) {
+            Toast.makeText(getApplicationContext(),
+                    listDataHeader.get(groupPosition) + " Collapsed",
+                    Toast.LENGTH_SHORT).show();
+
+        }
+    });
+
+    // Listview on child click listener
+    expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+
+        @Override
+        public boolean onChildClick(ExpandableListView parent, View v,
+        int groupPosition, int childPosition, long id) {
+            // TODO Auto-generated method stub
+            Toast.makeText(
+                    getApplicationContext(),
+                    listDataHeader.get(groupPosition)
+                            + " : "
+                            + listDataChild.get(
+                            listDataHeader.get(groupPosition)).get(
+                            childPosition), Toast.LENGTH_SHORT)
+                    .show();
+            return false;
+        }
+    });
+}
+
+    /*
+     * Preparing the list data
+     */
+    private void prepareListData() {
+        listDataHeader = new ArrayList<String>();
+        listDataChild = new HashMap<String, List<String>>();
+
+        // Adding child data
+        listDataHeader.add("Tutorial 1");
+        listDataHeader.add("Tutorial 2");
+        listDataHeader.add("Tutorial 3");
+
+        // Adding child data
+        List<String> Tutorial1 = new ArrayList<String>();
+        Tutorial1.add("PDF");
+        Tutorial1.add("Youtube");
+        Tutorial1.add("Test");
+
+
+        List<String> Tutorial2 = new ArrayList<String>();
+        Tutorial2.add("PDF");
+        Tutorial2.add("Youtube");
+        Tutorial2.add("Test");
+
+        List<String> Tutorial3 = new ArrayList<String>();
+        Tutorial3.add("PDF");
+        Tutorial3.add("Youtube");
+        Tutorial3.add("Test");
+
+        listDataChild.put(listDataHeader.get(0), Tutorial1); // Header, Child data
+        listDataChild.put(listDataHeader.get(1), Tutorial2);
+        listDataChild.put(listDataHeader.get(2), Tutorial3);
+    }
+}
+
+  /*  private ListView listView;
     private String[] tutorials = {
             "Tutorial 1 - PDF",
             "Tutorial 1 - Youtube",
@@ -51,26 +171,7 @@ public class TutorialActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tutorial);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
-        arrayAdapter.addAll(Arrays.asList(tutorials));
-
-        listView = (ListView)findViewById(R.id.listView);
-        listView.setAdapter(arrayAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                TutorialActivity.this.openPDF(TutorialActivity.this.urls[position]);
-
-            }
-        });
-    }
 
 
-}
+
+}*/
