@@ -36,6 +36,8 @@ public class listContent extends AppCompatActivity {
     private TextView lname;
     private TextView ddescription;
     private TextView lddescription;
+    private TextView dexample;
+    private TextView lexample;
 
 
     private TextView mTvMessage;
@@ -60,6 +62,8 @@ public class listContent extends AppCompatActivity {
         lname = (TextView) findViewById(R.id.lname);
         ddescription = (TextView) findViewById(R.id.ddescrition);
         lddescription = (TextView) findViewById(R.id.ldescrition);
+        dexample = (TextView) findViewById(R.id.dexample);
+        lexample = (TextView) findViewById(R.id.lexample);
         sorting(listname);
 
         editor = (WebView) findViewById(R.id.webView);
@@ -102,6 +106,7 @@ public class listContent extends AppCompatActivity {
 
         lname.setText(list.getName());
         lddescription.setText(list.getDescription());
+        lexample.setText(list.getSample());
 
 
 
