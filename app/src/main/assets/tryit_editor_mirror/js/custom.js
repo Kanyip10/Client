@@ -1,12 +1,14 @@
     function submitTryit(){
-          if(closeTagChecking2() == 1){
-            window.alert("There is " + closeTagChecking2() + " close tag missing");
-          }else if(closeTagChecking2() > 1){
-            window.alert("There are " + closeTagChecking2() + " close tag missing");
-          }else if(closeTagChecking2() == -1){
-            window.alert("There is " + Math.abs(closeTagChecking2()) + " unmatched close tag");
-          }else if(closeTagChecking2() < -1){
-            window.alert("There are " + Math.abs(closeTagChecking2()) + " unmatched close tag");
+          //checking = closeTagChecking2().length;
+
+          if(closeTagChecking2().length != 0){
+            var unClosedTagBuffer = closeTagChecking2();
+            for (var i = 0; i < unClosedTagBuffer.length; i++){
+              unClosedTagBuffer[i] = "<" + unClosedTagBuffer[i] + ">";
+            }
+           window.alert("The close tag of " + unClosedTagBuffer + " is missing");
+          //}else if(closeTagChecking2().length < -1){
+            //window.alert("There are " + closeTagChecking2() + " unmatched close tag");
           }else{
             //window.alert(closeTagChecking());
             var text = editor.getValue();
@@ -85,7 +87,7 @@
         }
       }
       return close;
-    }
+    };
 
     function closeTagChecking2(){
       code = editor.getValue();
@@ -97,6 +99,11 @@
       var close = 0;
       var buffer = [];
       var index = 0;
+      var unClosedTag = [];
+      var unClosedIndex = 0;
+      var closedTagIndex = 0;
+      var tag = "";
+
       for(var i = 0; i < code.length; i++){
         if (code[i] == "<" && code[i+1] != "/" && code[i+1] != "!"){
           var x = i;
@@ -105,16 +112,34 @@
             x = x + 1;
             index = index + 1;
           }
-          tagBuffer = buffer.join("");
-          if (htmlIndent.includes(tagBuffer)){
+          tag = buffer.join("");
+          if (htmlIndent.includes(tag)){
+            unClosedTag.splice(unClosedIndex, 0, tag);
+            unClosedIndex = unClosedIndex + 1;
             close = close + 1;
           }
+          tag = "";
           buffer = [];
+          index = 0;
         } else if (code[i] == "<" && code[i+1] == "/"){
-          close = close - 1;
+          var y = i + 1;
+          while(code[y+1] != ">" && code[y+1] != " "){
+            buffer[index] = code[y+1];
+            y = y + 1;
+            index = index + 1;         
+          }
+          tag = buffer.join("");  
+          if (unClosedTag.includes(tag)){
+            closedIndex = unClosedTag.indexOf(tag);
+            unClosedTag.splice(closedIndex, 1);
+            close = close - 1;
+          }
+          tag = "";
+          buffer = [];
+          index = 0;
         }
-      }
-      return close;
     }
+    return unClosedTag;
+  };
 
 
