@@ -18,16 +18,16 @@ public class TestLibrary {
     };
 
     private String mQuestions [] = {
-            "What is the Headings tag used for \'Hello 1\'?",
-            "What is the tag used for creating the above html?",
+            "What kind of attribute should be used to generate this table?",
+            "What kind of attribute should be used to make this list?",
             "What is the corresponding xx and yy?",
             "What is the corresponding xx and yy on the above html?"
     };
 
 
     private String mChoices[][] = {
-            {"<H1>", "<H2>", "<H6>", "<H7>"},
-            {"<img>", "<image>", "<photo>", "<canvas>"},
+            {"colspan = \"2\"", "rowspan = \"2\" ", "split = \"2\"", "separate = \"2\""},
+            {"type=\"circle\"", "type=\"disk\"", "list-style-type:disk", "list-style-type:circle"},
             {"<xx> = <td>, <yy> = <th>", "<xx> = <th>, <yy> = <td>", "<xx> = <tr>, <yy> = <th>", "<xx> = <th>, <yy> = <tr>"},
             {"<xx> = <ul>, <yy> = <ol>", "<xx> = <ol>, <yy> = <ul>", "<xx> = <li>, <yy> = <ol>", "<xx> = <ol>, <yy> = <li>"}
 
@@ -35,7 +35,7 @@ public class TestLibrary {
 
 
 
-    private String mCorrectAnswers[] = {"<H6>", "<img>", "<xx> = <th>, <yy> = <td>", "<xx> = <ul>, <yy> = <ol>"};
+    private String mCorrectAnswers[] = {"colspan = \"2\"", "list-style-type:circle", "<xx> = <th>, <yy> = <td>", "<xx> = <ul>, <yy> = <ol>"};
 
     public int getQuestionImage(int a) {
         int image = mQuestionImages[a];
