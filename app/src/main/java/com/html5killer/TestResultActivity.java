@@ -126,8 +126,11 @@ public class TestResultActivity extends AppCompatActivity {
 
     private void updateExp(){
         User user = new User();
-        user.setNewExp(mTestActivity.getCountCorrect());
-        changeExp(user);
+        if(mTestActivity.getCountCorrect() == 4){
+            user.setNewExp(mTestActivity.getCountCorrect());
+            changeExp(user);
+        }
+
     }
 
     private void changeExp(User user) {
