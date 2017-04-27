@@ -37,4 +37,5 @@
     <item type="id" name="label">false</item>
     <item type="id" name="progress">false</item>
     <item type="id" name="pattern">false</item>
+    <item name="errorCount" type="id">false</item>
 </resources>

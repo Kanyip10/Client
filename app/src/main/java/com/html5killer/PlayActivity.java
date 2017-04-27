@@ -86,6 +86,7 @@ public class PlayActivity extends Activity {
     private CountDownTimer mGameTimer;
     private int mHitHeight;
     private ArrayList<Integer> mHitPoints;
+
     private int mHitWidth;
     private Bitmap mImageB1;
     private Bitmap mImageB2;
@@ -105,6 +106,7 @@ public class PlayActivity extends Activity {
     private TextView mTxtHintCount;
     private TextView mTxtHitCount;
     private TextView mTxtScoreCount;
+    private TextView mTxtErrorCount;
     private RelativeLayout rlImage1;
     private RelativeLayout rlImage2;
     private int scaledHeight;
@@ -455,6 +457,7 @@ public class PlayActivity extends Activity {
         this.mTxtHintCount.setText(Integer.toString(this.mNumOfHints));
         this.mTxtScoreCount.setText(new StringBuilder(String.valueOf(getResources().getString(R.string.score))).append(" : ").append(Integer.toString(this.mTotalScore)).toString());
         this.mTxtHitCount.setText(new StringBuilder(String.valueOf(getResources().getString(R.string.found))).append(" : ").append(Integer.toString(this.mHitPoints.size())).append("/").append(Integer.toString(this.mNumOfDifferencs)).toString());
+        this.mTxtErrorCount.setText(new StringBuilder(String.valueOf(getResources().getString(R.string.error))).append(" : ").append(Integer.toString(this.mNumOfErrors)).append("/").append(PlayActivity.this.getResources().getInteger(R.integer.errorsAllowed)).toString());
         if (this.mPlaySound) {
             this.mBtnSound.setImageResource(R.drawable.sound);
         } else {

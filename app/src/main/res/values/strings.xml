@@ -61,6 +61,7 @@
     <string name="admob_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="found">Found</string>
     <string name="score">Score</string>
+    <string name="error">Error allowed:</string>
     <string name="player1score">Player 1</string>
     <string name="player2score">Player 2</string>
     <string name="btnHome">Home</string>

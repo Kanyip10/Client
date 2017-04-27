@@ -27,6 +27,7 @@ public class Prefs {
     private static String MY_TOTALS_PLAYER2_PREF;
     private static String MY_TOTALS_PREF;
 
+
     static {
         MY_STAGE_PREF = "stage";
         MY_STAGE_MULTI_PREF = "stageMulti";

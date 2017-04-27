@@ -15,6 +15,7 @@ package com.html5killer.fragments;
         import android.widget.ArrayAdapter;
         import android.widget.ExpandableListView;
         import android.widget.ImageView;
+        import android.widget.ListAdapter;
         import android.widget.ListView;
         import android.widget.Toast;
 
@@ -42,10 +43,12 @@ public class TutorialFragment extends Fragment {
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         activity.setSupportActionBar(toolbar);
-
+        owl = (ImageView) view.findViewById(R.id.imageView2);
 
         // get the listview
         expListView = (ExpandableListView) view.findViewById(R.id.lvExp);
+
+
 
         // preparing list data
         prepareListData();
@@ -54,7 +57,8 @@ public class TutorialFragment extends Fragment {
 
         // setting list adapter
         expListView.setAdapter(listAdapter);
-        owl = (ImageView) view.findViewById(R.id.imageView2);
+
+
       /*  arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
         arrayAdapter.addAll(Arrays.asList(tutorials));
 
@@ -67,7 +71,7 @@ public class TutorialFragment extends Fragment {
 
             }
         });*/
-
+        setListViewHeight(expListView,3);
 
         expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
 
@@ -112,6 +116,40 @@ public class TutorialFragment extends Fragment {
         });
         return  view;
     }
+    private void setListViewHeight(ExpandableListView listView,
+                                   int group) {
+        ExpandableListAdapter listAdapter = (ExpandableListAdapter) listView.getExpandableListAdapter();
+        int totalHeight = 0;
+        int desiredWidth = View.MeasureSpec.makeMeasureSpec(listView.getWidth(),
+                View.MeasureSpec.EXACTLY);
+        for (int i = 0; i < listAdapter.getGroupCount(); i++) {
+            View groupItem = listAdapter.getGroupView(i, false, null, listView);
+            groupItem.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
+
+            totalHeight += groupItem.getMeasuredHeight();
+
+            if (((listView.isGroupExpanded(i)) && (i != group))
+                    || ((!listView.isGroupExpanded(i)) && (i == group))) {
+                for (int j = 0; j < listAdapter.getChildrenCount(i); j++) {
+                    View listItem = listAdapter.getChildView(i, j, false, null,
+                            listView);
+                    listItem.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
+
+                    totalHeight += listItem.getMeasuredHeight();
+
+                }
+            }
+        }
+
+        ViewGroup.LayoutParams params = listView.getLayoutParams();
+        int height = totalHeight
+                + (listView.getDividerHeight() * (listAdapter.getGroupCount() - 1));
+        if (height < 10)
+            height = 200;
+        params.height = height;
+        listView.setLayoutParams(params);
+        listView.requestLayout();
+    }
 
     /*
      * Preparing the list data
@@ -124,27 +162,48 @@ public class TutorialFragment extends Fragment {
         listDataHeader.add("Tutorial 1");
         listDataHeader.add("Tutorial 2");
         listDataHeader.add("Tutorial 3");
+        listDataHeader.add("Tutorial 4");
+        listDataHeader.add("Tutorial 5");
+
 
         // Adding child data
         List<String> Tutorial1 = new ArrayList<String>();
         Tutorial1.add("PDF");
         Tutorial1.add("Youtube");
         Tutorial1.add("Test");
+        Tutorial1.add("Game");
 
 
         List<String> Tutorial2 = new ArrayList<String>();
         Tutorial2.add("PDF");
         Tutorial2.add("Youtube");
         Tutorial2.add("Test");
+        Tutorial2.add("Game");
 
         List<String> Tutorial3 = new ArrayList<String>();
         Tutorial3.add("PDF");
         Tutorial3.add("Youtube");
         Tutorial3.add("Test");
+        Tutorial3.add("Game");
+        List<String> Tutorial4 = new ArrayList<String>();
+        Tutorial4.add("PDF");
+        Tutorial4.add("Youtube");
+        Tutorial4.add("Test");
+        Tutorial4.add("Game");
+        List<String> Tutorial5 = new ArrayList<String>();
+        Tutorial5.add("PDF");
+        Tutorial5.add("Youtube");
+        Tutorial5.add("Test");
+        Tutorial5.add("Game");
+
+
 
         listDataChild.put(listDataHeader.get(0), Tutorial1); // Header, Child data
         listDataChild.put(listDataHeader.get(1), Tutorial2);
         listDataChild.put(listDataHeader.get(2), Tutorial3);
+        listDataChild.put(listDataHeader.get(3), Tutorial4);
+        listDataChild.put(listDataHeader.get(4), Tutorial5);
+
     }
 }
 
