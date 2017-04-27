@@ -645,7 +645,7 @@ public class PlayActivity extends Activity {
     private void updateExp(){
         Log.i("TAG",""+PlayActivity.this.mTotalScore);
         User user = new User();
-        user.setNewExp(PlayActivity.this.mTotalScore/200);
+        user.setNewExp(50);
         changeExp(user);
     }
 
