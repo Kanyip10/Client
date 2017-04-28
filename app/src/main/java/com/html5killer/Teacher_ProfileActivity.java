@@ -254,9 +254,7 @@ public class Teacher_ProfileActivity extends AppCompatActivity implements Change
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_tutorial) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_gallery) {
 
             Intent intent = new Intent(this, ReferenceListActivity.class);
             Bundle bundle = new Bundle();
@@ -265,17 +263,7 @@ public class Teacher_ProfileActivity extends AppCompatActivity implements Change
             intent.putExtras(bundle);
             startActivity(intent);
 
-        } else if (id == R.id.nav_slideshow) {
 
-            Intent intent = new Intent(this, GamePageActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putString(Constants.EMAIL, mEmail);
-            bundle.putString(Constants.TOKEN,mToken);
-            intent.putExtras(bundle);
-            startActivity(intent);
-
-
-        } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_logout) {
             logout();

@@ -53,6 +53,7 @@ public class Prefs {
 
     public static void clearPref(Context context) {
         setPointsPref(context, null);
+        setPointsMultiPref(context,null);
         setResumePref(context, context.getResources().getInteger(R.integer.levelDuration) * GeofenceStatusCodes.GEOFENCE_NOT_AVAILABLE);
         setStagePref(context, 1);
         setScaleWPref(context, 0);

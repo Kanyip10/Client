@@ -20,20 +20,32 @@ package com.html5killer.fragments;
         import android.widget.Toast;
 
         import com.html5killer.ExpandableListAdapter;
+        import com.html5killer.HomeActivity;
+        import com.html5killer.PlayActivity;
         import com.html5killer.R;
+        import com.html5killer.TestActivity;
+        import com.html5killer.utility.Prefs;
+        import com.html5killer.utils.Constants;
 
         import java.util.ArrayList;
         import java.util.Arrays;
         import java.util.HashMap;
         import java.util.List;
 
+        import android.content.SharedPreferences;
+
 public class TutorialFragment extends Fragment {
+
+    public static final String TAG = TutorialFragment.class.getSimpleName();
 
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
     private ImageView owl;
+    private String mToken;
+    private String mEmail;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -44,7 +56,7 @@ public class TutorialFragment extends Fragment {
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         activity.setSupportActionBar(toolbar);
         owl = (ImageView) view.findViewById(R.id.imageView2);
-
+        getData();
         // get the listview
         expListView = (ExpandableListView) view.findViewById(R.id.lvExp);
 
@@ -71,9 +83,9 @@ public class TutorialFragment extends Fragment {
 
             }
         });*/
-        setListViewHeight(expListView,3);
+        setListViewHeight(expListView,5);
 
-        expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+   /*     expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
 
             @Override
             public void onGroupExpand(int groupPosition) {
@@ -93,7 +105,7 @@ public class TutorialFragment extends Fragment {
                         Toast.LENGTH_SHORT).show();
 
             }
-        });
+        });*/
 
         // Listview on child click listener
         expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
@@ -102,17 +114,146 @@ public class TutorialFragment extends Fragment {
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
                 // TODO Auto-generated method stub
+             switch (groupPosition){
+                 case 0:
+                     switch (childPosition){
+                         case 0:
+                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view");
+                             break;
+                         case 1:
+                             openPDF("https://www.youtube.com/watch?v=9gTw2EDkaDQ");
+                             break;
+                         case 2:
+                             Intent intent = new Intent(getActivity(),TestActivity.class);
+                             Bundle bundle = new Bundle();
+                             bundle.putString(Constants.EMAIL, mEmail);
+                             bundle.putString(Constants.TOKEN,mToken);
+                             intent.putExtras(bundle);
+                             startActivity(intent);
+                             break;
+                         case 3:
+                             Intent intent1 = new Intent(getActivity(), HomeActivity.class);
+                             Bundle bundle1 = new Bundle();
+                             bundle1.putString(Constants.EMAIL, mEmail);
+                             bundle1.putString(Constants.TOKEN,mToken);
+                             intent1.putExtras(bundle1);
+                             startActivity(intent1);
+                             break;
 
-                Toast.makeText(
-                        getActivity().getApplicationContext(),
-                        listDataHeader.get(groupPosition)
-                                + " : "
-                                + listDataChild.get(
-                                listDataHeader.get(groupPosition)).get(
-                                childPosition), Toast.LENGTH_SHORT)
-                        .show();
-                return false;
-            }
+                     }
+                 case 1:
+                     switch (childPosition){
+                         case 0:
+                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view");
+                             break;
+                         case 1:
+                             openPDF("https://www.youtube.com/watch?v=9gTw2EDkaDQ");
+                             break;
+                         case 2:
+                             Intent intent = new Intent(getActivity(),TestActivity.class);
+                             Bundle bundle = new Bundle();
+                             bundle.putString(Constants.EMAIL, mEmail);
+                             bundle.putString(Constants.TOKEN,mToken);
+                             intent.putExtras(bundle);
+                             startActivity(intent);
+                             break;
+                         case 3:
+                             Intent intent1 = new Intent(getActivity(), HomeActivity.class);
+                             Bundle bundle1 = new Bundle();
+                             bundle1.putString(Constants.EMAIL, mEmail);
+                             bundle1.putString(Constants.TOKEN,mToken);
+                             intent1.putExtras(bundle1);
+                             startActivity(intent1);
+                             break;
+
+                     }
+                 case 2:
+                     switch (childPosition){
+                         case 0:
+                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view");
+                             break;
+                         case 1:
+                             openPDF("https://www.youtube.com/watch?v=9gTw2EDkaDQ");
+                             break;
+                         case 2:
+                             Intent intent = new Intent(getActivity(),TestActivity.class);
+                             Bundle bundle = new Bundle();
+                             bundle.putString(Constants.EMAIL, mEmail);
+                             bundle.putString(Constants.TOKEN,mToken);
+                             intent.putExtras(bundle);
+                             startActivity(intent);
+                             break;
+                         case 3:
+                             Intent intent1 = new Intent(getActivity(), HomeActivity.class);
+                             Bundle bundle1 = new Bundle();
+                             bundle1.putString(Constants.EMAIL, mEmail);
+                             bundle1.putString(Constants.TOKEN,mToken);
+                             intent1.putExtras(bundle1);
+                             startActivity(intent1);
+                             break;
+
+                     }
+                 case 3:
+                     switch (childPosition){
+                         case 0:
+                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view");
+                             break;
+                         case 1:
+                             openPDF("https://www.youtube.com/watch?v=9gTw2EDkaDQ");
+                             break;
+                         case 2:
+                             Intent intent = new Intent(getActivity(),TestActivity.class);
+                             Bundle bundle = new Bundle();
+                             bundle.putString(Constants.EMAIL, mEmail);
+                             bundle.putString(Constants.TOKEN,mToken);
+                             intent.putExtras(bundle);
+                             startActivity(intent);
+                             break;
+                         case 3:
+                             Intent intent1 = new Intent(getActivity(), HomeActivity.class);
+                             Bundle bundle1 = new Bundle();
+                             bundle1.putString(Constants.EMAIL, mEmail);
+                             bundle1.putString(Constants.TOKEN,mToken);
+                             intent1.putExtras(bundle1);
+                             startActivity(intent1);
+                             break;
+
+                     }case 4:
+                     switch (childPosition){
+                         case 0:
+                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view");
+                             break;
+                         case 1:
+                             openPDF("https://www.youtube.com/watch?v=9gTw2EDkaDQ");
+                             break;
+                         case 2:
+                             Intent intent = new Intent(getActivity(),TestActivity.class);
+                             Bundle bundle = new Bundle();
+                             bundle.putString(Constants.EMAIL, mEmail);
+                             bundle.putString(Constants.TOKEN,mToken);
+                             intent.putExtras(bundle);
+                             startActivity(intent);
+                             break;
+                         case 3:
+                             Intent intent1 = new Intent(getActivity(), HomeActivity.class);
+                             Bundle bundle1 = new Bundle();
+                             bundle1.putString(Constants.EMAIL, mEmail);
+                             bundle1.putString(Constants.TOKEN,mToken);
+                             intent1.putExtras(bundle1);
+                             startActivity(intent1);
+                             break;
+
+                     }
+
+
+
+
+
+
+             }
+
+
+            return false;}
         });
         return  view;
     }
@@ -184,7 +325,7 @@ public class TutorialFragment extends Fragment {
         Tutorial3.add("PDF");
         Tutorial3.add("Youtube");
         Tutorial3.add("Test");
-        Tutorial3.add("Game");
+        Tutorial3.add("Game         " + getActivity().getSharedPreferences("FIND_DIFF", 0).getInt("HIGHSCORE", 0));
         List<String> Tutorial4 = new ArrayList<String>();
         Tutorial4.add("PDF");
         Tutorial4.add("Youtube");
@@ -205,6 +346,21 @@ public class TutorialFragment extends Fragment {
         listDataChild.put(listDataHeader.get(4), Tutorial5);
 
     }
+    protected void openPDF(String url){
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(intent);
+
+    }
+    private void getData() {
+
+        Bundle bundle = getArguments();
+
+        mToken = bundle.getString(Constants.TOKEN);
+        mEmail = bundle.getString(Constants.EMAIL);
+    }
+
 }
 
   /*  private ListView listView;

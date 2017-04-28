@@ -181,15 +181,9 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_tutorial) {
-            Intent intent = new Intent(this, TutorialActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putString(Constants.EMAIL, mEmail);
-            bundle.putString(Constants.TOKEN,mToken);
-            intent.putExtras(bundle);
-            startActivity(intent);
 
-        } else if (id == R.id.nav_gallery) {
+
+         if (id == R.id.nav_gallery) {
 
             Intent intent = new Intent(this, ReferenceListActivity.class);
             Bundle bundle = new Bundle();
@@ -198,25 +192,6 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
             intent.putExtras(bundle);
             startActivity(intent);
 
-        } else if (id == R.id.nav_slideshow) {
-
-            Intent intent = new Intent(this, GamePageActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putString(Constants.EMAIL, mEmail);
-            bundle.putString(Constants.TOKEN, mToken);
-            intent.putExtras(bundle);
-            startActivity(intent);
-
-        } else if (id == R.id.nav_test) {
-
-            Intent intent = new Intent(this, TestActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putString(Constants.EMAIL, mEmail);
-            bundle.putString(Constants.TOKEN, mToken);
-            intent.putExtras(bundle);
-            startActivity(intent);
-            finish();
-        } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_logout) {
             logout();
@@ -248,14 +223,8 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
                     bundle.putString(Constants.TOKEN, mToken);
                     tag1.setArguments(bundle);
                     return tag1;
+
                 case 1:
-                    ErrorGameFragment tag2 = new ErrorGameFragment();
-                    Bundle bundle1 = new Bundle();
-                    bundle1.putString(Constants.EMAIL, mEmail);
-                    bundle1.putString(Constants.TOKEN, mToken);
-                    tag2.setArguments(bundle1);
-                    return tag2;
-                case 2:
                     Profile_fragment tag3 = new Profile_fragment();
                     Bundle bundle2 = new Bundle();
                     bundle2.putString(Constants.EMAIL, mEmail);
@@ -271,7 +240,7 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 2;
         }
 
         @Override
@@ -280,9 +249,8 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
                 case 0:
                     return "Tutorials";
                 case 1:
-                    return "Game";
-                case 2:
                     return "Profile";
+
             }
             return null;
         }

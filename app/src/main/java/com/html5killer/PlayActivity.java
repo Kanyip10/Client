@@ -86,7 +86,7 @@ public class PlayActivity extends Activity {
     private CountDownTimer mGameTimer;
     private int mHitHeight;
     private ArrayList<Integer> mHitPoints;
-
+    private ArrayList<Integer> mErrorPoints;
     private int mHitWidth;
     private Bitmap mImageB1;
     private Bitmap mImageB2;
@@ -171,7 +171,7 @@ public class PlayActivity extends Activity {
 
             public void onClick(DialogInterface dialog, int which) {
 
-               // PlayActivity.this.startActivity(new Intent(PlayActivity.this, HomeActivity.class));
+            //   PlayActivity.this.startActivity(new Intent(PlayActivity.this, HomeActivity.class));
                 PlayActivity.this.finish();
             }
         }
@@ -200,6 +200,7 @@ public class PlayActivity extends Activity {
                //PlayActivity.this.rlImage2.removeViewsInLayout(PlayActivity.this.rlImage2.getChildCount() - PlayActivity.this.mHitPoints.size(), PlayActivity.this.mHitPoints.size());
                 PlayActivity.this.mGameTimer.cancel();
                 PlayActivity.this.mHitPoints.clear();
+                PlayActivity.this.mErrorPoints.clear();
                 PlayActivity playActivity = PlayActivity.this;
                 playActivity.mCurStage = playActivity.mCurStage + 1;
                 if (PlayActivity.this.mCurStage > PlayActivity.this.mDiffList.size()) {
@@ -260,6 +261,7 @@ public class PlayActivity extends Activity {
                     } else {
                         playActivity = PlayActivity.this;
                         playActivity.mNumOfErrors = playActivity.mNumOfErrors - 1;
+                        PlayActivity.this.mErrorPoints.add(1);
                         PlayActivity.this.AnimateError((int) event.getX(), (int) event.getY());
                     }
                     v.onTouchEvent(event);
@@ -287,6 +289,7 @@ public class PlayActivity extends Activity {
                     } else {
                         playActivity = PlayActivity.this;
                         playActivity.mNumOfErrors = playActivity.mNumOfErrors - 1;
+                        PlayActivity.this.mErrorPoints.add(1);
                         PlayActivity.this.AnimateError((int) event.getX(), (int) event.getY());
                     }
                     v.onTouchEvent(event);
@@ -457,7 +460,7 @@ public class PlayActivity extends Activity {
         this.mTxtHintCount.setText(Integer.toString(this.mNumOfHints));
         this.mTxtScoreCount.setText(new StringBuilder(String.valueOf(getResources().getString(R.string.score))).append(" : ").append(Integer.toString(this.mTotalScore)).toString());
         this.mTxtHitCount.setText(new StringBuilder(String.valueOf(getResources().getString(R.string.found))).append(" : ").append(Integer.toString(this.mHitPoints.size())).append("/").append(Integer.toString(this.mNumOfDifferencs)).toString());
-        this.mTxtErrorCount.setText(new StringBuilder(String.valueOf(getResources().getString(R.string.error))).append(" : ").append(Integer.toString(this.mNumOfErrors)).append("/").append(PlayActivity.this.getResources().getInteger(R.integer.errorsAllowed)).toString());
+        this.mTxtErrorCount.setText(new StringBuilder(String.valueOf(getResources().getString(R.string.error))).append(" : ").append(Integer.toString(this.mErrorPoints.size())).append("/").append(this.mNumOfDifferencs).toString());
         if (this.mPlaySound) {
             this.mBtnSound.setImageResource(R.drawable.sound);
         } else {
@@ -477,6 +480,7 @@ public class PlayActivity extends Activity {
         this.mBtnHint = (ImageView) findViewById(R.id.imgHint);
         this.mTxtScoreCount = (TextView) findViewById(R.id.scoreCount);
         this.mTxtHitCount = (TextView) findViewById(R.id.hitCount);
+        this.mTxtErrorCount=(TextView) findViewById(R.id.errorCount);
         this.mErrorV1 = (ImageView) findViewById(R.id.errorimage1);
         this.mErrorV2 = (ImageView) findViewById(R.id.errorimage2);
         this.mErrorLParams = (LayoutParams) this.mErrorV1.getLayoutParams();
@@ -514,6 +518,7 @@ public class PlayActivity extends Activity {
         this.mResumeAt = Prefs.getResumePref(getApplicationContext());
         this.mCurStage = Prefs.getStagePref(getApplicationContext());
         this.mHitPoints = Prefs.getPointsPref(getApplicationContext());
+        this.mErrorPoints=Prefs.getPointsMultiPref(getApplicationContext());
         this.mPlaySound = Prefs.getSoundPref(getApplicationContext());
         this.mNumOfErrors = Prefs.getErrorsPref(getApplicationContext());
         this.mNumOfHints = Prefs.getHintsPref(getApplicationContext());
@@ -527,6 +532,7 @@ public class PlayActivity extends Activity {
         Prefs.setStagePref(getApplicationContext(), this.mCurStage);
         Prefs.setSoundPref(getApplicationContext(), this.mPlaySound);
         Prefs.setPointsPref(getApplicationContext(), this.mHitPoints);
+        Prefs.setPointsMultiPref(getApplicationContext(), this.mErrorPoints);
         Prefs.setErrorsPref(getApplicationContext(), this.mNumOfErrors);
         Prefs.setHintsPref(getApplicationContext(), this.mNumOfHints);
         Prefs.setScaleHPref(getApplicationContext(), this.scaledHeight);
@@ -578,6 +584,7 @@ public class PlayActivity extends Activity {
         this.mErrorLParams.topMargin = y - (this.mErrorV1.getHeight() / 2);
         this.mErrorV1.setLayoutParams(this.mErrorLParams);
         this.mErrorV1.startAnimation(this.mAnimateError);
+        SetGameStatusOnScreen();
 //        this.mErrorV2.setLayoutParams(this.mErrorLParams);
 //        this.mErrorV2.startAnimation(this.mAnimateError);
     }
