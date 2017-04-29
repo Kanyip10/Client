@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_main_scroll"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    tools:context="com.html5killer.fragments.Profile_fragment"
     >
+
+
 <RelativeLayout
     android:id="@+id/content_main"
     android:layout_width="match_parent"
@@ -19,6 +23,15 @@
         android:textColor="@android:color/black"
         android:textAppearance="?android:attr/textAppearanceLarge"/>
 
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
 <!-- Progress one-->
 
 
@@ -31,10 +44,6 @@
         android:layout_below="@+id/tv_name"
         android:layout_marginTop="20dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/card_padding">
 
             <TextView
                 android:id="@+id/tv_schedule"
@@ -46,6 +55,8 @@
                 android:text="Tutorial 1 Progress"
                 android:textAppearance="?android:attr/textAppearanceLarge"/>
 
+
+
             <ProgressBar
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
@@ -55,7 +66,6 @@
                 android:layout_below="@+id/tv_schedule"/>
 
 
-        </RelativeLayout>
     </android.support.v7.widget.CardView>
 
 
@@ -67,11 +77,6 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:layout_below="@+id/card"
         android:layout_marginTop="20dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/card_padding">
 
             <TextView
                 android:id="@+id/tv_schedule2"
@@ -91,8 +96,6 @@
                 android:id="@+id/progressBar2"
                 android:layout_below="@+id/tv_schedule2"/>
 
-
-        </RelativeLayout>
     </android.support.v7.widget.CardView>
 
 
@@ -105,11 +108,6 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:layout_below="@+id/card2"
         android:layout_marginTop="20dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/card_padding">
 
             <TextView
                 android:id="@+id/tv_schedule3"
@@ -130,7 +128,6 @@
                 android:layout_below="@+id/tv_schedule3"/>
 
 
-        </RelativeLayout>
     </android.support.v7.widget.CardView>
 
     <!-- Progress 4-->
@@ -143,10 +140,7 @@
         android:layout_below="@+id/card3"
         android:layout_marginTop="20dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/card_padding">
+
 
             <TextView
                 android:id="@+id/tv_schedule4"
@@ -167,7 +161,6 @@
                 android:layout_below="@+id/tv_schedule4"/>
 
 
-        </RelativeLayout>
     </android.support.v7.widget.CardView>
 
 <!-- Progress 5 -->
@@ -180,10 +173,6 @@
         android:layout_below="@+id/card4"
         android:layout_marginTop="20dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/card_padding">
 
             <TextView
                 android:id="@+id/tv_schedule5"
@@ -204,7 +193,6 @@
                 android:layout_below="@+id/tv_schedule5"/>
 
 
-        </RelativeLayout>
     </android.support.v7.widget.CardView>
 </RelativeLayout>
 </ScrollView>

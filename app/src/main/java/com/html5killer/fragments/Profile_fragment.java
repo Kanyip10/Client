@@ -58,6 +58,10 @@ public class Profile_fragment extends Fragment implements ChangePasswordDialog.L
     private Button mBtReferenceList;
 
     private ProgressBar mProgressbar;
+    private ProgressBar mProgressbar2;
+    private ProgressBar mProgressbar3;
+    private ProgressBar mProgressbar4;
+    private ProgressBar mProgressbar5;
 
     private SharedPreferences mSharedPreferences;
     private String mToken;
@@ -83,10 +87,14 @@ public class Profile_fragment extends Fragment implements ChangePasswordDialog.L
 
 
         mTvName = (TextView) v.findViewById(R.id.tv_name);
-        mTvEmail = (TextView) v.findViewById(R.id.tv_email);
-        mTvDate = (TextView) v.findViewById(R.id.tv_date);
+        //mTvEmail = (TextView) v.findViewById(R.id.tv_email);
+        //mTvDate = (TextView) v.findViewById(R.id.tv_date);
         mTvlevelnExp = (TextView) v.findViewById(R.id.level);
         mProgressbar = (ProgressBar) v.findViewById(R.id.progressBar);
+        mProgressbar2 = (ProgressBar) v.findViewById(R.id.progressBar2);
+        mProgressbar3 = (ProgressBar) v.findViewById(R.id.progressBar3);
+        mProgressbar4 = (ProgressBar) v.findViewById(R.id.progressBar5);
+        mProgressbar5 = (ProgressBar) v.findViewById(R.id.progressBar5);
 
 
       /*  mBtChangePassword = (Button) v.findViewById(R.id.btn_change_password);
@@ -146,13 +154,16 @@ public class Profile_fragment extends Fragment implements ChangePasswordDialog.L
 
     private void handleResponse(User user) {
 
-
-
+        //mTvEmail.setText(user.getEmail());
+        //mTvDate.setText(user.getCreated_at());
+        //mTvlevelnExp.setText(user.toString());
         mTvName.setText(user.getName());
-        mTvEmail.setText(user.getEmail());
-        mTvDate.setText(user.getCreated_at());
-        mTvlevelnExp.setText(user.toString());
+        mTvlevelnExp.setText(user.getName());
         mProgressbar.setProgress(user.getExperience());
+        mProgressbar2.setProgress(user.getExperience2());
+        mProgressbar3.setProgress(user.getExperience3());
+        mProgressbar4.setProgress(user.getExperience4());
+        mProgressbar5.setProgress(user.getExperience5());
     }
 
     private void handleError(Throwable error) {

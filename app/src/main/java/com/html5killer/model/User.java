@@ -7,6 +7,10 @@ public class User {
     private String email;
     private int level;
     private int experience;
+    private int experience2;
+    private int experience3;
+    private int experience4;
+    private int experience5;
     private String password;
     private String created_at;
     private String newPassword;
@@ -57,6 +61,38 @@ public class User {
 
     public void setExperience(int experience) {
         this.experience = experience;
+    }
+
+    public int getExperience2() {
+        return experience2;
+    }
+
+    public void setExperience2(int experience2) {
+        this.experience2 = experience2;
+    }
+
+    public int getExperience3() {
+        return experience3;
+    }
+
+    public void setExperience3(int experience3) {
+        this.experience3 = experience3;
+    }
+
+    public int getExperience4() {
+        return experience4;
+    }
+
+    public void setExperience4(int experience4) {
+        this.experience4 = experience4;
+    }
+
+    public int getExperience5() {
+        return experience5;
+    }
+
+    public void setExperience6(int experience5) {
+        this.experience5 = experience5;
     }
 
     public String getLevelName(int level){

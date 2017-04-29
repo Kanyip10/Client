@@ -45,4 +45,16 @@ public interface RetrofitInterface {
     @PUT("users/{email}/experience")
     Observable<Response> changeExp(@Path("email") String email, @Body User user);
 
+    @PUT("users/{email}/experience2")
+    Observable<Response> changeExp2(@Path("email") String email, @Body User user);
+
+    @PUT("users/{email}/experience3")
+    Observable<Response> changeExp3(@Path("email") String email, @Body User user);
+
+    @PUT("users/{email}/experience4")
+    Observable<Response> changeExp4(@Path("email") String email, @Body User user);
+
+    @PUT("users/{email}/experience5")
+    Observable<Response> changeExp5(@Path("email") String email, @Body User user);
+
 }

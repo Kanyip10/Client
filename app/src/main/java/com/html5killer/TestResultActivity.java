@@ -128,14 +128,14 @@ public class TestResultActivity extends AppCompatActivity {
         User user = new User();
         if(mTestActivity.getCountCorrect() == 4){
             user.setNewExp(mTestActivity.getCountCorrect());
-            changeExp(user);
+            changeExp3(user);
         }
 
     }
 
-    private void changeExp(User user) {
+    private void changeExp3(User user) {
 
-        mSubscriptions.add(NetworkUtil.getRetrofit(mToken).changeExp(mEmail,user)
+        mSubscriptions.add(NetworkUtil.getRetrofit(mToken).changeExp3(mEmail,user)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(this::Response,this::handleError));
