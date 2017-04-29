@@ -1,198 +1,270 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_main_scroll"
-    android:orientation="vertical"
+    tools:context="com.html5killer.fragments.Profile_fragment"
+    android:id="@+id/contain_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="com.html5killer.fragments.Profile_fragment"
-    >
+    android:fitsSystemWindows="true">
 
 
-<RelativeLayout
-    android:id="@+id/content_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/black"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-    <TextView
-        android:id="@+id/level"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="20dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+        android:layout_height="700dp"
+        android:id="@+id/contain_main2">
 
-<!-- Progress one-->
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"
+            android:paddingTop="15dp"
+            android:text="name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorDarkGrey" />
 
+    <!-- Progress one-->
 
+        <android.support.v7.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="20dp">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:layout_below="@+id/tv_name"
-        android:layout_marginTop="20dp">
-
-
-            <TextView
-                android:id="@+id/tv_schedule"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:textColor="@android:color/black"
-                android:layout_marginTop="20dp"
-                android:text="Tutorial 1 Progress"
-                android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-
-
-            <ProgressBar
-                style="?android:attr/progressBarStyleHorizontal"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:max="100"
-                android:id="@+id/progressBar"
-                android:layout_below="@+id/tv_schedule"/>
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_schedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Tutorial 1 Progress"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/holo_red_light" />
+
+                <TextView
+                    android:id="@+id/tv_exp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_schedule"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Exp.:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp" />
 
 
-    </android.support.v7.widget.CardView>
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:id="@+id/progressBar"
+                    android:layout_below="@+id/tv_exp"/>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
 
 
-<!-- Progress two -->
-    <android.support.v7.widget.CardView
-        android:id="@+id/card2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:layout_below="@+id/card"
-        android:layout_marginTop="20dp">
+    <!-- Progress two -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:layout_below="@+id/card"
+            android:layout_marginTop="20dp">
 
-            <TextView
-                android:id="@+id/tv_schedule2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:textColor="@android:color/black"
-                android:layout_marginTop="20dp"
-                android:text="Tutorial 2 Progress"
-                android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-            <ProgressBar
-                style="?android:attr/progressBarStyleHorizontal"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:max="100"
-                android:id="@+id/progressBar2"
-                android:layout_below="@+id/tv_schedule2"/>
+                android:layout_height="wrap_content">
 
-    </android.support.v7.widget.CardView>
+                <TextView
+                    android:id="@+id/tv_schedule2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Tutorial 2 Progress"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="?attr/colorPrimaryDark" />
+
+                <TextView
+                    android:id="@+id/tv_exp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_schedule2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Exp.:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp" />
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:id="@+id/progressBar2"
+                    android:layout_below="@+id/tv_exp2"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
 
 
-<!-- Progress 3-->
+    <!-- Progress 3-->
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/card3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:layout_below="@+id/card2"
-        android:layout_marginTop="20dp">
+        <android.support.v7.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:layout_below="@+id/card2"
+            android:layout_marginTop="20dp">
 
-            <TextView
-                android:id="@+id/tv_schedule3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:textColor="@android:color/black"
-                android:layout_marginTop="20dp"
-                android:text="Tutorial 3 Progress"
-                android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-            <ProgressBar
-                style="?android:attr/progressBarStyleHorizontal"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:max="100"
-                android:id="@+id/progressBar3"
-                android:layout_below="@+id/tv_schedule3"/>
+                android:layout_height="wrap_content">
 
+                <TextView
+                    android:id="@+id/tv_schedule3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Tutorial 3 Progress"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/colorLightyellow" />
 
-    </android.support.v7.widget.CardView>
+                <TextView
+                    android:id="@+id/tv_exp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_schedule3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Exp.:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp" />
 
-    <!-- Progress 4-->
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:id="@+id/progressBar3"
+                    android:layout_below="@+id/tv_exp3"/>
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/card4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:layout_below="@+id/card3"
-        android:layout_marginTop="20dp">
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
 
+        <!-- Progress 4-->
 
+        <android.support.v7.widget.CardView
+            android:id="@+id/card4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:layout_below="@+id/card3"
+            android:layout_marginTop="20dp">
 
-            <TextView
-                android:id="@+id/tv_schedule4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:textColor="@android:color/black"
-                android:layout_marginTop="20dp"
-                android:text="Tutorial 4 Progress"
-                android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-            <ProgressBar
-                style="?android:attr/progressBarStyleHorizontal"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:max="100"
-                android:id="@+id/progressBar4"
-                android:layout_below="@+id/tv_schedule4"/>
+                android:layout_height="wrap_content">
 
+                <TextView
+                    android:id="@+id/tv_schedule4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Tutorial 4 Progress"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/holo_green_light" />
 
-    </android.support.v7.widget.CardView>
+                <TextView
+                    android:id="@+id/tv_exp4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_schedule4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Exp.:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp" />
 
-<!-- Progress 5 -->
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:id="@+id/progressBar4"
+                    android:layout_below="@+id/tv_exp4"/>
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/card5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:layout_below="@+id/card4"
-        android:layout_marginTop="20dp">
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
 
+    <!-- Progress 5 -->
 
-            <TextView
-                android:id="@+id/tv_schedule5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:textColor="@android:color/black"
-                android:layout_marginTop="20dp"
-                android:text="Tutorial 5 Progress"
-                android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <android.support.v7.widget.CardView
+            android:id="@+id/card5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:layout_below="@+id/card4"
+            android:layout_marginTop="20dp">
 
-            <ProgressBar
-                style="?android:attr/progressBarStyleHorizontal"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:max="100"
-                android:id="@+id/progressBar5"
-                android:layout_below="@+id/tv_schedule5"/>
+                android:layout_height="wrap_content">
 
+                <TextView
+                    android:id="@+id/tv_schedule5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Tutorial 5 Progress"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/holo_purple" />
+                <TextView
+                    android:id="@+id/tv_exp5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_schedule5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Exp.:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp" />
 
-    </android.support.v7.widget.CardView>
-</RelativeLayout>
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:id="@+id/progressBar5"
+                    android:layout_below="@+id/tv_exp5"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
 </ScrollView>

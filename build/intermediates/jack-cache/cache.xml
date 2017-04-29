@@ -104,6 +104,18 @@
         <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-ec1d734e4da5ae77a86be91f0aadff728897b5ac.jar" />
     </item>
     <item
+        jar="/Users/KanYip/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0-alpha9/constraint-layout-solver-1.0.0-alpha9.jar"
+        revision="24.0.2"
+        sha1="6a908fd0803cc5f65b007101002aec06dc7544da">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/constraint-layout-solver-1.0.0-alpha9-0e2ab0d3bc80ea70bb6004bfe400725661292070.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-alpha9/jars/classes.jar"
+        revision="24.0.2"
+        sha1="f2b64f6a762f61a2379d6a79af03e2ee56eefe0b">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-4f99864bf30eaa7525e5c5a4ff2d5b63c86b5fb5.jar" />
+    </item>
+    <item
         jar="/Users/KanYip/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
         revision="24.0.2"
         sha1="aa557d71ead91cbf26e0c316a0f593d168303309">

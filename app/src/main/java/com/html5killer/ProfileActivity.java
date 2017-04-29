@@ -131,7 +131,7 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
 
     private void showSnackBarMessage(String message) {
 
-        Snackbar.make(findViewById(R.id.content_main), message, Snackbar.LENGTH_SHORT).show();
+        //Snackbar.make(findViewById(R.id.content_main), message, Snackbar.LENGTH_SHORT).show();
 
     }
 

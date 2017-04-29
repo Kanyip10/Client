@@ -46,12 +46,16 @@ public class Profile_fragment extends Fragment implements ChangePasswordDialog.L
 
     public static final String TAG = Profile_fragment.class.getSimpleName();
 
-    private TextView mTvName;
     private TextView mTvEmail;
     private TextView nName;
     private TextView nEmail;
-    private TextView mTvlevelnExp;
+    private TextView mTvName;
     private TextView mTvDate;
+    private TextView mExp;
+    private TextView mExp2;
+    private TextView mExp3;
+    private TextView mExp4;
+    private TextView mExp5;
     private Button mBtChangePassword;
     private Button mBtLogout;
     private Button mBtTest;
@@ -69,7 +73,7 @@ public class Profile_fragment extends Fragment implements ChangePasswordDialog.L
 
     private CompositeSubscription mSubscriptions;
 
-    @Nullable
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.content_main,container,false);
@@ -86,14 +90,18 @@ public class Profile_fragment extends Fragment implements ChangePasswordDialog.L
     private void initViews(View v) {
 
 
-        mTvName = (TextView) v.findViewById(R.id.tv_name);
         //mTvEmail = (TextView) v.findViewById(R.id.tv_email);
         //mTvDate = (TextView) v.findViewById(R.id.tv_date);
-        mTvlevelnExp = (TextView) v.findViewById(R.id.level);
+        mTvName = (TextView) v.findViewById(R.id.name);
+        mExp = (TextView) v.findViewById(R.id.tv_exp);
+        mExp2 = (TextView) v.findViewById(R.id.tv_exp2);
+        mExp3 = (TextView) v.findViewById(R.id.tv_exp3);
+        mExp4 = (TextView) v.findViewById(R.id.tv_exp4);
+        mExp5 = (TextView) v.findViewById(R.id.tv_exp5);
         mProgressbar = (ProgressBar) v.findViewById(R.id.progressBar);
         mProgressbar2 = (ProgressBar) v.findViewById(R.id.progressBar2);
         mProgressbar3 = (ProgressBar) v.findViewById(R.id.progressBar3);
-        mProgressbar4 = (ProgressBar) v.findViewById(R.id.progressBar5);
+        mProgressbar4 = (ProgressBar) v.findViewById(R.id.progressBar4);
         mProgressbar5 = (ProgressBar) v.findViewById(R.id.progressBar5);
 
 
@@ -156,9 +164,12 @@ public class Profile_fragment extends Fragment implements ChangePasswordDialog.L
 
         //mTvEmail.setText(user.getEmail());
         //mTvDate.setText(user.getCreated_at());
-        //mTvlevelnExp.setText(user.toString());
-        mTvName.setText(user.getName());
-        mTvlevelnExp.setText(user.getName());
+        mTvName.setText("User: " + user.getName());
+        mExp.setText("Exp.: " + user.getExperience());
+        mExp2.setText("Exp.: " + user.getExperience2());
+        mExp3.setText("Exp.: " + user.getExperience3());
+        mExp4.setText("Exp.: " + user.getExperience4());
+        mExp5.setText("Exp.: " + user.getExperience5());
         mProgressbar.setProgress(user.getExperience());
         mProgressbar2.setProgress(user.getExperience2());
         mProgressbar3.setProgress(user.getExperience3());

@@ -200,7 +200,7 @@ public class Teacher_ProfileActivity extends AppCompatActivity implements Change
 
     private void showSnackBarMessage(String message) {
 
-        Snackbar.make(findViewById(R.id.content_main),message,Snackbar.LENGTH_SHORT).show();
+        //Snackbar.make(findViewById(R.id.content_main),message,Snackbar.LENGTH_SHORT).show();
 
     }
 

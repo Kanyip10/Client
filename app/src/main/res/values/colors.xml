@@ -3,10 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorDarkGrey">#455A64</color>
+    <color name="colorDarkGrey">#455a64</color>
     <color name="colorLightBlue">#00CCFF</color>
-    <color name="colorLightyellow">#FFCC66</color>
-    <color name="colorlightgreen">#48D1CC</color>
+    <color name="colorLightyellow">#ffcc66</color>
+    <color name="colorlightgreen">#48d1cc</color>
     <color name="common_signin_btn_dark_text_default">@android:color/white</color>
     <color name="common_signin_btn_dark_text_pressed">@android:color/white</color>
     <color name="common_signin_btn_dark_text_disabled">#ffaaaaaa</color>
@@ -28,7 +28,7 @@
     <color name="wallet_hint_foreground_holo_dark">#ff808080</color>
     <color name="wallet_highlighted_text_holo_light">#6633b5e5</color>
     <color name="wallet_highlighted_text_holo_dark">#6633b5e5</color>
-    <color name="wallet_holo_blue_light">#ff33b5e5</color>
+    <color name="wallet_holo_blue_light">#33b5e5</color>
     <color name="wallet_link_text_light">#ff0000ee</color>
     <color name="transparent">#00000000</color>
 
