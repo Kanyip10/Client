@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <stages>
 
-	<!-- de -->
-	<stage>
-		<image1>images/error1.jpg</image1>
-		<image2>images/error1ans.jpg</image2>
-		<difference x="1598" y="1088" radius="70"/>
-		<difference x="1344" y="1207" radius="70"/>
-		<difference x="1322" y="1355" radius="70"/>
-		<difference x="751" y="1491" radius="70"/>
-		<difference x="385" y="1845" radius="70"/>
-	</stage>
+
+
 	<!-- duoc -->
 	<stage>
 		<image1>images/error2.jpg</image1>
@@ -20,6 +12,16 @@
 		<difference x="307" y="1174" radius="70"/>
 		<difference x="301" y="1360" radius="70"/>
 		<difference x="284" y="1460" radius="70"/>
+	</stage>
+
+	<stage>
+		<image1>images/error1.jpg</image1>
+		<image2>images/error1ans.jpg</image2>
+		<difference x="203" y="476" radius="70"/>
+		<difference x="236" y="745" radius="70"/>
+		<difference x="597" y="1184" radius="70"/>
+		<difference x="323" y="1944" radius="70"/>
+		<difference x="210" y="3647" radius="70"/>
 	</stage>
 
 	<!-- duoc -->

@@ -114,14 +114,16 @@ public class ReferenceListActivity extends AppCompatActivity {
 
 
 
+
                     listView.setAdapter(selectedList(list1));
+                    listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
                     ListUtils.setDynamicHeight(listView);
 
                     listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 
-                                        if(position == 0) {
+
                                             Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
                                             Bundle bundle = new Bundle();
                                             bundle.putString(Constants.EMAIL, mEmail);
@@ -129,32 +131,23 @@ public class ReferenceListActivity extends AppCompatActivity {
                                             bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
                                             intent.putExtras(bundle);
                                             startActivity(intent);
-                                        }
-
-                                         else{
-                                            Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
-                                            Bundle bundle = new Bundle();
-                                            bundle.putString(Constants.EMAIL, mEmail);
-                                            bundle.putString(Constants.TOKEN, mToken);
-                                            bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
-                                            intent.putExtras(bundle);
-                                            startActivity(intent);
-                                        }
-
-
 
 
                         }
                     });
+
                     break;
                 case 1:
                // sorting(spinner.getSelectedItem().toString());
                     header.setText("basic");
                     listView.setAdapter(selectedList(list2));
+                    listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
                     header1.setText("table");
                     listView1.setAdapter(selectedList(list3));
+                    listView1.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
                     header2.setText("list");
                     listView2.setAdapter(selectedList(list4));
+                    listView2.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
                     ListUtils.setDynamicHeight(listView);
                     ListUtils.setDynamicHeight(listView1);
@@ -164,17 +157,8 @@ public class ReferenceListActivity extends AppCompatActivity {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 
-                            if(position == 0) {
-                                Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
-                                Bundle bundle = new Bundle();
-                                bundle.putString(Constants.EMAIL, mEmail);
-                                bundle.putString(Constants.TOKEN, mToken);
-                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
-                                intent.putExtras(bundle);
-                                startActivity(intent);
-                            }
 
-                            else{
+
                                 Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
                                 Bundle bundle = new Bundle();
                                 bundle.putString(Constants.EMAIL, mEmail);
@@ -182,7 +166,7 @@ public class ReferenceListActivity extends AppCompatActivity {
                                 bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
                                 intent.putExtras(bundle);
                                 startActivity(intent);
-                            }
+
 
 
 
@@ -193,26 +177,13 @@ public class ReferenceListActivity extends AppCompatActivity {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 
-                            if(position == 0) {
+
                                 Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
                                 Bundle bundle = new Bundle();
                                 bundle.putString(Constants.EMAIL, mEmail);
                                 bundle.putString(Constants.TOKEN, mToken);
-                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                                bundle.putString(Constants.LIST_NAME, (String) listView1.getItemAtPosition(position));
                                 intent.putExtras(bundle);
-                                startActivity(intent);
-                            }
-
-                            else{
-                                Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
-                                Bundle bundle = new Bundle();
-                                bundle.putString(Constants.EMAIL, mEmail);
-                                bundle.putString(Constants.TOKEN, mToken);
-                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
-                                intent.putExtras(bundle);
-                                startActivity(intent);
-                            }
-
 
 
 
@@ -222,25 +193,14 @@ public class ReferenceListActivity extends AppCompatActivity {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 
-                            if(position == 0) {
-                                Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
-                                Bundle bundle = new Bundle();
-                                bundle.putString(Constants.EMAIL, mEmail);
-                                bundle.putString(Constants.TOKEN, mToken);
-                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
-                                intent.putExtras(bundle);
-                                startActivity(intent);
-                            }
 
-                            else{
                                 Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
                                 Bundle bundle = new Bundle();
                                 bundle.putString(Constants.EMAIL, mEmail);
                                 bundle.putString(Constants.TOKEN, mToken);
-                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                                bundle.putString(Constants.LIST_NAME, (String) listView2.getItemAtPosition(position));
                                 intent.putExtras(bundle);
                                 startActivity(intent);
-                            }
 
 
 
@@ -252,12 +212,15 @@ public class ReferenceListActivity extends AppCompatActivity {
                     break;
                 case 2:
                // sorting(spinner.getSelectedItem().toString());
-                    header.setText("chapter1");
+                    header.setText("Tutorial1");
                     listView.setAdapter(selectedList(list5));
-                    header1.setText("chapter2");
+                    listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+                    header1.setText("Tutorial2");
                     listView1.setAdapter(selectedList(list3));
-                    header2.setText("chapter3");
+                    listView1.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+                    header2.setText("Tutorial3");
                     listView2.setAdapter(selectedList(list4));
+                    listView2.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
                     ListUtils.setDynamicHeight(listView);
                     ListUtils.setDynamicHeight(listView1);
@@ -266,7 +229,7 @@ public class ReferenceListActivity extends AppCompatActivity {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 
-                            if(position == 0) {
+
                                 Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
                                 Bundle bundle = new Bundle();
                                 bundle.putString(Constants.EMAIL, mEmail);
@@ -274,19 +237,6 @@ public class ReferenceListActivity extends AppCompatActivity {
                                 bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
                                 intent.putExtras(bundle);
                                 startActivity(intent);
-                            }
-
-                            else{
-                                Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
-                                Bundle bundle = new Bundle();
-                                bundle.putString(Constants.EMAIL, mEmail);
-                                bundle.putString(Constants.TOKEN, mToken);
-                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
-                                intent.putExtras(bundle);
-                                startActivity(intent);
-                            }
-
-
 
 
                         }
@@ -296,25 +246,15 @@ public class ReferenceListActivity extends AppCompatActivity {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 
-                            if(position == 0) {
-                                Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
-                                Bundle bundle = new Bundle();
-                                bundle.putString(Constants.EMAIL, mEmail);
-                                bundle.putString(Constants.TOKEN, mToken);
-                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
-                                intent.putExtras(bundle);
-                                startActivity(intent);
-                            }
 
-                            else{
                                 Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
                                 Bundle bundle = new Bundle();
                                 bundle.putString(Constants.EMAIL, mEmail);
                                 bundle.putString(Constants.TOKEN, mToken);
-                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                                bundle.putString(Constants.LIST_NAME, (String) listView1.getItemAtPosition(position));
                                 intent.putExtras(bundle);
                                 startActivity(intent);
-                            }
+
 
 
 
@@ -325,25 +265,14 @@ public class ReferenceListActivity extends AppCompatActivity {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 
-                            if(position == 0) {
                                 Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
                                 Bundle bundle = new Bundle();
                                 bundle.putString(Constants.EMAIL, mEmail);
                                 bundle.putString(Constants.TOKEN, mToken);
-                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
+                                bundle.putString(Constants.LIST_NAME, (String) listView2.getItemAtPosition(position));
                                 intent.putExtras(bundle);
                                 startActivity(intent);
-                            }
 
-                            else{
-                                Intent intent = new Intent(ReferenceListActivity.this, listContent.class);
-                                Bundle bundle = new Bundle();
-                                bundle.putString(Constants.EMAIL, mEmail);
-                                bundle.putString(Constants.TOKEN, mToken);
-                                bundle.putString(Constants.LIST_NAME, (String) listView.getItemAtPosition(position));
-                                intent.putExtras(bundle);
-                                startActivity(intent);
-                            }
 
 
 

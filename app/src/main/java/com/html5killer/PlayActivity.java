@@ -171,7 +171,7 @@ public class PlayActivity extends Activity {
 
             public void onClick(DialogInterface dialog, int which) {
 
-            //   PlayActivity.this.startActivity(new Intent(PlayActivity.this, HomeActivity.class));
+               PlayActivity.this.startActivity(new Intent(PlayActivity.this, ProfileActivity.class));
                 PlayActivity.this.finish();
             }
         }
@@ -230,7 +230,7 @@ public class PlayActivity extends Activity {
                 }
                 Intent NextGame = new Intent(PlayActivity.this, NextGameActivity.class);
                 playActivity = PlayActivity.this;
-                playActivity.mTotalScore = playActivity.mTotalScore + (PlayActivity.this.mResumeAt / GeofenceStatusCodes.GEOFENCE_NOT_AVAILABLE);
+                playActivity.mTotalScore = playActivity.mTotalScore;
                 Prefs.clearPref(PlayActivity.this.getApplicationContext());
                 Prefs.setStagePref(PlayActivity.this.getApplicationContext(), PlayActivity.this.mCurStage);
                 Prefs.setHintsPref(PlayActivity.this.getApplicationContext(), PlayActivity.this.mNumOfHints);

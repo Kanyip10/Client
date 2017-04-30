@@ -312,30 +312,30 @@ public class TutorialFragment extends Fragment {
         Tutorial1.add("PDF");
         Tutorial1.add("Youtube");
         Tutorial1.add("Test");
-        Tutorial1.add("Game");
+        Tutorial1.add("Game             Highest score: " + String.valueOf(getResources().getString(R.string.highestscore) )+ "/" + String.valueOf(getResources().getString(R.string.highestscore)));
 
 
         List<String> Tutorial2 = new ArrayList<String>();
         Tutorial2.add("PDF");
         Tutorial2.add("Youtube");
         Tutorial2.add("Test");
-        Tutorial2.add("Game");
+        Tutorial2.add("Game             Highest score: " + String.valueOf(getResources().getString(R.string.highestscore)) + "/" + String.valueOf(getResources().getString(R.string.highestscore)));
 
         List<String> Tutorial3 = new ArrayList<String>();
         Tutorial3.add("PDF");
         Tutorial3.add("Youtube");
         Tutorial3.add("Test");
-        Tutorial3.add("Game         " + getActivity().getSharedPreferences("FIND_DIFF", 0).getInt("HIGHSCORE", 0));
+        Tutorial3.add("Game             Highest score: " + getActivity().getSharedPreferences("FIND_DIFF", 0).getInt("HIGHSCORE", 0) + "/" + String.valueOf(getResources().getString(R.string.highestscore)));
         List<String> Tutorial4 = new ArrayList<String>();
         Tutorial4.add("PDF");
         Tutorial4.add("Youtube");
         Tutorial4.add("Test");
-        Tutorial4.add("Game");
+        Tutorial4.add("Game             Highest score: " + "0" + "/" + String.valueOf(getResources().getString(R.string.highestscore)));
         List<String> Tutorial5 = new ArrayList<String>();
         Tutorial5.add("PDF");
         Tutorial5.add("Youtube");
         Tutorial5.add("Test");
-        Tutorial5.add("Game");
+        Tutorial5.add("Game             Highest score: " + "0" + "/" + String.valueOf(getResources().getString(R.string.highestscore)));
 
 
 
