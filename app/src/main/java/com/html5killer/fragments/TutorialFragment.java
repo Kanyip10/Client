@@ -128,6 +128,7 @@ public class TutorialFragment extends Fragment {
                              Bundle bundle = new Bundle();
                              bundle.putString(Constants.EMAIL, mEmail);
                              bundle.putString(Constants.TOKEN,mToken);
+                             bundle.putString("tutorialNum", "1");
                              intent.putExtras(bundle);
                              startActivity(intent);
                              break;
@@ -141,6 +142,7 @@ public class TutorialFragment extends Fragment {
                              break;
 
                      }
+                     break;
                  case 1:
                      switch (childPosition){
                          case 0:
@@ -154,6 +156,7 @@ public class TutorialFragment extends Fragment {
                              Bundle bundle = new Bundle();
                              bundle.putString(Constants.EMAIL, mEmail);
                              bundle.putString(Constants.TOKEN,mToken);
+                             bundle.putString("tutorialNum", "2");
                              intent.putExtras(bundle);
                              startActivity(intent);
                              break;
@@ -167,6 +170,7 @@ public class TutorialFragment extends Fragment {
                              break;
 
                      }
+                     break;
                  case 2:
                      switch (childPosition){
                          case 0:
@@ -180,6 +184,7 @@ public class TutorialFragment extends Fragment {
                              Bundle bundle = new Bundle();
                              bundle.putString(Constants.EMAIL, mEmail);
                              bundle.putString(Constants.TOKEN,mToken);
+                             bundle.putString("tutorialNum", "3");
                              intent.putExtras(bundle);
                              startActivity(intent);
                              break;
@@ -193,6 +198,8 @@ public class TutorialFragment extends Fragment {
                              break;
 
                      }
+                     break;
+                 /*
                  case 3:
                      switch (childPosition){
                          case 0:
@@ -218,7 +225,8 @@ public class TutorialFragment extends Fragment {
                              startActivity(intent1);
                              break;
 
-                     }case 4:
+                     }
+                 case 4:
                      switch (childPosition){
                          case 0:
                              openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view");
@@ -245,7 +253,7 @@ public class TutorialFragment extends Fragment {
 
                      }
 
-
+                */
 
 
 
@@ -303,8 +311,8 @@ public class TutorialFragment extends Fragment {
         listDataHeader.add("Tutorial 1");
         listDataHeader.add("Tutorial 2");
         listDataHeader.add("Tutorial 3");
-        listDataHeader.add("Tutorial 4");
-        listDataHeader.add("Tutorial 5");
+        //listDataHeader.add("Tutorial 4");
+        //listDataHeader.add("Tutorial 5");
 
 
         // Adding child data
@@ -326,6 +334,8 @@ public class TutorialFragment extends Fragment {
         Tutorial3.add("Youtube");
         Tutorial3.add("Test");
         Tutorial3.add("Game             Highest score: " + getActivity().getSharedPreferences("FIND_DIFF", 0).getInt("HIGHSCORE", 0) + "/" + String.valueOf(getResources().getString(R.string.highestscore)));
+
+        /*
         List<String> Tutorial4 = new ArrayList<String>();
         Tutorial4.add("PDF");
         Tutorial4.add("Youtube");
@@ -336,14 +346,14 @@ public class TutorialFragment extends Fragment {
         Tutorial5.add("Youtube");
         Tutorial5.add("Test");
         Tutorial5.add("Game             Highest score: " + "0" + "/" + String.valueOf(getResources().getString(R.string.highestscore)));
-
+*/
 
 
         listDataChild.put(listDataHeader.get(0), Tutorial1); // Header, Child data
         listDataChild.put(listDataHeader.get(1), Tutorial2);
         listDataChild.put(listDataHeader.get(2), Tutorial3);
-        listDataChild.put(listDataHeader.get(3), Tutorial4);
-        listDataChild.put(listDataHeader.get(4), Tutorial5);
+        //listDataChild.put(listDataHeader.get(3), Tutorial4);
+        //listDataChild.put(listDataHeader.get(4), Tutorial5);
 
     }
     protected void openPDF(String url){

@@ -44,6 +44,8 @@ import rx.subscriptions.CompositeSubscription;
 public class TestResultActivity extends AppCompatActivity {
 
     private TestLibrary mQuestionLibrary = new TestLibrary();
+    private TestLibrary1 mQuestionLibrary1 = new TestLibrary1();
+    private TestLibrary2 mQuestionLibrary2 = new TestLibrary2();
     private TestActivity mTestActivity = new TestActivity();
 
     private TextView mScoreView;
@@ -51,6 +53,7 @@ public class TestResultActivity extends AppCompatActivity {
     private String mToken;
     private String mEmail;
     private Button mBtFinish;
+    private String tutorial;
 
 
     private int exp = 0;
@@ -84,15 +87,42 @@ public class TestResultActivity extends AppCompatActivity {
 
         HashMap<String, String> qna = new HashMap<>();
 
-        for (int i = 0; i < mTestActivity.getCountQ(); i++) {
-            if (mQuestionLibrary.getCorrectAnswer(i) == mTestActivity.getuAnswer(i)) {
-                qna.put(mQuestionLibrary.getQuestion(i), "Correct Ans: " +
-                        mQuestionLibrary.getCorrectAnswer(i) + "\nYour Ans: "
-                        + mTestActivity.getuAnswer(i) + "  \u2705");
-            } else{
-                qna.put(mQuestionLibrary.getQuestion(i), "Correct Ans: " +
-                        mQuestionLibrary.getCorrectAnswer(i) + "\nYour Ans: "
-                        + mTestActivity.getuAnswer(i)+ "  \u274c");
+
+        if (tutorial.equals("3")) {
+            for (int i = 0; i < mTestActivity.getCountQ(); i++) {
+                if (mQuestionLibrary.getCorrectAnswer(i) == mTestActivity.getuAnswer(i)) {
+                    qna.put(mQuestionLibrary.getQuestion(i), "Correct Ans: " +
+                            mQuestionLibrary.getCorrectAnswer(i) + "\nYour Ans: "
+                            + mTestActivity.getuAnswer(i) + "  \u2705");
+                } else {
+                    qna.put(mQuestionLibrary.getQuestion(i), "Correct Ans: " +
+                            mQuestionLibrary.getCorrectAnswer(i) + "\nYour Ans: "
+                            + mTestActivity.getuAnswer(i) + "  \u274c");
+                }
+            }
+        }else if (tutorial.equals("1")){
+            for (int i = 0; i < mTestActivity.getCountQ(); i++) {
+                if (mQuestionLibrary1.getCorrectAnswer(i) == mTestActivity.getuAnswer(i)) {
+                    qna.put(mQuestionLibrary1.getQuestion(i), "Correct Ans: " +
+                            mQuestionLibrary1.getCorrectAnswer(i) + "\nYour Ans: "
+                            + mTestActivity.getuAnswer(i) + "  \u2705");
+                } else {
+                    qna.put(mQuestionLibrary1.getQuestion(i), "Correct Ans: " +
+                            mQuestionLibrary1.getCorrectAnswer(i) + "\nYour Ans: "
+                            + mTestActivity.getuAnswer(i) + "  \u274c");
+                }
+            }
+        } else if (tutorial.equals("2")){
+            for (int i = 0; i < mTestActivity.getCountQ(); i++) {
+                if (mQuestionLibrary2.getCorrectAnswer(i) == mTestActivity.getuAnswer(i)) {
+                    qna.put(mQuestionLibrary2.getQuestion(i), "Correct Ans: " +
+                            mQuestionLibrary2.getCorrectAnswer(i) + "\nYour Ans: "
+                            + mTestActivity.getuAnswer(i) + "  \u2705");
+                } else {
+                    qna.put(mQuestionLibrary2.getQuestion(i), "Correct Ans: " +
+                            mQuestionLibrary2.getCorrectAnswer(i) + "\nYour Ans: "
+                            + mTestActivity.getuAnswer(i) + "  \u274c");
+                }
             }
         }
 
@@ -111,7 +141,6 @@ public class TestResultActivity extends AppCompatActivity {
         }
 
         resultListView.setAdapter(adapter);
-
         updateExp();
 
     }
@@ -121,6 +150,7 @@ public class TestResultActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         mToken = bundle.getString(Constants.TOKEN);
         mEmail = bundle.getString(Constants.EMAIL);
+        tutorial = bundle.getString("tutorial");
 
     }
 
@@ -128,14 +158,38 @@ public class TestResultActivity extends AppCompatActivity {
         User user = new User();
         if(mTestActivity.getCountCorrect() == 4){
             user.setNewExp(50);
-            changeExp3(user);
+            if(tutorial.equals("3")) {
+                changeExp3(user);
+            } else if(tutorial.equals("1")){
+                changeExp(user);
+            } else if(tutorial.equals("2")){
+                changeExp2(user);
+            }
         }
 
     }
 
+
+
     private void changeExp3(User user) {
 
         mSubscriptions.add(NetworkUtil.getRetrofit(mToken).changeExp3(mEmail,user)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(this::Response,this::handleError));
+    }
+
+    private void changeExp(User user) {
+
+        mSubscriptions.add(NetworkUtil.getRetrofit(mToken).changeExp(mEmail,user)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(this::Response,this::handleError));
+    }
+
+    private void changeExp2(User user) {
+
+        mSubscriptions.add(NetworkUtil.getRetrofit(mToken).changeExp2(mEmail,user)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(this::Response,this::handleError));

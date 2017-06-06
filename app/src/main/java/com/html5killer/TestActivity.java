@@ -18,7 +18,8 @@ import com.html5killer.utils.Constants;
 public class TestActivity extends AppCompatActivity {
 
     private TestLibrary mQuestionLibrary = new TestLibrary();
-
+    private TestLibrary1 mQuestionLibrary1 = new TestLibrary1();
+    private TestLibrary2 mQuestionLibrary2 = new TestLibrary2();
     private TextView mScoreView;
     private TextView mQuestionView;
     private ImageView mQuestionImageView;
@@ -33,21 +34,28 @@ public class TestActivity extends AppCompatActivity {
 
     private String mToken;
     private String mEmail;
+    private String tutorial;
 
     private static String[] uAnswer = {"1", "2", "3", "4"};
     private static int countQ = 0;
 
     private static int countCorrect = 0;
 
+
     private void initSharedPreferences() {
         Bundle bundle = getIntent().getExtras();
         mToken = bundle.getString(Constants.TOKEN);
         mEmail = bundle.getString(Constants.EMAIL);
 
+
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Bundle bundle = getIntent().getExtras();
+        tutorial = bundle.getString("tutorialNum");
+        System.out.println(tutorial);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_do_test);
         initSharedPreferences();
@@ -169,19 +177,53 @@ public class TestActivity extends AppCompatActivity {
     }
 
     private void updateQuestion() {
-        if (mQuestionLibrary.getQuestion(mQuestionNumber) == null) {
-            testResult();
-        } else {
-            mQuestionImageView.setImageResource(mQuestionLibrary.getQuestionImage(mQuestionNumber));
-            mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
-            mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
-            mButtonChoice2.setText(mQuestionLibrary.getChoice2(mQuestionNumber));
-            mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber));
-            mButtonChoice4.setText(mQuestionLibrary.getChoice4(mQuestionNumber));
+        System.out.println(tutorial);
+        if (tutorial.equals("3")) {
+            if (mQuestionLibrary.getQuestion(mQuestionNumber) == null) {
+                testResult();
+            } else {
+                mQuestionImageView.setImageResource(mQuestionLibrary.getQuestionImage(mQuestionNumber));
+                mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
+                mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
+                mButtonChoice2.setText(mQuestionLibrary.getChoice2(mQuestionNumber));
+                mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber));
+                mButtonChoice4.setText(mQuestionLibrary.getChoice4(mQuestionNumber));
 
-            mAnswer = mQuestionLibrary.getCorrectAnswer(mQuestionNumber);
-            mQuestionNumber++;
+                mAnswer = mQuestionLibrary.getCorrectAnswer(mQuestionNumber);
+                mQuestionNumber++;
 
+            }
+        }
+        if (tutorial.equals("1")) {
+            if (mQuestionLibrary1.getQuestion(mQuestionNumber) == null) {
+                testResult();
+            } else {
+                mQuestionImageView.setImageResource(mQuestionLibrary1.getQuestionImage(mQuestionNumber));
+                mQuestionView.setText(mQuestionLibrary1.getQuestion(mQuestionNumber));
+                mButtonChoice1.setText(mQuestionLibrary1.getChoice1(mQuestionNumber));
+                mButtonChoice2.setText(mQuestionLibrary1.getChoice2(mQuestionNumber));
+                mButtonChoice3.setText(mQuestionLibrary1.getChoice3(mQuestionNumber));
+                mButtonChoice4.setText(mQuestionLibrary1.getChoice4(mQuestionNumber));
+
+                mAnswer = mQuestionLibrary1.getCorrectAnswer(mQuestionNumber);
+                mQuestionNumber++;
+            }
+        }
+        if (tutorial.equals("2")){
+            if (mQuestionLibrary2.getQuestion(mQuestionNumber) == null) {
+                testResult();
+            } else {
+                mQuestionImageView.setImageResource(mQuestionLibrary2.getQuestionImage(mQuestionNumber));
+                mQuestionView.setText(mQuestionLibrary2.getQuestion(mQuestionNumber));
+                mButtonChoice1.setText(mQuestionLibrary2.getChoice1(mQuestionNumber));
+                mButtonChoice2.setText(mQuestionLibrary2.getChoice2(mQuestionNumber));
+                mButtonChoice3.setText(mQuestionLibrary2.getChoice3(mQuestionNumber));
+                mButtonChoice4.setText(mQuestionLibrary2.getChoice4(mQuestionNumber));
+
+                mAnswer = mQuestionLibrary2.getCorrectAnswer(mQuestionNumber);
+                mQuestionNumber++;
+
+            }
         }
     }
 
@@ -199,6 +241,7 @@ public class TestActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putString(Constants.EMAIL, mEmail);
         bundle.putString(Constants.TOKEN, mToken);
+        bundle.putString("tutorial", tutorial);
         intent.putExtras(bundle);
         startActivity(intent);
         finish();

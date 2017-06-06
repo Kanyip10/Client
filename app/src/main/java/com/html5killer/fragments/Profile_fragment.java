@@ -96,13 +96,13 @@ public class Profile_fragment extends Fragment implements ChangePasswordDialog.L
         mExp = (TextView) v.findViewById(R.id.tv_exp);
         mExp2 = (TextView) v.findViewById(R.id.tv_exp2);
         mExp3 = (TextView) v.findViewById(R.id.tv_exp3);
-        mExp4 = (TextView) v.findViewById(R.id.tv_exp4);
-        mExp5 = (TextView) v.findViewById(R.id.tv_exp5);
+        //mExp4 = (TextView) v.findViewById(R.id.tv_exp4);
+        //mExp5 = (TextView) v.findViewById(R.id.tv_exp5);
         mProgressbar = (ProgressBar) v.findViewById(R.id.progressBar);
         mProgressbar2 = (ProgressBar) v.findViewById(R.id.progressBar2);
         mProgressbar3 = (ProgressBar) v.findViewById(R.id.progressBar3);
-        mProgressbar4 = (ProgressBar) v.findViewById(R.id.progressBar4);
-        mProgressbar5 = (ProgressBar) v.findViewById(R.id.progressBar5);
+        //mProgressbar4 = (ProgressBar) v.findViewById(R.id.progressBar4);
+        //mProgressbar5 = (ProgressBar) v.findViewById(R.id.progressBar5);
 
 
       /*  mBtChangePassword = (Button) v.findViewById(R.id.btn_change_password);
@@ -168,13 +168,13 @@ public class Profile_fragment extends Fragment implements ChangePasswordDialog.L
         mExp.setText("Exp.: " + user.getExperience());
         mExp2.setText("Exp.: " + user.getExperience2());
         mExp3.setText("Exp.: " + user.getExperience3());
-        mExp4.setText("Exp.: " + user.getExperience4());
-        mExp5.setText("Exp.: " + user.getExperience5());
+        //mExp4.setText("Exp.: " + user.getExperience4());
+        //mExp5.setText("Exp.: " + user.getExperience5());
         mProgressbar.setProgress(user.getExperience());
         mProgressbar2.setProgress(user.getExperience2());
         mProgressbar3.setProgress(user.getExperience3());
-        mProgressbar4.setProgress(user.getExperience4());
-        mProgressbar5.setProgress(user.getExperience5());
+        //mProgressbar4.setProgress(user.getExperience4());
+        //smProgressbar5.setProgress(user.getExperience5());
     }
 
     private void handleError(Throwable error) {

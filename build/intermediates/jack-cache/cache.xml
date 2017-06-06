@@ -2,268 +2,268 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.6.1\jars\classes.jar"
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/10.2.1/jars/classes.jar"
         revision="24.0.2"
-        sha1="47bbb3ec4b31ba71e125241c090dabe70cbb4de7">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-f9a6f153588e29f706239591cdfabff7f22c99c9.jar" />
+        sha1="3683531139103cc263b71d8b5ac6062832a8fd30">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-cc834bde9e5b0e89aca692be8cbcc18a277a9ae2.jar" />
     </item>
     <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\io.reactivex\rxandroid\1.2.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-80b78a5ee0d57f9a26e21017b7ac239ba18decd7.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        revision="24.0.2"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-24.2.1-5ce612344cead8d86502e510c1aaa11e9b90a0ae.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.8.0\5ea7af56cc7c567ed9856d99efb30740e9b17ff\okio-1.8.0.jar"
-        revision="24.0.2"
-        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\okio-1.8.0-c5c8f81675eefb67f915850d5d701d6f07c4d874.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        revision="24.0.2"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-24.2.1-eba4d87d960c9f57c62985431f4588c0842024b9.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-42d12705907daf445b6dfccfe521e0b6ec8178f8.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.6.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="79f521967ad7f49b34748db89df02852c2b2f87b">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-cd7f06f7eef5ef1ed0b6f69cb8bf92b101695c9d.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.5.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="c749ddb3aaf6744b02304427401f2ba4e704a220">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-b5861263c6328d7ac3547d40a0b945002357fe95.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.6.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="ee0ccb43f6ab276191b7f2d77c305fa9beb26db9">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-828f9f95aca4334032fa2209a840b1497c52cd66.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
-        revision="24.0.2"
-        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\retrofit-2.1.0-d1d0dc40e7e18cf95b225e0fdab466857569b78a.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.6.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="af7582c6b327449c6d32518e6a10307860b7b5d6">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-37ac4288931919fda4b5468bc6719de8cc03201b.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-820e56f42754330b3c129ce258a17daefff04afb.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
-        revision="24.0.2"
-        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-24.0.0-76fea2cd32e1de6702d1e7de4ba0ffa6ea9723f4.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-0afbdc96e566660b7c4ba7f88993a01d7c31b75d.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
-        revision="24.0.2"
-        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\converter-gson-2.1.0-fd2b03eaad194df6ff11b2794602488f1190d710.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.6.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="ad7706f8bb4a985656a8d2142f74021c8b0e03d8">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-ff2c985123bf7ac2457ea104f656a407e634b724.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-8b2bb861eeb66d8348acef1b5f3813c88ee4d227.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-2e3df84fe1760713f5b2c1e365291aeb95757fe5.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-dbc798f699727fe86cccc9545d23c06939ddb0fe.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.6.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="ee61ace5f3e488fc610e1c67693c49186a441f32">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-7f677e81f9e8593b723d30db6cf82730a6d60ffe.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-a82122909ed21faaca08aad3ad2625215945a1b6.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-63e2f61a71e96f0dda0fbc291ce1bbc09828f524.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha9\jars\classes.jar"
-        revision="24.0.2"
-        sha1="f2b64f6a762f61a2379d6a79af03e2ee56eefe0b">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-11694b4311bf8c11ff9cc67a1bae984e23c5375d.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        revision="24.0.2"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-24.2.1-d9636aa3755738d997f3ab188d832ec4817229eb.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-6c5344ecf356d0dd7afcb7a321c8c8f83e3290fd.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.2.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-8744689b39819641fd4f00b2b4b4a4ec1c8d3653.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        revision="24.0.2"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-24.2.1-cf87b6c7c29e4d59c4b4f3da79cabd4fb17785dd.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.3.0\2b802460eea20f8f2ad9c08c74e0f14718e88aa9\okhttp-3.3.0.jar"
-        revision="24.0.2"
-        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\okhttp-3.3.0-b469c7f02d7f96bfdd8524e23f58dbea62005752.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.2.0\42bfaf64c94f3848ebf5cf1c2ea4ec9d1b3ac6c8\rxjava-1.2.0.jar"
-        revision="24.0.2"
-        sha1="42bfaf64c94f3848ebf5cf1c2ea4ec9d1b3ac6c8">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\rxjava-1.2.0-b05af2b97d857b264de8f64f914f9f21e6fb55e4.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        revision="24.0.2"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\internal_impl-24.2.1-b4f5ebbe3cbd8b129188ebdd1e17a62560af0b93.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\classes.jar"
-        revision="24.0.2"
-        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-6569c47b10cf0f97736e19d38e81b18f967f001a.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-d8c54c08f7beb37ef0d9af478221f47a4df245ee.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha9\constraint-layout-solver-1.0.0-alpha9.jar"
-        revision="24.0.2"
-        sha1="6a908fd0803cc5f65b007101002aec06dc7544da">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\constraint-layout-solver-1.0.0-alpha9-a1bab6673854d8619678253555768fff985dca19.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.6.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="62ff84124b89177abc0c27f3e38c9732f2d41617">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-d9167f497f73074a1241236fcdca74a282d86c5b.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.6.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="0dfc12e4aacf514346ea866560c99807d032bc48">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-773a99de0e18e0b6d9dab4562452261a4bfc8acc.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
-        revision="24.0.2"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\support-annotations-24.2.1-3f17ad3ac253de7d6cdc6dfe214834fc44150c84.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
-        revision="24.0.2"
-        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\gson-2.7-32a699e0f48ffd4b961aecb5c699cc40cad71132.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.6.1\jars\classes.jar"
-        revision="24.0.2"
-        sha1="4a36600281a648769411ef642c331851732bf29e">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-2a959e55a4300fc4068d5cfb785fad5f5f25087f.jar" />
-    </item>
-    <item
-        jar="C:\Users\melody1203\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\adapter-rxjava\2.1.0\693eddc23e87ab13f9cf5001707ce8e7e1d1ff01\adapter-rxjava-2.1.0.jar"
+        jar="/Users/KanYip/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.1.0/693eddc23e87ab13f9cf5001707ce8e7e1d1ff01/adapter-rxjava-2.1.0.jar"
         revision="24.0.2"
         sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\adapter-rxjava-2.1.0-a60419c61a40d3f64f7062ee9a0bbf808515dba7.jar" />
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/adapter-rxjava-2.1.0-901ee73311d606aab60e2b807ebd90c7f33ae297.jar" />
     </item>
     <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.6.1\jars\classes.jar"
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.1/jars/classes.jar"
         revision="24.0.2"
-        sha1="a136366045678579300d161de97c2211c4c4f7a0">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-bd1958f2e190731c2db1792391da11df2b3abf74.jar" />
+        sha1="19696dc358ac668e341f28c41e3387d61ccdb81d">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-5c76c2e6ff7aef043ef2b08da1e510640d085242.jar" />
     </item>
     <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-dd68cd336f8ec2d9a6ba7b57ece423e91a8bf6dd.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-c09b16964df7ddb668c522f60e3157a4274b6b9b.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.2.0/42bfaf64c94f3848ebf5cf1c2ea4ec9d1b3ac6c8/rxjava-1.2.0.jar"
+        revision="24.0.2"
+        sha1="42bfaf64c94f3848ebf5cf1c2ea4ec9d1b3ac6c8">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/rxjava-1.2.0-7fc14f271dc9b01fe3928930d35b51ba672bf894.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/internal_impl-24.2.1-2bb7a1ac7971ed861495df7d7fa9c86045ff6a9e.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/classes.jar"
+        revision="24.0.2"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-34c99f8868814e3abb6a267b05a03e3269333380.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        revision="24.0.2"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/internal_impl-24.0.0-770597c28513772d7a65546602e75028cac71ea9.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="825c2e97a00df4df5b0f3081faa4fd6280cd7c72">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-582afc836226e0e2bd1c41d6d2cdc71b5963d95f.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="da5c606c36276a12a356e351882044c6b4b9e8d4">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-977c46e1ef1bdd5e52c9671162f56106da7ba4b6.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
+        revision="24.0.2"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/okhttp-3.3.0-6e8136377291679051e73caa2823b246582cfd85.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/internal_impl-24.2.1-68a5b668d789eeb734251f59b161688df9436553.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
         revision="24.0.2"
         sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-128fbb38f81e4f33c8d321b45152854b8a707d34.jar" />
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-a25f601b92317970432d22532057d562de9e8b3e.jar" />
     </item>
     <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
         revision="24.0.2"
-        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-01dffdfc4791adc9a8a0d67aace449b25c0c60b7.jar" />
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-909f2a93a45212548222308428c76903f3b31778.jar" />
     </item>
     <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.6.1\jars\classes.jar"
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
         revision="24.0.2"
-        sha1="6ff796a3173787afe2e712f3aec6f5b99796118e">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-b7661e002a31187f2b9a5a54b5b4a70e57271afc.jar" />
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-a881bba197346d928faac859293d37c370e5df8a.jar" />
     </item>
     <item
-        jar="C:\Users\melody1203\Desktop\Client\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="bdcc2a9572f18b8c90a3a157cab6cdfc97c6c736">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-ec1d734e4da5ae77a86be91f0aadff728897b5ac.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0-alpha9/constraint-layout-solver-1.0.0-alpha9.jar"
+        revision="24.0.2"
+        sha1="6a908fd0803cc5f65b007101002aec06dc7544da">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/constraint-layout-solver-1.0.0-alpha9-0e2ab0d3bc80ea70bb6004bfe400725661292070.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-alpha9/jars/classes.jar"
+        revision="24.0.2"
+        sha1="f2b64f6a762f61a2379d6a79af03e2ee56eefe0b">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-4f99864bf30eaa7525e5c5a4ff2d5b63c86b5fb5.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        revision="24.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/converter-gson-2.1.0-a537066101f31a086e3d97c02778badbc06dfd16.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-4c54a7e5e4fe612039258850b3067805f28c6571.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
         revision="24.0.2"
         sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="C:\Users\melody1203\Desktop\Client\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-c9bc9c5a76f07354b44d46e5d538e2747e5bf0c6.jar" />
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-caa4bad1e0cbdcf6bf475ac2b35cfeda494ec1e4.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="cfa47e1b140562d47bc670629d07e209cd8b02c4">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-460ab9e0fb633aaf8989dbcfebd12053ce2a12bb.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        revision="24.0.2"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/retrofit-2.1.0-dc31c07006c9118e9a7fe5b2e2eb1f6e214a6736.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/internal_impl-24.2.1-3a105c95b91a014040d940fd0adf083f8a88897c.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-a1fc130b7df1f5b0cc7c289bad70749c96b01a24.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        revision="24.0.2"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/okio-1.8.0-ed80f776e0931d6c6f823e5dfbd22794ee1009ce.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-4a4ca9b425241dea9fef0078f880f4a5de154f24.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-0ddf4017ead4479c0872647e749b187c10d005fd.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/internal_impl-24.2.1-06f9dd75e3eab313f2a262c2a1e96f55a9c4d718.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/support-annotations-24.2.1-38857ff6aceb586b6120135c9ebb4efcf9fe4fe8.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
+        revision="24.0.2"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-ea44b69a3b407eabe79c16cf81223c2a5234d9f6.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-840939665d402c0c156d95ffd5a558ec34c4aa81.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="c7626a9aa507bbbdc16188bc9a9f9bf3370c1ddd">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-f67a78235c4ba5b0dff6a07bdedfd69cf609ce3b.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="abf7c64e0bbaaa931738856734f76646ae62d9a5">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-cde1736a6054df5c4983e941a5c555d477ef63d4.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/internal_impl-24.2.1-a1a678665755aa03815a6b5eaf1d5a1bddbc3c52.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.onesignal/OneSignal/3.5.6/jars/classes.jar"
+        revision="24.0.2"
+        sha1="fc006a0e3cffa83bbf4d8157cda67bc4ce3e9ca4">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-9ed9329db0c560ab250e4464ba8811a4ef607c25.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-de8e298821bd6ef90d715c2e979a73e9a180876a.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-9b0354de452ca28c9933c659322bab2399f8ea72.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="6003d64df88a6ce5e961fa2bad7f1b9b97689ac1">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-a8b11a858473e671793c5621da22ccaa86b19c84.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        revision="24.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/gson-2.7-d5c8f5078494d7e4f35b329b7a0973e9d148f542.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="ab8343c3aadefce37313ceadd8bc4db1993f2ff0">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-ee934ac39a1341367c71f45753be6d58f74f8486.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="bb115a110992b254f767f337da233071f6f940b8">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-fd1e5fbcff665cff2a92994490718de774d7b81c.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/10.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="bfd85a88cf976eb2c54507cc914d8e8914c2f71e">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-c6234e683693383d571ff88b02c2a87626093951.jar" />
     </item>
 
 </items>
