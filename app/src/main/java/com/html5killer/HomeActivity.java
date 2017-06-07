@@ -24,6 +24,7 @@ public class HomeActivity extends Activity {
     private SharedPreferences mSharedPreferences;
     private String mToken;
     private String mEmail;
+    private String tutorial;
 
 
     /* renamed from: net.androidiconpacks.findmulti.HomeActivity.1 */
@@ -32,12 +33,15 @@ public class HomeActivity extends Activity {
         }
 
         public void onClick(View v) {
+            Bundle bundle1 = getIntent().getExtras();
+            tutorial = bundle1.getString("tutorialNum");
             Prefs.clearPref(HomeActivity.this.getApplicationContext());
             Prefs.setStagePref(HomeActivity.this.getApplicationContext(), 1);
             Intent intent = new Intent(HomeActivity.this, PlayActivity.class);
             Bundle bundle = new Bundle();
             bundle.putString(Constants.EMAIL, mEmail);
             bundle.putString(Constants.TOKEN, mToken);
+            bundle.putString("tutorialNum", tutorial);
             intent.putExtras(bundle);
             startActivity(intent);
 
@@ -51,10 +55,13 @@ public class HomeActivity extends Activity {
         }
 
         public void onClick(View v) {
+            Bundle bundle1 = getIntent().getExtras();
+            tutorial = bundle1.getString("tutorialNum");
             Intent intent = new Intent(HomeActivity.this, PlayActivity.class);
             Bundle bundle = new Bundle();
             bundle.putString(Constants.EMAIL, mEmail);
             bundle.putString(Constants.TOKEN, mToken);
+            bundle.putString("tutorialNum", tutorial);
             intent.putExtras(bundle);
             startActivity(intent);
 
@@ -88,6 +95,7 @@ public class HomeActivity extends Activity {
 
         mToken = bundle.getString(Constants.TOKEN);
         mEmail = bundle.getString(Constants.EMAIL);
+        tutorial = bundle.getString("tutorialNum");
 
     }
     protected void onRestart() {

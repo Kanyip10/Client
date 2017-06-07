@@ -137,6 +137,7 @@ public class TutorialFragment extends Fragment {
                              Bundle bundle1 = new Bundle();
                              bundle1.putString(Constants.EMAIL, mEmail);
                              bundle1.putString(Constants.TOKEN,mToken);
+                             bundle1.putString("tutorialNum", "1");
                              intent1.putExtras(bundle1);
                              startActivity(intent1);
                              break;
@@ -165,6 +166,7 @@ public class TutorialFragment extends Fragment {
                              Bundle bundle1 = new Bundle();
                              bundle1.putString(Constants.EMAIL, mEmail);
                              bundle1.putString(Constants.TOKEN,mToken);
+                             bundle1.putString("tutorialNum", "2");
                              intent1.putExtras(bundle1);
                              startActivity(intent1);
                              break;
@@ -193,6 +195,7 @@ public class TutorialFragment extends Fragment {
                              Bundle bundle1 = new Bundle();
                              bundle1.putString(Constants.EMAIL, mEmail);
                              bundle1.putString(Constants.TOKEN,mToken);
+                             bundle1.putString("tutorialNum", "3");
                              intent1.putExtras(bundle1);
                              startActivity(intent1);
                              break;

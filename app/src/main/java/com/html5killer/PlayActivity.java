@@ -117,6 +117,7 @@ public class PlayActivity extends Activity {
     private SharedPreferences mSharedPreferences;
     private String mToken;
     private String mEmail;
+    private String tutorial;
 
     /* renamed from: net.androidiconpacks.findmulti.PlayActivity.1 */
     class C06441 implements AnimationListener {
@@ -469,7 +470,18 @@ public class PlayActivity extends Activity {
     }
 
     private void LoadResources() {
-        parseXML(getResources().getString(R.string.imageLocation));
+        Bundle bundle1 = getIntent().getExtras();
+        tutorial = bundle1.getString("tutorialNum");
+        if(tutorial.equals("3")){
+            parseXML(getResources().getString(R.string.imageLocation));
+        }
+        if(tutorial.equals("1")){
+            parseXML("xml/differences1.xml");
+        }
+        if(tutorial.equals("2")){
+            parseXML("xml/differences2.xml");
+        }
+        //parseXML(getResources().getString(R.string.imageLocation));
         readDBData();
         this.mProgressBar = (SaundProgressBar) findViewById(R.id.progressBar);
         this.mProgressBar.setMax(this.mLevelDuration);
@@ -502,10 +514,22 @@ public class PlayActivity extends Activity {
     }
 
     private void LoadConfigParams() {
+        Bundle bundle1 = getIntent().getExtras();
+        tutorial = bundle1.getString("tutorialNum");
+        System.out.println(tutorial);
         this.mPauseFlag = false;
         this.ROTATE_FROM = 0.0f;
         this.ROTATE_TO = ((float) getResources().getInteger(R.integer.errorNumRotations)) * 360.0f;
-        this.mSourceXML = getResources().getString(R.string.imageLocation);
+        if(tutorial.equals("3")){
+            this.mSourceXML = getResources().getString(R.string.imageLocation);
+        }
+        if(tutorial.equals("1")){
+            this.mSourceXML = "xml/differences1.xml";
+        }
+        if(tutorial.equals("2")){
+            this.mSourceXML = "xml/differences2.xml";
+        }
+        //this.mSourceXML = getResources().getString(R.string.imageLocation);
         this.mScoreIncrement = getResources().getInteger(R.integer.scoreIncrement);
         this.mLevelDuration = getResources().getInteger(R.integer.levelDuration);
         this.mLevelDuration *= GeofenceStatusCodes.GEOFENCE_NOT_AVAILABLE;
@@ -646,6 +670,7 @@ public class PlayActivity extends Activity {
 
         mToken = bundle.getString(Constants.TOKEN);
         mEmail = bundle.getString(Constants.EMAIL);
+        tutorial = bundle.getString("tutorialNum");
 
     }
 
@@ -653,12 +678,38 @@ public class PlayActivity extends Activity {
         Log.i("TAG",""+PlayActivity.this.mTotalScore);
         User user = new User();
         user.setNewExp(50);
-        changeExp3(user);
+        if(tutorial.equals("3")){
+            changeExp3(user);
+        }
+        if(tutorial.equals("2")){
+            changeExp2(user);
+        }
+        if(tutorial.equals("1")){
+            changeExp(user);
+        }
+
+
     }
 
     private void changeExp3(User user) {
 
         mSubscriptions.add(NetworkUtil.getRetrofit(mToken).changeExp3(mEmail,user)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(this::Response,this::handleError));
+    }
+
+    private void changeExp2(User user) {
+
+        mSubscriptions.add(NetworkUtil.getRetrofit(mToken).changeExp2(mEmail,user)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(this::Response,this::handleError));
+    }
+
+    private void changeExp(User user) {
+
+        mSubscriptions.add(NetworkUtil.getRetrofit(mToken).changeExp(mEmail,user)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(this::Response,this::handleError));
