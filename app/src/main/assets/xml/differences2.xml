@@ -7,21 +7,21 @@
 	<stage>
 		<image1>images/error_t2_1.png</image1>
 		<image2>images/error_t2_1ans.png</image2>
-		<difference x="203" y="476" radius="70"/>
-		<difference x="236" y="745" radius="70"/>
-		<difference x="597" y="1184" radius="70"/>
-		<difference x="323" y="1944" radius="70"/>
-		<difference x="210" y="3647" radius="70"/>
+		<difference x="111" y="507" radius="40"/>
+		<difference x="105" y="629" radius="40"/>
+		<difference x="442" y="814" radius="40"/>
+		<difference x="1191" y="814" radius="40"/>
+		<difference x="87" y="213" radius="40"/>
 	</stage>
 
 	<stage>
 		<image1>images/error_t2_2.png</image1>
 		<image2>images/error_t2_2ans.png</image2>
-		<difference x="856" y="499" radius="70"/>
-		<difference x="424" y="657" radius="70"/>
-		<difference x="307" y="1174" radius="70"/>
-		<difference x="301" y="1360" radius="70"/>
-		<difference x="284" y="1460" radius="70"/>
+		<difference x="822" y="482" radius="40"/>
+		<difference x="760" y="473" radius="40"/>
+		<difference x="480" y="473" radius="40"/>
+		<difference x="133" y="405" radius="40"/>
+		<difference x="104" y="375" radius="40"/>
 	</stage>
 
 
@@ -30,11 +30,11 @@
 	<stage>
 		<image1>images/error_t2_3.png</image1>
 		<image2>images/error_t2_3ans.png</image2>
-		<difference x="598" y="44" radius="70"/>
-		<difference x="547" y="404" radius="70"/>
-		<difference x="387" y="852" radius="70"/>
-		<difference x="544" y="872" radius="70"/>
-		<difference x="393" y="2146" radius="70"/>
+		<difference x="574" y="365" radius="40"/>
+		<difference x="587" y="492" radius="40"/>
+		<difference x="574" y="608" radius="40"/>
+		<difference x="516" y="808" radius="40"/>
+		<difference x="267" y="650" radius="40"/>
 	</stage>
 
 

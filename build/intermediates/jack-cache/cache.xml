@@ -218,12 +218,6 @@
         <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/internal_impl-24.2.1-a1a678665755aa03815a6b5eaf1d5a1bddbc3c52.jar" />
     </item>
     <item
-        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.onesignal/OneSignal/3.5.6/jars/classes.jar"
-        revision="24.0.2"
-        sha1="fc006a0e3cffa83bbf4d8157cda67bc4ce3e9ca4">
-        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-9ed9329db0c560ab250e4464ba8811a4ef607c25.jar" />
-    </item>
-    <item
         jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.1/jars/classes.jar"
         revision="24.0.2"
         sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
@@ -234,6 +228,12 @@
         revision="24.0.2"
         sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
         <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-9b0354de452ca28c9933c659322bab2399f8ea72.jar" />
+    </item>
+    <item
+        jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.onesignal/OneSignal/3.5.7/jars/classes.jar"
+        revision="24.0.2"
+        sha1="bfeba9e17614c43b87b9dbef4d9014d66de49b34">
+        <dex dex="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-9cbed7748f32a9ec66e308804341e32b23b57b59.jar" />
     </item>
     <item
         jar="/Users/KanYip/Desktop/Document/University/Year 4/FYP/Product/html5killer/Client/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.1/jars/classes.jar"

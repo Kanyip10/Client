@@ -7,32 +7,32 @@
 	<stage>
 		<image1>images/error2.jpg</image1>
 		<image2>images/error2ans.jpg</image2>
-		<difference x="856" y="499" radius="70"/>
-		<difference x="424" y="657" radius="70"/>
-		<difference x="307" y="1174" radius="70"/>
-		<difference x="301" y="1360" radius="70"/>
-		<difference x="284" y="1460" radius="70"/>
+		<difference x="856" y="499" radius="40"/>
+		<difference x="424" y="657" radius="40"/>
+		<difference x="307" y="1174" radius="40"/>
+		<difference x="315" y="198" radius="40"/>
+		<difference x="315" y="120" radius="40"/>
 	</stage>
 
 	<stage>
 		<image1>images/error1.jpg</image1>
 		<image2>images/error1ans.jpg</image2>
-		<difference x="203" y="476" radius="70"/>
-		<difference x="236" y="745" radius="70"/>
-		<difference x="597" y="1184" radius="70"/>
-		<difference x="323" y="1944" radius="70"/>
-		<difference x="210" y="3647" radius="70"/>
+		<difference x="203" y="476" radius="40"/>
+		<difference x="236" y="745" radius="40"/>
+		<difference x="597" y="1184" radius="40"/>
+		<difference x="323" y="1944" radius="40"/>
+		<difference x="210" y="3647" radius="40"/>
 	</stage>
 
 	<!-- duoc -->
 	<stage>
 		<image1>images/error3.jpg</image1>
 		<image2>images/error3ans.jpg</image2>
-		<difference x="598" y="44" radius="70"/>
-		<difference x="547" y="404" radius="70"/>
-		<difference x="387" y="852" radius="70"/>
-		<difference x="544" y="872" radius="70"/>
-		<difference x="393" y="2146" radius="70"/>
+		<difference x="598" y="44" radius="40"/>
+		<difference x="547" y="404" radius="40"/>
+		<difference x="387" y="852" radius="40"/>
+		<difference x="544" y="872" radius="40"/>
+		<difference x="393" y="2146" radius="40"/>
 	</stage>
 
 
