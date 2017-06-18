@@ -6,4 +6,5 @@ public class Constants {
     public static final String TOKEN = "token";
     public static final String EMAIL = "email";
     public static final String LIST_NAME = "list";
+    public static final String FALLBACK_LINK = "fallback_link";
 }

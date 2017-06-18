@@ -1,5 +1,7 @@
 package com.html5killer;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -48,6 +50,7 @@ public class listContent extends AppCompatActivity {
     private String mEmail;
 
     private String listname;
+    private String fallbackLink;
 
     private WebView editor;
 
@@ -89,6 +92,7 @@ public class listContent extends AppCompatActivity {
         mToken = bundle.getString(Constants.TOKEN);
         mEmail = bundle.getString(Constants.EMAIL);
         listname = bundle.getString(Constants.LIST_NAME);
+        fallbackLink = bundle.getString(Constants.FALLBACK_LINK);
 
     }
 
@@ -114,26 +118,32 @@ public class listContent extends AppCompatActivity {
     }
 
     private void handleError(Throwable error) {
+        openBrowserWithLink(fallbackLink);
+        finish();
+//        if (error instanceof HttpException) {
+//
+//            Gson gson = new GsonBuilder().create();
+//
+//            try {
+//
+//                String errorBody = ((HttpException) error).response().errorBody().string();
+//                Response response = gson.fromJson(errorBody,Response.class);
+//                showSnackBarMessage(response.getMessage());
+//
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        } else {
+//
+//            showSnackBarMessage("Network Error !");
+//        }
+    }
 
-
-
-        if (error instanceof HttpException) {
-
-            Gson gson = new GsonBuilder().create();
-
-            try {
-
-                String errorBody = ((HttpException) error).response().errorBody().string();
-                Response response = gson.fromJson(errorBody,Response.class);
-                showSnackBarMessage(response.getMessage());
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-
-            showSnackBarMessage("Network Error !");
-        }
+    private void openBrowserWithLink(String url){
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(intent);
     }
 
     private void showMessage(String message) {

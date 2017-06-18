@@ -118,7 +118,7 @@ public class TutorialFragment extends Fragment {
                  case 0:
                      switch (childPosition){
                          case 0:
-                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view");
+                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjbmtkQ3hZQlNrWUk/view?usp=sharing");
                              break;
                          case 1:
                              openPDF("https://www.youtube.com/watch?v=9gTw2EDkaDQ");
@@ -147,10 +147,10 @@ public class TutorialFragment extends Fragment {
                  case 1:
                      switch (childPosition){
                          case 0:
-                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view");
+                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjbmtkQ3hZQlNrWUk/view?usp=sharing");
                              break;
                          case 1:
-                             openPDF("https://www.youtube.com/watch?v=9gTw2EDkaDQ");
+                             openPDF("https://www.youtube.com/watch?v=YcApt9RgiT0");
                              break;
                          case 2:
                              Intent intent = new Intent(getActivity(),TestActivity.class);
@@ -176,10 +176,10 @@ public class TutorialFragment extends Fragment {
                  case 2:
                      switch (childPosition){
                          case 0:
-                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view");
+                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjbmtkQ3hZQlNrWUk/view?usp=sharing");
                              break;
                          case 1:
-                             openPDF("https://www.youtube.com/watch?v=9gTw2EDkaDQ");
+                             openPDF("https://www.youtube.com/watch?v=CGSdK7FI9MY");
                              break;
                          case 2:
                              Intent intent = new Intent(getActivity(),TestActivity.class);
@@ -206,7 +206,7 @@ public class TutorialFragment extends Fragment {
                  case 3:
                      switch (childPosition){
                          case 0:
-                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view");
+                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjbmtkQ3hZQlNrWUk/view?usp=sharing");
                              break;
                          case 1:
                              openPDF("https://www.youtube.com/watch?v=9gTw2EDkaDQ");
@@ -232,7 +232,7 @@ public class TutorialFragment extends Fragment {
                  case 4:
                      switch (childPosition){
                          case 0:
-                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjMWFDTnZ3OVFZZjg/view");
+                             openPDF("https://drive.google.com/file/d/0B1o8pNj_jIRjbmtkQ3hZQlNrWUk/view?usp=sharing");
                              break;
                          case 1:
                              openPDF("https://www.youtube.com/watch?v=9gTw2EDkaDQ");
